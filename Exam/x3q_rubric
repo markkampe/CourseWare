@@ -1,0 +1,78 @@
+1(3T-A): user mode thread pkg
+	(a) 8p:	3p  descriptor, reasonable contents, reasonable allocation/deallocation
+		3p  1 stack, 1 reasonable allocation/deallocation, 1 mention size/growth
+		2p  1 runnable thread queue, list of thread descriptors
+	(b) 14p: 4p  2 create/destroy, 2 reasonable comments
+		4p  2 block/unblock/yield, 2 reasonable comments
+		6p  2 choose next, how
+		    2 save state, how
+		    2 restore state and resume, how
+	(c) 	5p  2p addressed, 1p mention scheduling algorithm, 2p reasonable approach
+	(d)	6p  2p how to lock, 2p how to block, 2p how to resume
+
+2(6E-A): Dynamic Eq (working set)
+	(a) 5:	2 steal, 2 stolen from, 1 clarity
+	(b) 6:	2 larger WS, 2 steal more, 2 stolen from less
+	(c) 6:  2 smaller WS, 2 steal less, 2 stolen from more
+	(d) 6:  3 smaller WS, 3 more competition/stealing
+	(e) 4:	2 on-point, 2 cogent/clear
+	(f) 6:  2 example, 2 first force, 2 second force
+
+3(7B-A): find/fix multiple queues
+	(a) enqueue 4p: -1 too much, -2 too little or wrong place
+	    getnext 4p: -1 too much, -2 too little or wrong place
+	    dequeue 4p: -1 too much, -2 too little or wrong place
+	    suspend 4p: -1 too much, -2 too little or wrong place
+	    others  2p: no place else
+	(b) 2p:  appropriate choice of protection mechanism
+	    2p:  per-queue lock granularity
+	    2p:	 reasonable justification
+	    4p:  correct placement/use (-1 for each error)
+	    	 (enqueue,dequeue,getnext can be protected in caller or callee)
+	    5p:  suspend deadlock prevention (2: recognize, 3: prevent)
+
+4a(8C-E): DEADLK: Lock Manager(lease)
+	2p: 1: honored constraints, 1: understood their solution
+	2p: effectively prevented deadlock
+	2p: robust in the face of network/node failures
+	2p: reasonable justification
+
+4b(8C-F): DEADLK: Driver Queue(mutx,disable)
+	2p: 1: honored constraints, 1: understood their solution
+	2p: protected against conflicts w/other threads
+	2p: protected against conflicts w/interrupts
+	2p: reasonable justification
+
+4c(8C-L): DEADLK: dedicated bufs
+	2p: 1: honored constraints, 1: understood their solution
+	2p: effectively prevented deadlocks over buffer alocations
+	2p: avoids creating a bottle-neck
+	2p: reasonable justification
+
+4d(8C-K): DEADLK: hold and block
+	2p: 1: honored constraints, 1: understood their solution
+	2p: effectively prevented deadlock
+	2p: avoids creating a bottle-neck
+	2p: reasonable justification
+
+5(11G-A): Copy-on-Write
+	(a) 10p  3p: don't overwrite, 4p: new copy, 3p: change pointers
+	(b)  5p  3p: old copies still available, 2p: how this helps
+	(c)  3p  COW clones
+		 2p: other plausible
+	(d)  5p  3p: time travel, 2p: old data still there
+		 2p: something else reasonable, 2p: good reason
+	(e)  5p  recycling the old copies
+	(f)  5p	 3p: garbage collection, 2p: how
+
+6(13C-B): new distributed service
+	(a) 10p  5/each: 3 important characteristic, 2 characteristic, 1 observation
+			 2 good value, 1 weak but on-point (or just a definition)
+	(b)  9p  3: honors problem constraints (sessions, database)
+		 3: clearly understood
+		 3: effective and practical
+	(c)  3p  1: honors problem constraints, 1: effective & practical, 1: clear
+	(d)  3p  1: honors problem constraints, 1: effective & practical, 1: clear
+	(e)  3p  1: honors problem constraints, 1: effective & practical, 1: clear
+	(f)  5p  1: use ssl, 1: honors constratints, 1: effective, 1: practical 1: clear
+

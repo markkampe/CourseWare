@@ -1,0 +1,7 @@
+(with an API or operation) ... You should be able to:
+<UL>
+    <LI>explain how and why it should be used.</LI>
+    <LI>independenly and correctly use it in practical problems.</LI>
+    <LI>review, describe, and critique code that uses it.</LI>
+    <LI>diagnose and correct common problems that occur when using it.</LI>
+</UL>

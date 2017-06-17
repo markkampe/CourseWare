@@ -1,0 +1,6 @@
+... You should be able to:
+<UL>
+    <LI>define them and discuss their implications.</LI>
+    <LI>discuss how they relate to one-another.</LI>
+    <LI>give examples, recognize instances.</LI>
+</UL>

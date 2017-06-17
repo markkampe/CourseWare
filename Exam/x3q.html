@@ -1,0 +1,328 @@
+<html>
+<head>
+<title>Exam Solutions</title>
+</head>
+<body>
+<center>
+<H1>Exam Solutions</H1>
+</center>
+
+<H2>1. user mode thread pkg</H2>
+<P>
+This was discussed in reading section(s) AD26,27,User Mode Threads<br>
+This was discussed in lecture section(s) 3T<br>
+</P>
+    <OL type="a">
+       <LI>	Data Structures:
+       	<UL>
+    	   <li>	each thread would have a thread descriptor, containing
+    	   	thread identification information, scheduling information,
+    		exit status, and a pointer to the thread stack.  
+    		This would be allocated (from the heap) by the <tt>thread_create</tt> function 
+    		and deallocated by the <tt>thread_destroy</tt> function.</li>
+    	   <li>	each thread would have a thread stack.
+    		This too would be allocated (from the heap) by the <tt>thread_create</tt> function 
+    		and deallocated by the <tt>thread_exit</tt> function.
+    		The size of the thread stack would be fixed, but could be a parameter to the 
+    		<tt>thread_create</tt> function.</li>
+    	   <li> I would also need a queue of runnable threads.</li>
+    	</ul>
+       </li>
+       <LI> Key Methods:
+       	<UL>
+    	   <li> <tt>thread_create</tt><br>
+    		create a new stack
+    		(of a fixed or specified size), and a thread descriptor, and
+    		add them to my thread descriptor array.  I would then
+    		initialize the thread stack with an initial set of registers
+    		that would cause it to execute a specified routine.  Then
+    		I would add it to the runnable queue to be dispatched.
+    	   </li>
+    	   <li> <tt>dispatcher</tt><br>
+    	   	choose the next thread to run (from the runnable queue),
+    		restore its registers (saved on the thread stack), and 
+    		<em>return</em> to that thread to resume its execution.
+    	   </li>
+    	   <li> <tt>thread_yield</tt><br>
+    	   	save the state of the running thread (on the thread stack),
+    		put this thread back on the runnable queue, and return to
+    		the dispatcher.  Yielding the CPU would also cancel the
+    		any prending preemption alarm signal.
+    	   </li>
+    	   <li> <tt>thread_block</tt><br>
+    		remove the current thread from the runnable thread queue and then yield.
+    	   </li>
+    	   <li> <tt>thread_unblock</tt><br>
+    		re-add the specified thread to the runnable queue.
+    	   </li>
+    	   <li> <tt>thread_exit</tt><br>
+    	        copy the termination status into the thread descriptor,
+    		free the thread stack, remove the thread from the runnable queue,
+    		and call the dispatcher to run a different thread.
+    	   </li>
+    	   <li> <tt>thread_destroy</tt><br>
+    		return termination status and free its thread descriptor.
+    	   </li>
+    	</ul>
+       </Li>
+       <LI> I would implement preemptive scheduling (either priority or
+       	round-robbin) by setting an alarm (immediately before
+    	dispatching each thread),
+       	catching the resulting signal, and calling <tt>thread_yield</tt>
+    	on behalf of the preempted thread.  
+       </li>
+       <LI> I would use atomic instructions to check/seize locks.
+       	I would use <tt>thread_block</tt> to
+    	block a thread awaiting a mutex, and <tt>thread_unblock</tt> to
+    	wake up a thread when the awaited mutex became available.</tt>
+       </li>
+    </OL>
+    
+
+<H2>2. Dynamic Eq (working set)</H2>
+<P>
+This was discussed in reading section(s) K:Working Sets, OS Principles<br>
+This was discussed in lecture section(s) 6E,1D<br>
+</P>
+    <OL type=a>
+        <LI> When ever a process gets a page-fault, it is allowed to steal a page
+    	 (potentially) from other processes.  When a process does not use all
+    	 of its pages, other processes are allowed to steal them.</li>
+        <LI> If a process references more pages more often, it will steal more 
+    	 pages.  Because it is referencing all of its own pages, they are 
+    	 less likely to be stolen.  The result is a net increase in the
+    	 working set size for that process.</li>
+        <LI> If a process does not reference its pages as often, they will 
+    	 grow older and thus be more likely to be stolen.   Since fewer
+    	 pages are being referenced, there will be fewer opportunities 
+    	 to steal pages from other processes.
+    	 The result will be a net decrease in the working set size for that process.</li>
+        <LI> When more processes are competing for pages there will be much more
+    	 frequent page stealing ... with the effect that everyone will have
+    	 fewer pages, losing their least recently used pages.</li>
+        <LI> 
+    	 This response is constructive in that it attempts to make the best
+    	 possible use of memory for the running processes (letting each process
+    	 keep only its most recently used pages.
+    	 But, if doing this reduces processes below their optimal working-set
+    	 size and drives the system into thrashing, this will not have been
+    	 a constructive response.</li>
+        <LI> We discussed multi-queue scheduling, where receiving too many time-slice-ends
+    	 moves a process to a longer-quantum queue (with longer time slices but run less
+    	 often) and too many voluntary ends moves a process to a shorter-quantum queue.
+    	 The result will be to give each process a time-slice-length close to
+    	 its own natural interval, and to automatically adapt to changes in this
+    	 behavior.</li>
+    </OL>
+
+<H2>3. find/fix multiple queues</H2>
+<P>
+This was discussed in reading section(s) AD26,28<br>
+This was discussed in lecture section(s) 7B,D,E,L<br>
+</P>
+    (a) The critical sections are indicated in red:
+    <font color=green><PRE>
+    	void enqueue( struct request *req, struct request **head ) {
+    		struct request *rp, **rpp;
+    <font color=red>
+    		for (rpp = head; rp = *rpp; rpp = &(rp->next))
+    			if (rp->key >= req->key)
+    				break;
+    		req->next = rp;	
+    		*rpp = req;
+    </font><font color=green>	}
+    
+    	struct request *getnext( struct request **head ) {
+    		struct request *rp;
+    </font><font color=red>
+    		rp = *head;
+    		if (rp != 0)
+    			*head = rp->r_next;
+    </font><font color=green>		return( rp );
+    	}
+    
+    	struct request *dequeue( long findkey, struct request **head ) {
+    		struct request *rp, **rpp;
+    </font><font color=red>
+    		for (rpp = head; rp = *rpp; rpp = &(rp->next))
+    			if (rp->key >= findkey)
+    				break;
+    		if (rp->key > findkey)
+    			return( (struct request *) 0 );
+    		*rpp = rp->next;
+    </font><font color=green>		return( rp );
+    	}
+    	suspend_req( key, &old_queue, &new_queue  ) {
+    		...
+    </font><font color=red>		req = dequeue( key, &old_queue );
+    		enqueue( req, &new_queue );
+    </font><font color=green>	 	...
+    	}
+    </PRE></font><font color="black">
+    <P>
+    (b) Protecting the critical sections
+    <ul>
+    	Most of the critical sections are in the queue management routines, but
+    	because <tt>suspend_req</tt> needs to call both <tt>enqueue</tt> and 
+    	<tt>dequeue</tt> as part of a single
+    	transaction, it may be more appropriate to put locks for the lists in the calling
+    	routines (<tt>submit_req, process_req, suspend_req</tt>) 
+    	than in the queue management routines (<tt>getnext, enqueue, dequeue</tt>).
+    	</P>
+    	<P>
+    	Mutexes (or semaphores) are the most appropriate mechanism;
+    	Because this is a high contention application, locks should be per-queue.
+    	Because this is an application, interrupt disables are not an option.
+    	Because of mid-list operations, atomic instructions are not an option.
+    	Because of the potential for deadlock (in <tt>suspend</tt>), coarser
+    	granularity (e.g. monitors) would be a poor choice.
+    	</P>
+    	<P>
+    	For <tt>submit_req</tt> and <tt>process_req</tt> we would take the
+    	mutex before calling <tt>enqueue</tt>/<tt>getnext</tt>, and release
+    	it immediately after their return.  In <tt>suspend_req</tt> we need
+    	to hold the locks around both the calls to <tt>dequeue</tt> and
+    	<tt>enqueue</tt>.
+    	</P>
+    	<P>
+    	There is a potential deadlock in <tt>suspend_req</tt> which needs
+    	to hold multiple queue locks.  The most likely prevention path
+    	is by request ordering (e.g. lock the queue with the lower
+    	address first).
+    	</P>
+    </UL>
+
+<H2>4a. DEADLK: Lock Manager(lease)</H2>
+<P>
+This was discussed in reading section(s) AD32.3<br>
+This was discussed in lecture section(s) 8C<br>
+</P>
+    <P>
+    Mutual exclusion is surely necessary, and since the applications
+    are running on different operating systems and machines, we probably
+    can't prevent them from blocking while holding network locks.  Because
+    the managed resources are arbitrary (and only some of them are owned
+    by the lock manager) probably makes ordering impractical.  This leaves
+    us with preemption.  We should implement leases with lock breaking.
+    </P>
+
+<H2>4b. DEADLK: Driver Queue(mutx,disable)</H2>
+<P>
+This was discussed in reading section(s) AD32.3<br>
+This was discussed in lecture section(s) 8C<br>
+</P>
+    <P>
+    Because we cannot use atomic instructions to maintain the request queue,
+    we will need to protect it with a lock.  A simple mutex would be adequate
+    to protect the queue from parallel updates by multiple readers and writers.
+    The deadlock potential comes from an interrupt routine needing to use the 
+    queue while a read or write routine was adding a request to it.
+    If the queue was locked when the interrupt came in, the interrupt routine
+    could not complete until the queue was unlocked, and the queue could not
+    be unlocked until the interrupt returned.  This suggests that interrupts
+    must be disabled when the queue is being updated.
+    </P>
+
+<H2>4c. DEADLK: dedicated bufs</H2>
+<P>
+This was discussed in reading section(s) AD32.3, Deadlock Avoidance<br>
+This was discussed in lecture section(s) 8C<br>
+</P>
+    <P>
+    This is very similar to the swap-manager buffer deadlock described in class.
+    This problem can be easily elminated by having each thread reserve an 
+    adequately large pool of message buffers up-front ... so that it does
+    not need to allocate additional memory later (when it is trying to process
+    requests).
+    </P>
+    <P>
+    A different approach would be to limit the number of incoming requests
+    as a means of controlling the total memory requirements.
+    </P>
+
+<H2>4d. DEADLK: hold and block</H2>
+<P>
+This was discussed in reading section(s) AD32.3<br>
+This was discussed in lecture section(s) 8C<br>
+</P>
+    <P>
+    Mutual exclusion is a given, and nothing about the problem suggests that we know
+    how to attack circular dependency or implement preemption.  This leaves us with
+    hold and wait.  A thread must release its lock while awaiting a message.
+    </P>
+
+<H2>5. Copy-on-Write</H2>
+<P>
+This was discussed in reading section(s) AD42.4,AD23.5<br>
+This was discussed in lecture section(s) 11GH,6F<br>
+</P>
+    <OL type="a">
+       <LI> In a copy-on-write file system, we do not over-write data/meta-data blocks; 
+            Rather we allocate a new block for the updated information, and then (recursively)
+    	update higher level structures to point to the new information. 
+          </li>
+       <LI> The old information remains un-modified, so if a pointer update is not written
+            out, the old pointer and data remain valid.  If new information is corrupted,
+    	it is easier to fall back to the previous information.
+          </li>
+       <LI> A copy-on-write clone (discussed for VMs and as a fork optimization) allows
+       	multiple files to share all the same (read-only) data blocks, and only 
+    	creates new copies when a change is made (and only of the blocks that changed).
+          </li>
+       <LI> Since old information is not over-written, it becomes possible to implement
+       	<em>time-travel</em> where the user can see older versions of files.
+          </li>
+       <LI> Since old data blocks are not over-written, we need a mechanism to
+       	eventually reclaim that space.
+          </li>
+       <LI> Periodically follow all of the I-node and block
+       	pointers to determine which blocks were still accessible, 
+    	and then garbage collect blocks that are no longer reachable.
+          </li>
+    </OL>
+
+<H2>6. new distributed service</H2>
+<P>
+This was discussed in reading section(s) AD47,Cryptography,Distributed Security,RESTful,SSL<br>
+This was discussed in lecture section(s) 11A,13BCGHI<br>
+</P>
+    <OL type="a">
+       <LI>	Several of the advantages of RESTful interfaces are applicable:
+       	<UL>
+    	   <LI> RESTful protocols are stateless, which enables fail-over
+    		in case of server-failure to provide better availability</li>
+    	   <LI> RESTful protocols are layerable, so that they can pass
+    	   	through higher level services like SSL or VPN to provide
+    		greater security</li>
+    	   <LI> RESTful protocols are cacheable, which could enable edge
+    	   	cache servers to reduce network and server load.</li>
+    	</UL>
+           </li>
+       <LI> 
+            A capability could be a description of a level of access to a 
+    	particular Key-Value store, and be encrypted with the KVS manager's
+    	private key.  Validation would be a simple matter of decrypting the
+    	capability (with the KVS manager's public key) and confirming that
+    	it granted the appropriate access to the indicated KVS.
+           </li>
+       <LI>
+           The capability could be returned to the creator in response to
+           a CREATE_KVS operation.
+           </li>
+       <LI>
+           Any agent who had a copy of the capability would be able to
+           perform operations on the associated KVS.
+           </li>
+       <LI>
+           The CREATE_KVS operation could return multiple capabilities 
+           (e.g. one for READ, one for WRITE, one for DELETE, one for DESTROY).
+           </li>
+       <LI>
+           Because the protocol is RESTful, and RESTful protocols layer,
+           operations could trivially be tunneled through an SSL/TLS session,
+           to provide protection from Man-in-the-Middle attacks.
+           </li>
+    </OL>
+
+</body>
+</html>

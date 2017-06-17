@@ -1,0 +1,69 @@
+
+
+
+
+	CS 111			Final (part 2)			06/12/2017
+
+
+
+Name __________________________________________________	exam #  ______
+
+
+Student ID # __________________________________________	
+
+
+
+This exam is comprised of six problems, each problem being a full page of related 
+questions.  You must choose three of these problems to answer.  You cannot answer
+more than three problems.  Review all of the questions and consider what answer you 
+would give to EACH part before deciding which three to answer.  All problems have the 
+same value.
+
+
+Read each question CAREFULLY, make sure you understand EXACTLY what question is being 
+asked and what type of answer is expected, and make sure that your answer clearly and 
+directly responds to the asked question.   Many students lose many points for answering 
+questions other than the one I asked.  If you are unsure of what a question is asking 
+for, raise your hand and ask.  
+
+
+I am looking for depth of understanding and the ability to solve real problems.  
+I want to see specific answers.  One-liners and vague generalities will receive 
+little or no credit.  Superficial answers that I may have accepted previously
+will not be accepted on this exam.  
+
+
+None of these questions requires long answers, but many of the questions may require 
+you to do a lot of thinking and sketching before you come up with a reasonable answer.
+Feel free to use scratch paper to organize your thoughts.  If the correct part of your
+answer is buried under a mountain of rambling, we may not find it.
+
+
+If you need more space, you can overflow onto the back page.  Note (on the problem
+page) that you are doing this.
+
+If you answer more than three problems, we will only grade the first three.  Circle
+the numbers of the three problems you want us to grade:
+
+
+
+	1. (design) User-Mode Threads Package
+
+
+	2. (concept) Dynamic Equilibrium
+
+
+	3. (code) Find and Fix Race Conditions
+
+
+	4. (approach) Deadlock Problems
+
+
+	5. (concept) Copy-on-Write File Systems
+
+
+	6. (protocol design) A New Distributed Service
+
+
+	Total
+

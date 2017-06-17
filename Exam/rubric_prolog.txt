@@ -1,0 +1,12 @@
+Detailed rubric (below) discusses how many poings should be given/deducted 
+for which aspects of each question.  Such rubric is often difficult to apply
+because some answers approach the problem from a very different direction.
+A more general set of rules can be used, both in places where the normal
+rubric seems inappropriate, and as a sanity check on the normal rubric:
+
+	>80%	a competent effort at a well-chosen approach
+	>60%	a reaonable effort, with a plausible but flawed approach
+	>40%	a weak effort, or a poorly chosen approach
+	>20%	a weak effort and a poorly chosen approach
+	<20%	fails to respond to the question
+

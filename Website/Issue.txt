@@ -1,0 +1,7 @@
+... You should be able to:
+<UL>
+    <LI>discuss the considerations to be weighed.</LI>
+    <LI>recognize situations where they do and do not apply.</LI>
+    <LI>interpret them in the context of a particular problem.</LI>
+    <LI>make and justify decisions based on them.</LI>
+</UL>

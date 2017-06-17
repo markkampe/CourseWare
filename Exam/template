@@ -1,0 +1,29 @@
+descr=20-30 characters long
+status=NEW
+lect=sections
+text=readings
+diff=
+#   difficulty (of the most difficult part)
+#	A: requires insight/skillful application
+#		analyze (predict/explain) or apply (solve new problem)
+#	B: requires understanding of the subject
+#		meanings/implications, details of non-trivial processes
+#		contrast, justify, non-trivial application, deep example
+#	C: requires remembering basic details
+#		major conclusions, lists, diagrams, criteria, 
+#		recognize, example, simple application
+#   novelty (of the most novel part)
+#	1: discussed and answered in reading or lecture
+#	2: discussion/application of discussed material
+#	3: find approach to a new problem
+pri=
+#   priority (of the most important part)
+#	1: primary learning objective (w/closely related secondaries)
+#	2: designated secondaries, details of primaries
+#	3: non-key concepts and details
+#lines=	how much room to leave for answer
+===QUESTION=== 
+===ANSWER===
+===RUBRIC===
+===NOTES===
+history of this question

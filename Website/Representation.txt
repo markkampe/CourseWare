@@ -1,0 +1,6 @@
+... You should be able to:
+<UL>
+    <LI>understand the purpose, advantages, limitations, and key elements of this form.</LI>
+    <LI>correctly describe information in that form.</LI>
+    <LI>answer questions about information presented in that form.</LI>
+</UL>

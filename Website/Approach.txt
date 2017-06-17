@@ -1,0 +1,9 @@
+(mechanism, algorithm, or architecture) ... You should be able to:
+<UL>
+    <LI>describe it, and what problem it addresses.</LI>
+    <LI>descibe its elements or steps.</LI>
+    <LI>explain its applicability and advantages relative to alternatives.</LI>
+    <LI>recognize and explain its limitations.</LI>
+    <LI>explain why it it is or is not appropriate for a particular problem.</LI>
+    <LI>describe how it could be applied to a particular problem.</LI>
+</UL>
