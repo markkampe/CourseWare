@@ -100,8 +100,14 @@ class schedule:
         print "%s<TD> %s </TD>" % (' ' * 2 * self.indent, date)
 
         print "%s<TD>" % (' ' * 2 * self.indent)
-        for t in self.topics[lecture]:
-            print "%s%s<br>" % (' ' * 3 * self.indent, t)
+        if lecture in self.topics.keys():
+            for t in self.topics[lecture]:
+                print "%s%s<br>" % (' ' * 3 * self.indent, t)
+        else:
+            sys.stderr.write("ERROR: scheduled lecture %s has no topics\n" %
+                             (lecture))
+            sys.exit(-1)
+
         print "%s</TD>" % (' ' * 2 * self.indent)
 
         print "%s<TD>" % (' ' * 2 * self.indent)
