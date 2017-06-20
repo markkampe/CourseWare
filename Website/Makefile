@@ -30,6 +30,19 @@ ucla: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(
 		$(OBJECTIVES) > keys.html
 	python $(PGM_SLIDES) --lectures=$(QUARTER) --prolog=pre_slides.html > slides.html
 
+ucla-17: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
+	rm -f schedule.html keys.html index.html syllabus.html
+	gcc -E -w -DUCLA syllabus.c | grep -v '^# ' > syllabus.html
+	gcc -E -w -DUCLA -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
+	gcc -E -w -DUCLA -DSEASON=$(SEASON) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)
+	python $(PGM_SCHED) --lectures=$(QUARTER) --topics=$(TOPICS) --col=17 \
+		--prolog=$(SCHED_PFX) --epilog=post.html --quizzes="CCLE"\
+		$(READINGS) > schedule.html
+	python $(PGM_OBJS) --lectures=$(QUARTER) --topics=$(TOPICS) --col=17 \
+		--prolog=$(KEY_PFX) --epilog=post.html -d \
+		$(OBJECTIVES) > keys.html
+	python $(PGM_SLIDES) --lectures=$(QUARTER) --prolog=pre_slides.html > slides.html
+
 
 pomona: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
 	rm -f schedule.html keys.html index.html syllabus.html
