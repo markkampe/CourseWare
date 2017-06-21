@@ -2,6 +2,7 @@
 #define COURSE	CS111
 #define PTE_PROCESS
 #define PROTEST_PROCESS
+#define GRADESCOPE Gradescope
 #define SCORE_X3	15
 #define	SCORE_EXAM	45
 #define	SCORE_P4	10
@@ -354,7 +355,7 @@ Letter Grading Scale:
     <li>I do not grade on a curve, but a fixed scale.
         The break points generally fall within two points
 	of 90/80/70/60</li>
-    <li>I do look carefully at the break points to make sure
+    <li>I do look carefully at the break points to try to ensure
 	that students who did similar work do not get different
 	grades</li>
     <li>if I make a mistake in a problem that makes it significantly 
@@ -378,8 +379,9 @@ Late and make-up policy:
 	    You are encouraged to check the on-line grade book regularly to ensure that all of
 	    your assignement grades have been properly recorded.
 	</li>
-	<li>I am always willing to explain <strong>exam</strong> grading criteria.</li>
-	<li>I am usually willing to regrade an <strong>exam</strong> problem 
+	<li>I am always willing to explain the correct answers and 
+	    <strong>exam</strong> grading criteria.</li>
+	<li>I am always willing to regrade an <strong>exam</strong> problem 
 	    if I misunderstood a clearly correct answer ... 
 	    but this does not extend to 
 	    <ul>
@@ -390,14 +392,14 @@ Late and make-up policy:
 	    </li>
 	<li>I will correct a quiz score if the auto-grader was unable to accept
 	    a correct answer.</li>
-	<li>I never raise grades in response to excuses or hardship stories.</li>
-	<li>I never assign makeup projects.  The only opportunity to improve 
+	<li>I <u>never</u> raise grades in response to excuses or hardship stories.</li>
+	<li>I <u>never</u> assign makeup projects.  The only opportunity to improve 
 	    a grade is before the assignment is submitted.</li>
 </ul>
 #ifdef PROTEST_PROCESS
 <P>
 If you believe that one of your exam answers was more correct than reflected
-by the awarded points:
+by the awarded points, and it was not simply a matter of mis-grading:
 <ol type="1">
 	<li> carefully review the posted solution, the relevant reading, and the
 	     relevant lecture notes.</li>
@@ -415,8 +417,12 @@ by the awarded points:
 		that was captured by your submission.
 		</li>
 	</ol>
+#ifdef GRADESCOPE
+	<li> submit your essay as a GRADESCOPE regrade request.</li>
+#else
 	<li> send me your essay in e-mail, along with the URL for 
 	     your solution.</li>
+#endif
 </ol>
 If your submission (a) shows a good understanding of the problem
 and significant insight into its solution, (b) makes a good case
@@ -428,8 +434,8 @@ WARNINGS:
 <UL>
    <li> This is not timed, and you are able to research your
    	position and consider your arguments; 
-	I will evaluate your arguments as a college level essay, 
-	that clearly demonstrates your undertstanding of the subject,
+	I will evaluate your arguments as a university level essay 
+	that clearly demonstrates your undertstanding of the subject
 	and a compelling argument for the correctness of the
 	answer you submitted.</li>
    <li> Do not bother explaining how you misunderstood the question
@@ -438,7 +444,7 @@ WARNINGS:
    <li>	If your (open-book, un-timed) essay demonstrates that 
 	(even after reviewing the reading, lecture notes, and posted 
 	solution) you still do not understand the question and its 
-	solution, your score may be further lowered.</li>
+	solution, <u>your score may be further lowered.</u></li>
 </UL>
 #endif
 
@@ -542,14 +548,19 @@ Please, do not test me on this matter.
 		<li>the complexity of the principles that must be applied</li>
 		<li>the amount of work involved in the projects</li>
 	    </ul>
-	<br>
+	<p>
 	People who have had little difficulty with previous Computer Science courses
 	are often surprised by the work load in this course.
-	<br>
+	</P></P>
 	Keeping up in this course requires considerable work and discipline.
-	<br>
+	</P></P>
+	In particular, projects must be started as soon as possible.
+	All (but the first) involve difficulties, and students wind up
+	losing many more points due to late submission than to 
+	functionality deficiencies.
+	</P></P>
 	Catching up after falling behind is extremely difficult.
-	<br>
+	</P>
 </ul>
 
 <H2><a name="standards">Related Curriculum Standards</a>*:</H2>
