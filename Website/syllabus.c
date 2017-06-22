@@ -486,9 +486,9 @@ submit projects on CCLE:
 <p>
 <ul>
 The most valuable thing you will get from this course is a mastery of concepts and 
-techiques that will serve you throughout your carrer.  
-Your grade in this course gives testemony to that mastery.
-But those benefits will only accrue, and the grade will only be meaninful if it is honestly earned.
+techiques that will serve you throughout your career.  
+Your grade in this course gives testimony to that mastery.
+But those benefits will only accrue, and the grade will only be meaningful if it is honestly earned.
 
 #ifdef UCLA
 Students must follow the 
