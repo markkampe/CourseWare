@@ -1,11 +1,17 @@
 #ifdef UCLA
 #define	COURSE CS111
+#define ROOM Math-Science 5200
 #define SUBMIT CCLE
 #define SUBMIT_URL "http://ccle.ucla.edu"
+#define BEFORE 1-2PM
+#define AFTER 4-5PM
 #else
 #define	COURSE CS134
+#define ROOM Edmunds ???
 #define	SUBMIT submit.cs.pomona.edu
 #define SUBMIT_URL "http:submit.cs.pomona.edu"
+#define BEFORE 11-12AM
+#define AFTER 2:30-3:30PM
 #define STUDENT_PRES
 #endif
 <html><head>
@@ -22,11 +28,10 @@
 </P>
 Office/Hours:
 <UL>
+	<li>ROOM</li>
 #ifdef UCLA
-	<li>Boelter Hall 4531M</li>
 	<li>Tuesday/Thursday before (1-2PM) and after (4-5PM) class</li>
 #else
-	<li>Edmunds ???</li>
 	<li>Monday/Wednesday before (11-12AM) and after (2:30-3:30PM) class</li>
 #endif
 </UL>
@@ -53,7 +58,7 @@ Information specific to the current (SEASON YEAR) section:
 		on-line forum</A> for requesting in-class discussion topics.</li>
 #endif
 	<li> <a href="slides/slides.html">Lecture slides</a>.</li>
-	<li> <A Href="projects/Edison.html">Ordering your Edison</A></li>
+	<li> <A Href="projects/ordering.html">Ordering your Embedded System</A></li>
 	<LI> Project Due Dates (submission via <A Href=SUBMIT_URL>SUBMIT</A>)
 		<P>
 			Projects follow quickly after the readings and lectures in which 
@@ -77,16 +82,16 @@ Information specific to the current (SEASON YEAR) section:
 		<TABLE><TBODY>
 		<TR> <TH>Due</TH>		<TH>Project</TH></TR>
 #ifdef UCLA
-		<TR> <TD>Mon 04/10 23:59</TD>	<TD><A Href="projects/P0.html">P0. Warmup</A></TD>			</TR>
-		<TR> <TD>Mon 04/17 23:59</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
-		<TR> <TD>Mon 04/24 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. IPC and encryption</A></TD>	</TR>
-		<TR> <TD>Mon 05/01 23:59</TD>	<TD><A Href="projects/P4A.html">P4A. Edison Bringup</A></TD>		</TR>
-		<TR> <TD>Mon 05/08 23:59</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
-		<TR> <TD>Mon 05/15 23:59</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>		</TR>
-		<TR> <TD>Mon 05/22 23:59</TD>	<TD><A Href="projects/P4B.html">P4B. Sensors and communication</A></TD>	</TR>
-		<TR> <TD>Mon 05/29 23:59</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A></TD></TR>
-		<TR> <TD>Mon 06/05 23:59</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis</A></TD>	</TR>
-		<TR> <TD>Mon 06/12 23:59</TD>	<TD><A Href="projects/P4C.html">P4C. IOT Secure communication</A></TD>	</TR>
+		<TR> <TD>Mon 04/09 23:59</TD>	<TD><A Href="projects/P0.html">P0. Warmup</A></TD>			</TR>
+		<TR> <TD>Mon 04/16 23:59</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
+		<TR> <TD>Mon 04/23 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. IPC and encryption</A></TD>	</TR>
+		<TR> <TD>Mon 04/30 23:59</TD>	<TD><A Href="projects/P4A.html">P4A. Embedded System Bringup</A></TD>	</TR>
+		<TR> <TD>Mon 05/07 23:59</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
+		<TR> <TD>Mon 05/14 23:59</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>		</TR>
+		<TR> <TD>Mon 05/21 23:59</TD>	<TD><A Href="projects/P4B.html">P4B. Sensors and communication</A></TD>	</TR>
+		<TR> <TD>Mon 05/28 23:59</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A></TD></TR>
+		<TR> <TD>Mon 06/04 23:59</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis</A></TD>	</TR>
+		<TR> <TD>Mon 06/11 23:59</TD>	<TD><A Href="projects/P4C.html">P4C. IOT Secure communication</A></TD>	</TR>
 #else
 		<TR> <TD>Mon 01/23 23:59</TD>	<TD><A Href="projects/P0.html">P0. Warmup</A></TD>			</TR>
 		<TR> <TD>Mon 01/30 23:59</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
@@ -113,9 +118,9 @@ Information specific to the current (SEASON YEAR) section:
 		<TABLE><TBODY>
 		<TR> <TH>Date</TH>		<TH>Exam</TH>		</TR>
 #ifdef UCLA
-		<TR> <TD>Thu 05/04</TD>		<TD>Mid-Term</TD>	</TR>
-		<TR> <TD>Mon 06/12</TD>		<TD>Final (part 1)</TD>	</TR>
-		<TR> <TD>Mon 06/12</TD>		<TD>Final (part 2)</TD>	</TR>
+		<TR> <TD>Thu 05/03</TD>		<TD>Mid-Term</TD>	</TR>
+		<TR> <TD>Mon 06/11</TD>		<TD>Final (part 1)</TD>	</TR>
+		<TR> <TD>Mon 06/11</TD>		<TD>Final (part 2)</TD>	</TR>
 #else
 		<TR> <TD>Wed 03/08</TD>		<TD>Mid-Term</TD>	</TR>
 		<TR> <TD>Thu 05/11</TD>		<TD>Final (part 1)</TD>	</TR>
