@@ -15,7 +15,7 @@ SCHED_PFX=pre_schedule.html
 KEY_PFX=pre_keys.html
 
 SEASON=Spring
-YEAR=2017
+YEAR=2018
 
 ucla: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
 	rm -f schedule.html keys.html index.html syllabus.html
