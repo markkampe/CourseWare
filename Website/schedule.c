@@ -1,5 +1,5 @@
 #define SEASON Spring
-#define YEAR 2017
+#define YEAR 2018
 #ifdef UCLA
 #define COURSE CS111
 #else
