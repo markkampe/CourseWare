@@ -1,2 +1,3 @@
 SOMEDAY:
-	I should be able to generate the project/exam schedule out of the QUARTER.csv
+	I should be able to generate the project/exam schedule in index.html out of the QUARTER.csv
+	The Season/Year in pre_schedule.html should come from macros
