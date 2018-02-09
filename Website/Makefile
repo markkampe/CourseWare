@@ -22,10 +22,10 @@ ucla: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(
 	gcc -E -w -DUCLA syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -DUCLA -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
 	gcc -E -w -DUCLA -DSEASON=$(SEASON) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)
-	python $(PGM_SCHED) --lectures=$(QUARTER) --topics=$(TOPICS) --col=18 \
+	python $(PGM_SCHED) --lectures=$(QUARTER) --topics=$(TOPICS) --col=19 \
 		--prolog=$(SCHED_PFX) --epilog=post.html --quizzes="CCLE"\
 		$(READINGS) > schedule.html
-	python $(PGM_OBJS) --lectures=$(QUARTER) --topics=$(TOPICS) --col=18 \
+	python $(PGM_OBJS) --lectures=$(QUARTER) --topics=$(TOPICS) --col=19 \
 		--prolog=$(KEY_PFX) --epilog=post.html -d \
 		$(OBJECTIVES) > keys.html
 	python $(PGM_SLIDES) --lectures=$(QUARTER) --prolog=pre_slides.html > slides.html

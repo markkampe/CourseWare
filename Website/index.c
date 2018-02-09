@@ -50,14 +50,16 @@ Information specific to the current (SEASON YEAR) section:
 		of reading assignments, lectures and quizzes.</li>
 #ifdef UCLA
 	<li> daily quizzes in <a href="https://ccle.ucla.edu">CCLE</a></li>
-	<li> <a href="https://ccle.ucla.edu/mod/forum/view.php?id=1402048">
-		on-line forum</A> for requesting in-class discussion topics.</li>
+	<li> <a href="https://piazza.com/class/jdabtkwr46f7mn">Piazza</a> 
+		on-line forum for on-line discussions and requesting 
+		in-class discussion topics.</li>
 #else
 	<li> daily quizzes in <a href="https://sakai.claremont.edu">Sakai</a></li>
 	<li> <a href="https://sakai.claremont.edu/portal/site/CX_mtg_99138/page/9df25280-a728-4a77-a303-d039686a845d">
 		on-line forum</A> for requesting in-class discussion topics.</li>
 #endif
-	<li> <a href="slides/slides.html">Lecture slides</a>.</li>
+	<li> <a href="slides/index.html">Lecture slides</a>.</li>
+	<li> <a href="https://gradescope.com/courses/13796">Gradescope</a> website for exam feedback.</li>
 	<li> <A Href="projects/ordering.html">Ordering your Embedded System</A></li>
 	<LI> Project Due Dates (submission via <A Href=SUBMIT_URL>SUBMIT</A>)
 		<P>
@@ -84,7 +86,7 @@ Information specific to the current (SEASON YEAR) section:
 #ifdef UCLA
 		<TR> <TD>Mon 04/09 23:59</TD>	<TD><A Href="projects/P0.html">P0. Warmup</A></TD>			</TR>
 		<TR> <TD>Mon 04/16 23:59</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
-		<TR> <TD>Mon 04/23 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. IPC and encryption</A></TD>	</TR>
+		<TR> <TD>Mon 04/23 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. Compressed Communication</A></TD>	</TR>
 		<TR> <TD>Mon 04/30 23:59</TD>	<TD><A Href="projects/P4A.html">P4A. Embedded System Bringup</A></TD>	</TR>
 		<TR> <TD>Mon 05/07 23:59</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
 		<TR> <TD>Mon 05/14 23:59</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>		</TR>
@@ -95,7 +97,7 @@ Information specific to the current (SEASON YEAR) section:
 #else
 		<TR> <TD>Mon 01/23 23:59</TD>	<TD><A Href="projects/P0.html">P0. Warmup</A></TD>			</TR>
 		<TR> <TD>Mon 01/30 23:59</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
-		<TR> <TD>Mon 02/06 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. IPC and encryption</A></TD>		</TR>
+		<TR> <TD>Mon 02/06 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. Compressed communication</A></TD>	</TR>
 		<TR> <TD>Mon 02/13 23:59</TD>	<TD><A Href="projects/P4A.html">P4A. Edison Bringup</A></TD>		</TR>
 		<TR> <TD>Mon 02/27 23:59</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
 		<TR> <TD>Mon 03/06 23:59</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>			</TR>
@@ -107,10 +109,12 @@ Information specific to the current (SEASON YEAR) section:
 		</TBODY></TABLE>
 	<P>
 	Projects 2 and 3 are heavily based on the reading and lectures, and would
-	be difficult to before the associated material (on synchronization and file systems)
+	be difficult to do before the associated material (on synchronization and file systems)
 	has been covered.
 	Projects 0, 4 and (to a lesser extent) 1 are much less dependent on reading
 	and lectures and can be started at any time.
+	You will find that, if you start each project as soon as possible, you will earn
+	much better project scores.
 	</p>
 	</LI>
 	<P></P>
@@ -119,8 +123,8 @@ Information specific to the current (SEASON YEAR) section:
 		<TR> <TH>Date</TH>		<TH>Exam</TH>		</TR>
 #ifdef UCLA
 		<TR> <TD>Thu 05/03</TD>		<TD>Mid-Term</TD>	</TR>
-		<TR> <TD>Mon 06/11</TD>		<TD>Final (part 1)</TD>	</TR>
-		<TR> <TD>Mon 06/11</TD>		<TD>Final (part 2)</TD>	</TR>
+		<TR> <TD>Wed 06/13</TD>		<TD>Final (part 1)</TD>	</TR>
+		<TR> <TD>Wed 06/13</TD>		<TD>Final (part 2)</TD>	</TR>
 #else
 		<TR> <TD>Wed 03/08</TD>		<TD>Mid-Term</TD>	</TR>
 		<TR> <TD>Thu 05/11</TD>		<TD>Final (part 1)</TD>	</TR>

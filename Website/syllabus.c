@@ -1,12 +1,15 @@
+#define SCORE_QUIZ	10
+#define SCORE_X1	15
+#define SCORE_X2	15
 #ifdef	UCLA
 #define COURSE	CS111
 #define PTE_PROCESS
 #define PROTEST_PROCESS
 #define GRADESCOPE Gradescope
-#define SCORE_X3	15
-#define	SCORE_EXAM	45
-#define	SCORE_P4	10
-#define	SCORE_PROJ	45	
+#define SCORE_X3	10
+#define	SCORE_EXAM	40
+#define	SCORE_P4	15
+#define	SCORE_PROJ	50	
 #else
 #define	COURSE	CS134
 #define	SCORE_PRES	10
@@ -23,7 +26,7 @@
 <body>
 <center>
 <h1>Operating Systems Principles</h1>
-Last updated: Mar 24, 2017
+Last updated: Feb 09, 2018
 </center>
 
 <hr>
@@ -31,7 +34,7 @@ Last updated: Mar 24, 2017
 <a href="http://www.linkedin.com/in/markkampe">Mark Kampe</a>
 </h2>
 <ul>
-	My background is not academic.  I am a professional engineer.
+	My background is not academic, but in Operating Systems development.
 	I have spent over 40 years designing, building, and guiding operating systems, 
 	operating systems related projects, and system software development teams.
 	Much of my work has focused on high performance and highly available
@@ -59,8 +62,8 @@ Last updated: Mar 24, 2017
 		     and principles that have emerged from (or been best articulated in)
 		     operating systems.</li>
 		<li> provide all students with a conceptual foundation that will enable
-		     them to read well written introductory level OS-related papers, and
-		     engage in intelligent discussions of those topics and participate
+		     them to read well written introductory level OS-related papers,
+		     engage in intelligent discussions of those topics, and participate
 		     in entry-level OS-related projects.</li>
 		<li> non-objectives ... things often taught in other OS courses:</li>
 		<ul>
@@ -107,7 +110,7 @@ Last updated: Mar 24, 2017
 	This course introduces an extremely wide range of new concepts, and so
 	involves a great deal of reading.
 	Most of the readings for this course will come from 
-	<a href="http:pages.cs.wisc.edu/~remzi">Remzi Arpaci-Dusseau</a>'s 
+	<a href="http://pages.cs.wisc.edu/~remzi">Remzi Arpaci-Dusseau</a>'s 
 	<a href="http://pages.cs.wisc.edu/~remzi/OSTEP">
 	Operating Systems in Three Easy Pieces</a>.  
 	This text was 
@@ -123,7 +126,8 @@ Last updated: Mar 24, 2017
 		    in synchronization and file systems.</li>
 		<li>avoidance of gratuitous formalisms, ancient history, and 
 		    low-value tangents.</li>
-		<li>it is an Open Source effort ... a movement for which many
+		<li>it is an <A Href="https://en.wikipedia.org/wiki/Open-source_model">Open Source</a>
+		    effort ... a movement for which many
 		    of us have tremendous respect.  A very practical implication
 		    of this decision is that students are not required to 
 		    purchase a text book.</li>
@@ -132,7 +136,7 @@ Last updated: Mar 24, 2017
 <p>
 	The primary weaknesses of this text seem to be:
 	<UL>
-		<LI>much more focused on mechanisms than principles</li>
+		<LI>focused on mechanisms than principles</li>
 		<LI>subjects and examples are limited to those found in the Linux kernel</li>
 	</UL>
 	<P>
@@ -143,7 +147,7 @@ Last updated: Mar 24, 2017
 		<li> numerous readings from chapter 2 (System Calls) of the Linux
 		     Programmers' Manual as detailed examples</li>
 		<li> Wikipedia articles for general overviews of areas not covered by
-		     the other texts</li>
+		     the other readings</li>
 	</ul>
 </p>
 </ul>
@@ -158,7 +162,7 @@ Last updated: Mar 24, 2017
 	<li> file I/O and Inter-Process Communication</li>
 	<li> synchronization, and contention </li>
 	<li> file systems </li>
-	<li> IOT and embedded system security</li>
+	<li> Internet-of-Things (IOT) and embedded system security</li>
    </ul>
    </p>
    <p>
@@ -190,28 +194,24 @@ Last updated: Mar 24, 2017
 		     to have access to a multi-core CPU (departmental servers
 		     will do).</li>
 	        <li> Parts of Project 4 (Embedded System) will require you to be able to
-		     connect your Edison directly (via USB) to another computer.</li>
+		     connect your embedded system directly (via USB) to another computer.</li>
 	     </ul>
    	</li>
-        <li> An Intel Edison development system, including:
+        <li> An embedded development system, including:
 	     <ul>
-	     	<li>an Intel Edison Kit for Arduino ... a small, low-power,
-		    system on a chip with Arduino-compatible input/output
-		    connectors (~$85)</li>
-		<li>a Grove Starter Kit for Arduino ... a collection of
+	     	<li>an BeagleBone Green ... a small, low-power,
+		    system on a chip with numerous general purpose I/O pins</li>
+		<li>a Grove Starter Kit ... a collection of
 		    sensors, actuators, and display devices for embedded
-		    system hobby projects (~$40)</li>
-		<li>a suitable power supply for the Edison board ...
-		    9v, 650mA, 5.5x2.1mm center positive (~$6)</li>
-	     	<li>a USB to micro-USB cord capable of carrying
-		    1A of power (~$5)</li>
+		    system hobby projects</li>
+		<li>a suitable micro-USB power supply for the embedded board </li>
 	     </ul>
 	     All of these parts are widely avaiable and,
 	     ironically, they will cost you just about the same amount
 	     of money you would have otherwise spent on an Operating
 	     Systems text.  But, if you are taking this course, the 
-	     odds are that you will find many other uses for your
-	     Edison after this course is over.
+	     odds are that you will find many other uses for your embedded
+	     development system after this course is over.
         </li>
    </ul>
    </p>
@@ -230,6 +230,14 @@ Last updated: Mar 24, 2017
 	<li> work through and discuss important but non-trivial examples from the reading.</li>
 	<li> discuss perspectives, implications, and applications not covered by the reading.</li>
     </ul>
+    <P>
+    You can help to enrich the quality of the lecture sessions by:
+    <ul>
+    	<li> using the on-line Piazza forum to suggest questions and topics
+	     to be discussed during the lecture sessions.</li>
+	<li> asking questions during the lecture sessions.</li>
+    </ul>
+    </P>
 	<P>
 	To ensure that students have done the reading, and come to class prepared to engage
 	in deeper exploration of the topics, an on-line quiz (based on the assigned reading)
@@ -268,7 +276,7 @@ The most reliable way to reach me is via email or google-talk
 <P>
 Grades in this course are based on:
 <ul>
-	<li>10% daily quizzes on the assigned reading.
+	<li>SCORE_QUIZ% daily quizzes on the assigned reading.
 	    <P>
 	    These must be completed, on-line, prior to each lecture.
 	    Each quiz is a one digit number of short-answer questions.
@@ -339,8 +347,8 @@ Grades in this course are based on:
 	    </p>
 	    Breakdown of points among the exams:
 	    <ul>
-		<li>15% midterm (concepts)</li>
-		<li>15% final exam - part 1 (concepts)</li>
+		<li>SCORE_X1% midterm (concepts)</li>
+		<li>SCORE_X2% final exam - part 1 (concepts)</li>
 		<li>SCORE_X3% final exam - part 2 (applications)</li>
 	    </ul>
 	    </li>
@@ -362,6 +370,45 @@ Letter Grading Scale:
 	more difficult than intended, I will adjust the scale
 	to compensate for my mistake</li>
 </ul>
+<a name="quizzes">Moodle Quizzes</A> ... an apology:
+<ul>
+	<P>
+        When classes had only 40-50 students, quiz questions were short-answer, 
+        I graded them personally, and returned them the next day.
+	With classes of 120-160 students this is no longer possible, and
+	I have been forced to move to automated <a href="https://moodle.com">moodle</a> quizzes,
+	administered on the CCLE website.
+	</P>
+	<P>
+	It is very difficult to do short-answer questions in moodle, as even minor variations
+	in punctuation result in answers being scorred as incorrect.  As a result, virtually
+	all of the questions are multiple-choice or matching.  In order to keep these
+	questions from being trivial, it is necessary to include options that sound reasonable,
+	but are wrong in some detail.  Students are often understandably unhappy
+	about missing a question becauce their chosen answer was subtly wrong.  
+	I wish I could give short-answer quiz questions ... but I can't.
+	</P>
+	<P>
+	Since the quizzes and readings are on-line, many students try to cheat by looking up the
+	answers.  Since looking up answers defeats the purpose (encouraging you to do the reading),
+	quiz questions often use different words than the reading, and are time limited.  
+	If you know the answers, you should have ample time to read the options and make your selection.
+	But you will find it difficult to finish the quiz within the allowed time 
+	if you are trying to look up the answers.
+	</P>
+	<P>
+	I along with most students dislike this format ... but despite all of these irritations,
+	experience shows that quiz scores are well corellated with final grades in the class ...
+	and A students typically get quiz scores in the 85-100 range.
+	</P>
+	<P>
+	But, while I feel locked into the format, I am concerned about ensuring the fairness of
+	questions and the relevance of the topics they cover.  If you have suggestions for how
+	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
+	your suggestions.
+	</P>
+</ul>
+
 Late and make-up policy:
 <ul>
 	<li>there are no make-ups for quizzes, but you can
@@ -492,15 +539,9 @@ But those benefits will only accrue, and the grade will only be meaningful if it
 
 #ifdef UCLA
 Students must follow the 
-<a href='http://www.deanofstudents.ucla.edu/Portals/16/Documents/144317_condeofcoduct_MarchV2_final%20with%20links.pdf'>
+<a href='https://www.deanofstudents.ucla.edu/Student-Conduct'>
 Student Conduct Code</a>, 
 which prohibits cheating, fabrication, multiple submissions, and facilitating academic dishonesty. 
-A summary of the academic integrity material of the Student Conduct Code can be found in the 
-<a href='http://www.deanofstudents.ucla.edu/Portals/16/Documents/StudentGuide.pdf'>Student
-Guide to Academic Integrity</a>, 
-and the 
-<a href='http://www.deanofstudents.ucla.edu/'>Office of the Dean of Students</a> has a <a
-href='http://www.deanofstudents.ucla.edu/Video'>workshop on academic integrity</a>.*</p>
 #endif
 #ifdef POMONA
 Students must follow the Academic Honesty standards of both 
@@ -565,7 +606,7 @@ Please, do not test me on this matter.
 
 <H2><a name="standards">Related Curriculum Standards</a>*:</H2>
 <p>
-Related <a href='http://www.acm.org/education/CS2013-final-report.pdf'>Computer
+Related <a href="https://www.acm.org/binaries/content/assets/education/cs2013_web_final.pdf">Computer
 Science Curricula 2013</a> knowledge areas:</p>
 
 <ul>
@@ -606,8 +647,7 @@ href='http://sites.computer.org/ccse/'>IEEE/ACM Software Engineering
     <li>FND.ef.4. Systems development (e.g., security, safety, performance, effects of scaling, feature interaction, etc.)</li>
 </ul>
 <br><br>
-*These sections are taken, with permission, from 
-<A Href="http://web.cs.ucla.edu/classes/winter/cs111/index.html">Prof Eggert's CS111 Syllabus</a>.
+*These sections are taken, with permission, from Prof Eggert's CS111 Syllabus</a>.
 <br><hr><br>
 <font face = "Arial Helvetica" color = #0000FF size = 2>
 For information about these pages, contact
