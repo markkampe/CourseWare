@@ -1,6 +1,6 @@
 #ifdef UCLA
 #define	COURSE CS111
-#define ROOM Math-Science 5200
+#define ROOM Boelter 3531C
 #define SUBMIT CCLE
 #define SUBMIT_URL "http://ccle.ucla.edu"
 #define BEFORE 1-2PM
@@ -91,19 +91,23 @@ Information specific to the current (SEASON YEAR) section:
 		<TR> <TD>Mon 05/07 23:59</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
 		<TR> <TD>Mon 05/14 23:59</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>		</TR>
 		<TR> <TD>Mon 05/21 23:59</TD>	<TD><A Href="projects/P4B.html">P4B. Sensors and communication</A></TD>	</TR>
-		<TR> <TD>Mon 05/28 23:59</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A></TD></TR>
-		<TR> <TD>Mon 06/04 23:59</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis</A></TD>	</TR>
+		<TR> <TD>Mon 05/28 23:59</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A>
+			(optionally w/2 person teams)</TD></TR>
+		<TR> <TD>Mon 06/04 23:59</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis
+			(optionally w/2 person teams)</A></TD>	</TR>
 		<TR> <TD>Mon 06/11 23:59</TD>	<TD><A Href="projects/P4C.html">P4C. IOT Secure communication</A></TD>	</TR>
 #else
 		<TR> <TD>Mon 01/23 23:59</TD>	<TD><A Href="projects/P0.html">P0. Warmup</A></TD>			</TR>
 		<TR> <TD>Mon 01/30 23:59</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
 		<TR> <TD>Mon 02/06 23:59</TD>	<TD><A Href="projects/P1B.html">P1B. Compressed communication</A></TD>	</TR>
-		<TR> <TD>Mon 02/13 23:59</TD>	<TD><A Href="projects/P4A.html">P4A. Edison Bringup</A></TD>		</TR>
+		<TR> <TD>Mon 02/13 23:59</TD>	<TD><A Href="projects/P4A.html">P4A. Embedded System Bringup</A></TD>	</TR>
 		<TR> <TD>Mon 02/27 23:59</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
 		<TR> <TD>Mon 03/06 23:59</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>			</TR>
 		<TR> <TD>Mon 03/20 23:59</TD>	<TD><A Href="projects/P4B.html">P4B. Sensors and communication</A></TD>	</TR>
-		<TR> <TD>Mon 04/03 23:59</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A></TD>	</TR>
-		<TR> <TD>Mon 04/17 23:59</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis</A></TD>	</TR>
+		<TR> <TD>Mon 04/03 23:59</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation
+			(optionally w/2 person teams)</A></TD>	</TR>
+		<TR> <TD>Mon 04/17 23:59</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis
+			(optionally w/2 person teams)</A></TD>	</TR>
 		<TR> <TD>Mon 05/05 23:59</TD>	<TD><A Href="projects/P4C.html">P4C. IOT Secure communication</A></TD>	</TR>
 #endif
 		</TBODY></TABLE>
@@ -122,7 +126,7 @@ Information specific to the current (SEASON YEAR) section:
 		<TABLE><TBODY>
 		<TR> <TH>Date</TH>		<TH>Exam</TH>		</TR>
 #ifdef UCLA
-		<TR> <TD>Thu 05/03</TD>		<TD>Mid-Term</TD>	</TR>
+		<TR> <TD>Thu 05/03</TD>		<TD>Mid-Term (<a href="sample.html">sample questions</a>)</TD></TR>
 		<TR> <TD>Wed 06/13</TD>		<TD>Final (part 1)</TD>	</TR>
 		<TR> <TD>Wed 06/13</TD>		<TD>Final (part 2)</TD>	</TR>
 #else
