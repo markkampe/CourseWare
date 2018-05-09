@@ -356,20 +356,27 @@ Grades in this course are based on:
 <P>
 Students with good programming backgrounds generally do very well on the lab projects.
 Quiz scores tend to be well corellated with scores on the mid-term and part 1 of the final.
-Scores for part 2 of the final exam tend to be distributed over a much wider range.
+Scores for part 2 of the final exam (problem solving vs. memory/understanding) tend to 
+be distributed over a much wider range.
 </P>
+<P>
 Letter Grading Scale:
 <ul>
     <li>I do not grade on a curve, but a fixed scale.
-        The break points generally fall within two points
-	of 90/80/70/60</li>
+	I am not trying to assign students to performance percentiles,
+	but rather to assess their mastery of the 
+	<a Href="keys.html">course learning objectives</a>.
+	</li>
     <li>I do look carefully at the break points to try to ensure
 	that students who did similar work do not get different
-	grades</li>
+	grades, but the major break points generally fall within a point or 
+	two of 88/78/68/58.
+	</li>
     <li>if I make a mistake in a problem that makes it significantly 
 	more difficult than intended, I will adjust the scale
 	to compensate for my mistake</li>
 </ul>
+</P>
 <a name="quizzes">Moodle Quizzes</A> ... an apology:
 <ul>
 	<P>
@@ -382,27 +389,16 @@ Letter Grading Scale:
 	<P>
 	It is very difficult to do short-answer questions in moodle, as even minor variations
 	in punctuation result in answers being scorred as incorrect.  As a result, virtually
-	all of the questions are multiple-choice or matching.  In order to keep these
+	all quiz questions are multiple-choice or matching.  In order to keep these
 	questions from being trivial, it is necessary to include options that sound reasonable,
-	but are wrong in some detail.  Students are often understandably unhappy
-	about missing a question becauce their chosen answer was subtly wrong.  
-	I wish I could give short-answer quiz questions ... but I can't.
+	but are wrong in some detail.
+	I (along with most students) dislike this format ... but despite these irritations,
+	experience shows that quiz scores are well corellated with (and a little bit better than)
+	exam scores.  Most A-students seem to earn quiz scores in the 90s.
 	</P>
+	<IMG src="quiz_vs_exam.jpg" alt="scatter plot of quiz vs exam scores"></IMG>
 	<P>
-	Since the quizzes and readings are on-line, many students try to cheat by looking up the
-	answers.  Since looking up answers defeats the purpose (encouraging you to do the reading),
-	quiz questions often use different words than the reading, and are time limited.  
-	If you know the answers, you should have ample time to read the options and make your selection.
-	But you will find it difficult to finish the quiz within the allowed time 
-	if you are trying to look up the answers.
-	</P>
-	<P>
-	I along with most students dislike this format ... but despite all of these irritations,
-	experience shows that quiz scores are well corellated with final grades in the class ...
-	and A students typically get quiz scores in the 85-100 range.
-	</P>
-	<P>
-	But, while I feel locked into the format, I am concerned about ensuring the fairness of
+	While I feel locked into the format, I am concerned about ensuring the fairness of
 	questions and the relevance of the topics they cover.  If you have suggestions for how
 	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
 	your suggestions.
@@ -433,8 +429,7 @@ Late and make-up policy:
 	    but this does not extend to 
 	    <ul>
 	    	<li>reinterpreting vague or poorly written answers</li>
-		<li>giving credit for having misunderstood the question</li>
-		<li>giving credit for not having fully understood problem</li>
+		<li>giving credit for not having properly or fully understood problem</li>
 	    </ul>
 	    </li>
 	<li>I will correct a quiz score if the auto-grader was unable to accept
@@ -445,8 +440,11 @@ Late and make-up policy:
 </ul>
 #ifdef PROTEST_PROCESS
 <P>
-If you believe that one of your exam answers was more correct than reflected
-by the awarded points, and it was not simply a matter of mis-grading:
+If you believe that your answer was <u>clearly correct</u> and was simply
+mis-read or mis-graded, submit a re-grade request from within GRADESCOPE.
+<br>
+If your answer did not agree with the posted solution, but you believe it was
+more correct than reflected by the awarded points:
 <ol type="1">
 	<li> carefully review the posted solution, the relevant reading, and the
 	     relevant lecture notes.</li>
@@ -465,7 +463,7 @@ by the awarded points, and it was not simply a matter of mis-grading:
 		</li>
 	</ol>
 #ifdef GRADESCOPE
-	<li> submit your essay as a GRADESCOPE regrade request.</li>
+	<li> submit your essay as part of a GRADESCOPE regrade request.</li>
 #else
 	<li> send me your essay in e-mail, along with the URL for 
 	     your solution.</li>
@@ -572,9 +570,11 @@ statement that is not your own, <strong>cite your source</strong>.
 <P>
 If you have questions about the policy, please discuss them with me.
 Be warned that I take Academic Honesty deadly seriously.  I use a variety of tools and
-techniques to detect plagiarism, I report all suspected cases,
-and I seek full prosecution of every case I report.  
-Please, do not test me on this matter.
+techniques to detect plagiarism, I report all suspected cases to the Dean's office,
+and I seek <u>full</u> prosecution of every case I report.  
+</P>
+<P>
+<strong>Please, do not test me on this matter</strong>.
 </p>
 </UL>
 
