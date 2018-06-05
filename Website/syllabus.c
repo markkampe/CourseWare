@@ -443,7 +443,8 @@ Late and make-up policy:
 If you believe that your answer was <u>clearly correct</u> and was simply
 mis-read or mis-graded, submit a re-grade request from within GRADESCOPE.
 <br>
-If your answer did not agree with the posted solution, but you believe it was
+If your answer did not agree with the posted solution or clear statements in the
+reading/lectures, but you believe it was
 more correct than reflected by the awarded points:
 <ol type="1">
 	<li> carefully review the posted solution, the relevant reading, and the
@@ -490,6 +491,8 @@ WARNINGS:
 	(even after reviewing the reading, lecture notes, and posted 
 	solution) you still do not understand the question and its 
 	solution, <u>your score may be further lowered.</u></li>
+   <li> Attempts to defend incorrect answers are more likely
+   	to lose points than to gain them.</li>
 </UL>
 #endif
 
