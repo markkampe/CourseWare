@@ -3,7 +3,7 @@
 # and have a pointer to the question data
 #
 PGM=../Python/exam.py
-DATABASE=/mnt/diskstation/markk/Documents/OS_Exams
+DATABASE=$(HOME)/EXAMS
 LIST=$(DATABASE)/exams.csv
 
 LINES=70
