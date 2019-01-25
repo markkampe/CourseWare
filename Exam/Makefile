@@ -32,11 +32,23 @@ ifeq ($(X), 1)
 	TITLE=Midterm
 	PROLOG=x1_prolog.txt
 endif
+ifeq ($(X), A)
+	TITLE=Midterm
+	PROLOG=x1_prolog.txt
+endif
 ifeq ($(X), 2)
 	TITLE=Final part I
 	PROLOG=x1_prolog.txt
 endif
+ifeq ($(X), B)
+	TITLE=Final part I
+	PROLOG=x1_prolog.txt
+endif
 ifeq ($(X), 3)
+	TITLE=Final part II
+	PROLOG=x3_prolog.txt
+endif
+ifeq ($(X), C)
 	TITLE=Final part II
 	PROLOG=x3_prolog.txt
 endif
