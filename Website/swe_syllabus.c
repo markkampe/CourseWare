@@ -1,8 +1,5 @@
-#define SCORE_QUIZ	10
-#define SCORE_X1	15
-#define SCORE_X2	15
-#ifdef	UCLA
-#define COURSE	CS111
+#include "courseinfo.h"
+#ifdef  UCLA
 #define PTE_PROCESS
 #define PROTEST_PROCESS
 #define GRADESCOPE Gradescope
@@ -10,32 +7,53 @@
 #define	SCORE_EXAM	40
 #define	SCORE_P4	15
 #define	SCORE_PROJ	50	
-#else
-#define	COURSE	CS134
+#endif  UCLA
+#ifdef POMONA
 #define	SCORE_PRES	10
 #define SCORE_X3	10
 #define	SCORE_EXAM	40
 #define	SCORE_P4	5
 #define	SCORE_PROJ	40	
-#endif
+#endif  POMONA
+#define SCORE_QUIZ	10
+#define SCORE_X1	15
+#define SCORE_X2	15
 <html>
 <head>
-<title>COURSE Syllabus</title>
+<title>NUMBER Syllabus</title>
 </head>
 
 <body>
 <center>
-<h1>Operating Systems Principles</h1>
-Last updated: Feb 09, 2018
+<h1>COURSE</h1>
+Last updated: May 09, 2019
 </center>
 
-<hr>
+<h2> <a name="objectives">Course Objectives</a></h2>
+<P>
+With appologies to Sun Tzu:
+<ul><em>
+The art of software development is of vital importance to every enterprise.<br>
+It is a matter of life and death, a road either to success or to ruin.<br>
+Hence, it is a subject of inquiry which can, on no account, be neglected.
+</em></ul>
+</p>
+<P>
+The goal of this course is to familiarize you with the concepts, tools and techniques
+that are required to successfully pursue non-trivial software projects ranging
+from a few staff-months to a staff-centry or more.
+It is not a survey course.  
+It is a very practical course dealing with real-world problems, the issues
+that complicate them, and the approaches that have been successfully applied
+to their solution.
+</P>
+
 <h2> <a name="instructor">Instructor:</a>
 <a href="http://www.linkedin.com/in/markkampe">Mark Kampe</a>
 </h2>
 <ul>
 	My background is not academic, but in Operating Systems development.
-	I have spent over 40 years designing, building, and guiding operating systems, 
+	I have spent almost 50 years designing, building, and guiding operating systems, 
 	operating systems related projects, and system software development teams.
 	Much of my work has focused on high performance and highly available
 	multi-processor and distributed systems.
@@ -44,45 +62,6 @@ Last updated: Feb 09, 2018
 	concepts and techniques, and to make them interesting and clear.
 </ul>
 
-<h2> <a name="objectives">Course Objectives</a></h2>
-<ul>
-	<P>
-	Operating Systems has been considered a core computer science
-	course for a very long time.
-	This is a new syllabus, developed by Paul Eggert, Mark Kampe, and Peter Reiher.
-	While the list of covered topics is quite similar to most other Operating
-	Systems courses, the detailed learning objectives have been updated to 
-	reflect the needs of a new generation of computer science students:
-	</P>
-	   <ul>
-		<li> provide all students with OS related concepts and exploitation skills
-		     that they (a) will all likely need and (b) are unlikely to get in other
-		     courses.</li>
-		<li> provide Computer Science majors with an introduction to key concepts
-		     and principles that have emerged from (or been best articulated in)
-		     operating systems.</li>
-		<li> provide all students with a conceptual foundation that will enable
-		     them to read well written introductory level OS-related papers,
-		     engage in intelligent discussions of those topics, and participate
-		     in entry-level OS-related projects.</li>
-		<li> non-objectives ... things often taught in other OS courses:</li>
-		<ul>
-			<li>prepare students to write or work with kernel code.
-			    Very few of our students will ever have need to do this,
-			    and the pendulum now appears to be swinging away
-			    from kernel-mode implementations (even for file systems
-			    and other performance-critical data-paths).
-			</li>
-			<li>understanding of the issues and techniques associated
-			    with device drivers and low level platform support code
-			    in operating systems.  This may be crucial background
-			    for hardware system designers and embedded software
-			    developers, but this course seeks to provide
-			    a more general introduction for a much broader audience.
-			</li>
-		</ul>
-	   </ul>
-	<P>
 	The reading, lectures, projects, and exams are all designed around
 	a large set of <a Href="keys.html">detailed learning objectives</a>.
 	In addition to giving students a detailed overview of the material
@@ -93,131 +72,40 @@ Last updated: Feb 09, 2018
 
 <h2> Assumed Student Background</h2>
 <ul>
-	<li> abiliy to design, write, build, and debug C software</li>
-	<li> familiarity with basic computer architecture (registers, memory,
-	     instruction pointer, processor status word) and instruction sets
-	     (load, store, test, branch, logical/arithmetic operations).</li>
-	<li> familiarity with the stack model of program execution (parameter
-	     passing, saving/restoring registers, local variables, return values).</li>
-	<li> familiarity with the software generation tool chain (compilers, assemblers,
-	     object modules, linkage editors, load modules).</li>
- 	<li> familiarity with the use of libraries.</li>
+	<li> abiliy to design, write, build, and debug software in multiple languages</li>
+	<li> experience with researching, obtaining, and learning to exploit new 
+             libraries and software development tools.
 </ul>
 
-<h2><a name="text">Primary Text</a></h2>
-<ul>
+<h2><a name="text">Assigned Readings</a></h2>
 <p>
-	This course introduces an extremely wide range of new concepts, and so
-	involves a great deal of reading.
-	Most of the readings for this course will come from 
-	<a href="http://pages.cs.wisc.edu/~remzi">Remzi Arpaci-Dusseau</a>'s 
-	<a href="http://pages.cs.wisc.edu/~remzi/OSTEP">
-	Operating Systems in Three Easy Pieces</a>.  
-	This text was 
-	selected, after evaluating numerous alternatives, for several reasons:
-	<ul>
-		<li>a good introduction to an appropriate range of topics.</li>
-		<li>a practical treatment with numerous code examples that
-		    students can run for themselves.</li>
-		<li>highly readable.</li>
-		<li>presentations are based on readily available (Linux) systems.</li>
-		<li>numerous quantitative analyses of performance implications.</li>
-		<li>excellent explorations of important performance issues
-		    in synchronization and file systems.</li>
-		<li>avoidance of gratuitous formalisms, ancient history, and 
-		    low-value tangents.</li>
-		<li>it is an <A Href="https://en.wikipedia.org/wiki/Open-source_model">Open Source</a>
-		    effort ... a movement for which many
-		    of us have tremendous respect.  A very practical implication
-		    of this decision is that students are not required to 
-		    purchase a text book.</li>
-	</ul>
+        This is a concept-rich course and there is a great deal of reading
+        (averaging 45-50 pages per lecture).  
+        A few days will be shorter than this, and one of them is much longer.
+        Fortunately, I think you will find that most of the material is 
+        simple enough to be understood in a single reading.
 </p>
 <p>
-	The primary weaknesses of this text seem to be:
-	<UL>
-		<LI>focused on mechanisms than principles</li>
-		<LI>subjects and examples are limited to those found in the Linux kernel</li>
-	</UL>
-	<P>
-	Hence, there will be a few areas that must be covered from
-	alternative readings (all available on-line):
-	<ul>
-		<li> numerous monographs written specifically for this course</li>
-		<li> numerous readings from chapter 2 (System Calls) of the Linux
-		     Programmers' Manual as detailed examples</li>
-		<li> Wikipedia articles for general overviews of areas not covered by
-		     the other readings</li>
-	</ul>
+        The primary text for this course is Steve McConnell's 
+        <A Href="https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/">
+        Code Complete (2nd edition)</A>
+        This is an excellent book, available in paperback, that you will probably
+        keep for a very long time, and replace when you eventually wear it out.
 </p>
-</ul>
+<p>
+        For more general Software Engineering topics, rather than force you to buy an
+        expensive Software Engineering text (half of which would be uninteresting),
+        I have attempted to assemble a collection of small, publically available
+        articles on selected topics.  URLs for all of these articles can be found
+        on the <A href="schedule.html">reading and lecture schedule</A>.
+</p>
 
 <h2><a name="projects">Projects</a></h2>
-<ul>
-   <p>
-   Viewed in terms of problem domains, the projects are C
-   programming problems in several key operating systems areas:
-   <ul>
-   	<li> processes and threads</li>
-	<li> file I/O and Inter-Process Communication</li>
-	<li> synchronization, and contention </li>
-	<li> file systems </li>
-	<li> Internet-of-Things (IOT) and embedded system security</li>
-   </ul>
-   </p>
-   <p>
-   But they also span a wide range of software development skills:
-   <ul>
-	<li> developing software to specifications</li>
-   	<li> learning and mastering complex APIs</li>
-   	<li> performance analysis</li>
-	<li> consistency analysis of complex data structures</li>
-   	<li> developing and debugging parallel, distributed, and embedded applications</li>
-   </ul>
-   </p>
-   <p>
-   The projects in this course will require you to have:
-   <ul>
-   	<li> Access to a Linux system on which you can build and test C programs.
-	     If you are taking this course, there is a better-than-even chance
-	     that you already have a Linux system, but if you don't there are
-	     several options:
-	     <ul>
-	        <li> Install Linux on your own laptop or desktop.</li>
-		<li> Install Linux in a virtual machine inside your own laptop or desktop.</li>
-		<li> Do your project work on CS department Linux servers.</li>
-		<li> Get a free (low powered) Linux virtual machine from Amazon Web Services.</li>
-	     </ul>
-	     For most of the projects any Linux system will do, but ...
-	     <ul>
-	        <li> Project 2 (synchronization and contention) will require you
-		     to have access to a multi-core CPU (departmental servers
-		     will do).</li>
-	        <li> Parts of Project 4 (Embedded System) will require you to be able to
-		     connect your embedded system directly (via USB) to another computer.</li>
-	     </ul>
-   	</li>
-        <li> An embedded development system, including:
-	     <ul>
-	     	<li>an BeagleBone Green ... a small, low-power,
-		    system on a chip with numerous general purpose I/O pins</li>
-		<li>a Grove Starter Kit ... a collection of
-		    sensors, actuators, and display devices for embedded
-		    system hobby projects</li>
-		<li>a suitable micro-USB power supply for the embedded board </li>
-	     </ul>
-	     All of these parts are widely avaiable and,
-	     ironically, they will cost you just about the same amount
-	     of money you would have otherwise spent on an Operating
-	     Systems text.  But, if you are taking this course, the 
-	     odds are that you will find many other uses for your embedded
-	     development system after this course is over.
-        </li>
-   </ul>
-   </p>
-</ul>
+<p>
+FIX
+</p>
 
-<h2><a name="schedule">Lecture, Reading, Lab and Exam Schedule</a></h2>
+<h2><a name="schedule">Lecture Sessions</a></h2>
 <ul>
     <p>
     <a href="schedule.html">Lecture, Reading, Lab, and Exam Schedule</A>
@@ -228,6 +116,7 @@ Last updated: Feb 09, 2018
 	<li> discuss student questions arising from the reading.</li>
 	<li> expand on key results that should be drawn from reading.</li>
 	<li> work through and discuss important but non-trivial examples from the reading.</li>
+        <li> have group exercises related to these topics.</li>
 	<li> discuss perspectives, implications, and applications not covered by the reading.</li>
     </ul>
     <P>
@@ -259,18 +148,6 @@ Last updated: Feb 09, 2018
 </ul>
 
 <P>
-
-<H2><a name="officehours">Office Hours</a></H2>
-<P>
-<UL>
-I am not regular faculty, and am only on campus on the days I teach this course.
-I will try to be in my office  one hour before and after each class session.
-If those times do not work for you, it may be possible to schedule an appointment
-at some other time.
-When not on campus, I am generally on-line.
-The most reliable way to reach me is via email or google-talk 
-<a href="mailto:mark.kampe@gmail.com">Mark.Kampe@gmail.com</a>.
-</UL>
 
 <H2><a name="grading">Assignments and Grades</a></H2>
 <P>
@@ -354,12 +231,6 @@ Grades in this course are based on:
 	    </li>
 </ul>
 <P>
-Students with good programming backgrounds generally do very well on the lab projects.
-Quiz scores tend to be well corellated with scores on the mid-term and part 1 of the final.
-Scores for part 2 of the final exam (problem solving vs. memory/understanding) tend to 
-be distributed over a much wider range.
-</P>
-<P>
 Letter Grading Scale:
 <ul>
     <li>I do not grade on a curve, but a fixed scale.
@@ -377,6 +248,7 @@ Letter Grading Scale:
 	to compensate for my mistake</li>
 </ul>
 </P>
+#ifdef UCLA
 <a name="quizzes">Moodle Quizzes</A> ... an apology:
 <ul>
 	<P>
@@ -404,6 +276,7 @@ Letter Grading Scale:
 	your suggestions.
 	</P>
 </ul>
+#endif
 
 Late and make-up policy:
 <ul>
@@ -581,76 +454,7 @@ and I seek <u>full</u> prosecution of every case I report.
 </p>
 </UL>
 
-<H2>General Warnings:</H2>
-<ul>
-	You will find the material in this course to be exteremely useful.
-	But, this is widely held to be one of the most difficult courses in the
-	undergraduate Computer Science catalog, due to:
-	    <ul>
-		<li>the amount of reading</li>
-		<li>the number of new and subtle concepts to be mastered</li>
-		<li>the complexity of the principles that must be applied</li>
-		<li>the amount of work involved in the projects</li>
-	    </ul>
-	<p>
-	People who have had little difficulty with previous Computer Science courses
-	are often surprised by the work load in this course.
-	</P></P>
-	Keeping up in this course requires considerable work and discipline.
-	</P></P>
-	In particular, projects must be started as soon as possible.
-	All (but the first) involve difficulties, and students wind up
-	losing many more points due to late submission than to 
-	functionality deficiencies.
-	</P></P>
-	Catching up after falling behind is extremely difficult.
-	</P>
-</ul>
 
-<H2><a name="standards">Related Curriculum Standards</a>*:</H2>
-<p>
-Related <a href="https://www.acm.org/binaries/content/assets/education/cs2013_web_final.pdf">Computer
-Science Curricula 2013</a> knowledge areas:</p>
-
-<ul>
-    <li>OS/Overview of Operating Systems</li>
-    <li>OS/Operating System Principles</li>
-    <li>OS/Concurrency</li>
-    <li>OS/Scheduling and Dispatch</li>
-    <li>OS/Memory Management</li>
-    <li>OS/Security and Protection</li>
-    <li>OS/Virtual Machines</li>
-    <li>OS/Device Management</li>
-    <li>OS/File Systems</li>
-    <li>OS/System Performance Evaluation</li>
-    <li>PD/Communication and Coordination</li>
-    <li>PD/Distributed Systems</li>
-    <li>IAS/Foundational Concepts in Security</li>
-    <li>IAS/Threats and Attacks</li>
-    <li>NC/Networked Applications</li>
-    <li>SF/Cross-Layer Communications</li>
-    <li>SF/Resource Allocation and Scheduling</li>
-    <li>SF/Virtualization and Isolation</li>
-    <li>SF/Reliability through Redundancy</li>
-</ul>
-
-<p>Related <a
-href='http://sites.computer.org/ccse/'>IEEE/ACM Software Engineering
-2004 (SE2004)</a> bodies of knowledge:</p>
-
-<ul>
-    <li>CMP.cf.4. Abstraction &ndash; use and support for (encapsulation, hierarchy, etc.)</li>
-    <li>CMP.cf.10. Operating system basics</li>
-    <li>CMP.cf.12. Network communication basics</li>
-    <li>CMP.ct.1. API design and use</li>
-    <li>CMP.ct.2. Code reuse and libraries</li>
-    <li>CMP.ct.10. Concurrency primitives (e.g., semaphores, monitors, etc.)</li>
-    <li>CMP.ct.14. Performance analysis and tuning</li>
-    <li>CMP.ct.15. Platform standards (POSIX etc.)</li>
-    <li>FND.ef.4. Systems development (e.g., security, safety, performance, effects of scaling, feature interaction, etc.)</li>
-</ul>
-<br><br>
-*These sections are taken, with permission, from Prof Eggert's CS111 Syllabus</a>.
 <br><hr><br>
 <font face = "Arial Helvetica" color = #0000FF size = 2>
 For information about these pages, contact

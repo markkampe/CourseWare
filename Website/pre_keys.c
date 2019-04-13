@@ -1,11 +1,12 @@
+#include "courseinfo.h"
 <HTML>
 <HEAD>
-<TITLE>Objectives</TITLE>
+<TITLE>NUMBER Keys</TITLE>
 </HEAD>
 
 <BODY>
 <CENTER>
-<H1>Operating Systems Principles<BR>
+<H1>COURSE<BR>
 Learning Objectives</H1>
 </CENTER>
 

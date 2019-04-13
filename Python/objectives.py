@@ -29,6 +29,7 @@ class objectives:
         self.lists = {}     # there is a dict of categories
                             # each entry is a dict of per-lecture entries
                             # each element is [title, priority, difficulty]
+        self.used = []      # list of categories actually used
 
         # create a list for each category
         self.names = categories
@@ -66,6 +67,8 @@ class objectives:
             # add this to the per lecture sub-list for that category
             catdict = self.lists[category]
             catdict[lecture].append((title, priority, difficulty))
+            if category not in self.used:
+                self.used.append(category)
             return None
 
     def table(self, breaks=False, indent=4):
@@ -76,7 +79,7 @@ class objectives:
         print "%s<TH>Lect/Lab</TH>" % (' ' * (2 * indent))
         if len(self.titles) > 0:
             print "%s<TH>Subject</TH>" % (' ' * (2 * indent))
-        for list in self.names:
+        for list in self.used:
             print "%s<TH>%s</TH>" % ((' ' * (2 * indent)), list)
         print "%s</TR>" % (' ' * indent)
 
@@ -89,7 +92,7 @@ class objectives:
                 print "%s<TD>%s</TD>" % \
                       (' ' * (2 * indent), self.titles[lect])
 
-            for c in categories:
+            for c in self.used:
                 catlist = self.lists[c]
                 # for each category
                 print "%s<TD>" % (' ' * (2 * indent))
@@ -238,7 +241,7 @@ if __name__ == '__main__':
 
     # create an appropriate objectives instance
     # NOTE: if I were cooler, I would take these as parms
-    categories = ("Concept", "Issue", "Approach", "Skill")
+    categories = ("Concept", "Issue", "Approach", "Representation", "Skill")
     obj = objectives(categories)
 
     # choose type faces
@@ -263,9 +266,10 @@ if __name__ == '__main__':
     if opts.describe:
         print "<UL>"
         for c in categories:
-            print "    <LI> <STRONG>%s</STRONG>" % (c)
-            interpolate(c + ".txt", 8)
-            print "    </LI>"
+            if c in obj.used:
+                print "    <LI> <STRONG>%s</STRONG>" % (c)
+                interpolate(c + ".txt", 8)
+                print "    </LI>"
         print "</UL>"
 
     obj.table(True)

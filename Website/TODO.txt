@@ -1,3 +1,12 @@
+prove this all works for 111
+finish creating the SWE syllabus
+fix misplaced SWE reading and learning objectives
+
+objectives:
+	add another column for what reading they are covered in
+	pull them in to a lecture when either the topic or the reading is hit
+
+
 SOMEDAY:
 	I should be able to generate the project/exam schedule in index.html out of the QUARTER.csv
 	The Season/Year in pre_schedule.html should come from macros

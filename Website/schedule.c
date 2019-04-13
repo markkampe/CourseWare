@@ -1,18 +1,12 @@
-#define SEASON Spring
-#define YEAR 2018
-#ifdef UCLA
-#define COURSE CS111
-#else
-#define COURSE CS134
-#endif
+#include "courseinfo.h"
 <HTML>
 <HEAD>
-<TITLE>COURSE Schedule</TITLE>
+<TITLE>NUMBER Schedule</TITLE>
 </HEAD>
 
 <BODY>
 <CENTER>
-<H1>Operating Systems Principles<BR>
+<H1>COURSE<BR>
 SEASON YEAR<BR>
 Lectures, Reading, Quizzes, Exams, and Projects<BR>
 </H1>

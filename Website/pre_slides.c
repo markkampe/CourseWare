@@ -1,9 +1,13 @@
+#include "courseinfo.h"
 <HTML>
     <HEAD>
-	<TITLE>OS Slides</TITLE>
+	<TITLE>NUMBER Slides</TITLE>
     </HEAD>
     <BODY>
-	<center><H1> Operating Systems Principles </H1></center>
+        <CENTER>
+        <H1>COURSE<BR>
+        SEASON YEAR<BR></H1>
+        </CENTER>
 	<P>
 	These are the slides used in the scheduled lectures. Each set of slides is in pdf format,
 	six slides to the page.

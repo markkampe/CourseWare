@@ -1,6 +1,6 @@
-... You should be able to:
+(graphical, code, or document) ... You should be able to:
 <UL>
-    <LI>understand the purpose, advantages, limitations, and key elements of this form.</LI>
-    <LI>correctly describe information in that form.</LI>
-    <LI>answer questions about information presented in that form.</LI>
+    <LI>descibe its purpose and key elements.</LI>
+    <LI>present information in this form.</LI>
+    <LI>answer questions about a project that has been described in this form.</LI>
 </UL>
