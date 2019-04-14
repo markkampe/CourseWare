@@ -1,6 +1,5 @@
-prove this all works for 111
-finish creating the SWE syllabus
-fix misplaced SWE reading and learning objectives
+review and fix SWE key->topic mapping
+finish moving old material into new SWE syllabus
 
 objectives:
 	add another column for what reading they are covered in

@@ -16,11 +16,14 @@ SCHED_PFX=pre_schedule.html
 SLIDES_PFX=pre_slides.html
 KEYS_PFX=pre_keys.html
 
+INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
+OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
+
 SEASON=Fall
 YEAR=2019
 
 ucla: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	rm -f schedule.html keys.html index.html syllabus.html
+	rm -f $(OUTPUTS)
 	grep $(SEASON)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
 	gcc -E -w -DUCLA -DOS os_syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -DUCLA -DOS -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
@@ -34,10 +37,10 @@ ucla: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
 		$(OBJECTIVES) > keys.html
 	python $(PGM_SLIDES) --lectures=$(QUARTER) --prolog=$(SLIDES_PFX) > slides.html
-	rm -f $(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
+	rm -f $(INTERMEDIATES)
 
 ucla-17: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	rm -f schedule.html keys.html index.html syllabus.html
+	rm -f $(OUTPUTS)
 	grep $(SEASON)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
 	gcc -E -w -DUCLA -DOS os_syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -DUCLA -DOS -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
@@ -51,11 +54,11 @@ ucla-17: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS)
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
 		$(OBJECTIVES) > keys.html
 	python $(PGM_SLIDES) --lectures=$(QUARTER) --prolog=$(SLIDES_PFX) > slides.html
-	rm -f $(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
+	rm -f $(INTERMEDIATES)
 
 
 pom-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	rm -f schedule.html keys.html os_index.html syllabus.html
+	rm -f $(OUTPUTS)
 	grep $(SEASON)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
 	gcc -E -w -DPOMONA -DOS os_syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -DPOMONA -DOS -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
@@ -69,10 +72,10 @@ pom-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS)
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
 		$(OBJECTIVES) > keys.html
 	python $(PGM_SLIDES) --lectures=$(SEMESTER) --prolog=$(SLIDES_PFX) > slides.html
-	rm -f $(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
+	rm -f $(INTERMEDIATES)
 		
 pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	rm -f schedule.html keys.html sw_index.html syllabus.html
+	rm -f schedule.html keys.html os_index.html syllabus.html
 	grep $(SEASON)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
 	gcc -E -w -DPOMONA -DSWE swe_syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -DPOMONA -DSWE -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
@@ -89,5 +92,4 @@ pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS)
 	rm -f $(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 
 clean:
-	rm -f keys.html schedule.html index.html syllabus.html slides.html
-	rm -f $(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
+	rm -f $(INTERMEDIATES) $(OUTPUTS)
