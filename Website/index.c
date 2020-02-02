@@ -34,11 +34,16 @@ Information specific to the current (SEASON YEAR) section:
 		on-line forum for on-line discussions and requesting 
 		in-class discussion topics.</li>
 #endif UCLA
-#ifdef POMONA
+#ifdef POM
 	<li> daily quizzes in <a href="https://sakai.claremont.edu">Sakai</a></li>
 	<li> <a href="https://sakai.claremont.edu/portal/site/CX_mtg_99138/page/9df25280-a728-4a77-a303-d039686a845d">
 		on-line forum</A> for requesting in-class discussion topics.</li>
-#endif  POMONA
+#endif  POM
+#ifdef HMC
+	<li> daily quizzes in <a href="https://sakai.claremont.edu">FIXME</a></li>
+	<li> <a href="https://sakai.claremont.edu/portal/site/CX_mtg_99138/page/9df25280-a728-4a77-a303-d039686a845d">
+		FIXME on-line forum</A> for requesting in-class discussion topics.</li>
+#endif  HMC
 	<li> <a href="slides/index.html">Lecture slides</a>.</li>
 	<li> <a href="https://gradescope.com/courses/13796">Gradescope</a> website for exam feedback.</li>
 #ifdef OS
