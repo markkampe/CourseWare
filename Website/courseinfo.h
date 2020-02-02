@@ -17,6 +17,9 @@
 #ifdef POMONA
 #define NUMBER CS181F
 #endif  POMONA
+#ifdef HMC
+#define NUMBER CSTBD
+#endif  HMC
 #endif  SWE
 
 #ifdef UCLA
@@ -27,4 +30,7 @@
 #define	SUBMIT submit.cs.pomona.edu
 #define SUBMIT_URL "http:submit.cs.pomona.edu"
 #endif  POMONA
-
+#ifdef HMC
+#define	SUBMIT "FIX_SUBMIT"
+#define SUBMIT_URL "FIX_SUBMIT_URL"
+#endif  HMC
