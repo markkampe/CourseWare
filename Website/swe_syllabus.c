@@ -15,6 +15,13 @@
 #define	SCORE_P4	5
 #define	SCORE_PROJ	40	
 #endif  POMONA
+#ifdef HMC
+#define	SCORE_PRES	10
+#define SCORE_X3	10
+#define	SCORE_EXAM	40
+#define	SCORE_P4	5
+#define	SCORE_PROJ	40	
+#endif  HMC
 #define SCORE_QUIZ	10
 #define SCORE_X1	15
 #define SCORE_X2	15
