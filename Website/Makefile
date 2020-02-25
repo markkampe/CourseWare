@@ -25,6 +25,8 @@ SEASON=Fall
 YEAR=2020
 
 
+# Problems with this rule:
+#	unconditional --epilog="swe_post.html"
 default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HOURS)
 	rm -f $(OUTPUTS)
 	# construct intermediates based on the school/course/year/season
@@ -36,7 +38,7 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DSEASON=$(SEASON) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
 	# construct the schedule, learning objectices, and slides index
 	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
-		--prolog=$(SCHED_PFX) --epilog=post.html --quizzes="Sakai"\
+		--prolog=$(SCHED_PFX) --epilog=swe_post.html --quizzes=$(QUIZZES)\
 		$(READINGS) > schedule.html
 	python $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
@@ -45,16 +47,16 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	rm -f $(INTERMEDIATES)
 
 ucla-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=UCLA COURSE=OS LECTURES=19 SCHEDULE=$(QUARTER)
+	make SCHOOL=UCLA COURSE=OS LECTURES=19 SCHEDULE=$(QUARTER) QUIZZES="ccle"
 
 pom-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=POM COURSE=OS LECTURES=28 SCHEDULE=$(SEMESTER)
+	make SCHOOL=POM COURSE=OS LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="Sakai"
 		
 pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=POM COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER)
+	make SCHOOL=POM COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES"=Sakai"
 
 hmc-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=HMC COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER)
+	make SCHOOL=HMC COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="TBD"
 
 clean:
 	rm -f $(INTERMEDIATES) $(OUTPUTS)
