@@ -82,7 +82,7 @@ to their solution.
 	</UL>
 </UL>
 
-<H2>Project Due Dates</H2>
+<H2>Projects and Due Dates</H2>
 <P>
 Projects follow quickly after the readings and lectures in which
 the associated principles are presented.

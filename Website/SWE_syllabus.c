@@ -353,10 +353,10 @@ to their solution.
 	<TR> <TD>SCORE_QUIZ</TD> <TD>quizzes: daily</TD></TR>
 	<TR> <TD>SCORE_X1</TD>	 <TD>exam: midterm</TD></TR>
 	<TR> <TD>SCORE_X2</TD>	 <TD>exam: final</TD></TR>
-	<TR> <TD>SCORE_P1</TD>	 <TD>project: proposal</TD></TR>
-	<TR> <TD>SCORE_P2</TD>	 <TD>project: architecture</TD></TR>
-	<TR> <TD>SCORE_P3</TD>	 <TD>project: planning and design</TD></TR>
-	<TR> <TD>SCORE_P4</TD>	 <TD>project: implementation and testing</TD></TR>
+	<TR> <TD>SCORE_P1</TD>	 <TD>project: 1. proposal</TD></TR>
+	<TR> <TD>SCORE_P2</TD>	 <TD>project: 2. architecture</TD></TR>
+	<TR> <TD>SCORE_P3</TD>	 <TD>project: 3. planning and design</TD></TR>
+	<TR> <TD>SCORE_P4</TD>	 <TD>project: 4. implementation and testing</TD></TR>
 	</TBODY></TABLE>
     <P>
     While a weight is shown for each project, there will not
