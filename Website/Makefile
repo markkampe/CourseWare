@@ -21,7 +21,7 @@ KEYS_PFX=pre_keys.html
 INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
 
-SEASON=Fall
+MONTH=9
 YEAR=2020
 
 
@@ -30,12 +30,12 @@ YEAR=2020
 default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HOURS)
 	rm -f $(OUTPUTS)
 	# construct intermediates based on the school/course/year/season
-	grep $(SEASON)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
+	grep $(MONTH)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) $(COURSE)_syllabus.c | grep -v '^# ' > syllabus.html
-	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DSEASON=$(SEASON) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
-	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DSEASON=$(SEASON) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)
-	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DSEASON=$(SEASON) -DYEAR=$(YEAR) pre_slides.c | grep -v '^# ' > $(SLIDES_PFX)
-	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DSEASON=$(SEASON) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
+	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
+	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)
+	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_slides.c | grep -v '^# ' > $(SLIDES_PFX)
+	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
 	# construct the schedule, learning objectices, and slides index
 	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
 		--prolog=$(SCHED_PFX) --epilog=swe_post.html --quizzes=$(QUIZZES)\
