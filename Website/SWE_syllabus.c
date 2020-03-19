@@ -22,7 +22,7 @@ Hence, it is a subject of inquiry which can, on no account, be neglected.
 <P>
 The goal of this course is to familiarize you with the concepts, tools and techniques
 that are required to successfully pursue non-trivial software projects ranging
-from a few staff-months to a staff-centry or more.
+from a few staff-months to a staff-century or more.
 It is not a survey course.  
 It is a very practical course dealing with real-world problems, the issues
 that complicate them, and the approaches that have been successfully applied
