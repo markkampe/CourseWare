@@ -233,13 +233,13 @@ to their solution.
     (involving very different activities):
     </P>
     <OL type=1>
-        <LI> <A href="projects/proj_1.html">
+        <LI> <A href="projects.html#desc_1">
                 Requirements and Proposal</A></li>
-        <LI> <A href="projects/proj_2.html">
+        <LI> <A href="projects.html#desc_2">
                 Architecture and Review</a></li>
-        <LI> <A href="projects/proj_3.html">
+        <LI> <A href="projects.html#desc_3">
                 Planning, Specifications, Design, and Review</a></li>
-        <LI> <A Href="projects/proj_4.html">
+        <LI> <A Href="projects.html#desc_4">
                 Implementation and Testing</a></li>
     </OL>
     </P>
