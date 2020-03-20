@@ -42,7 +42,7 @@ to their solution.
 	<LI> <strong>Office Hours</strong>:
 #include "office_hours.h"
 	    </LI>
-	<LI> <A href="info/QandA.html">Frequently Asked Questions</A> </LI>
+	<LI> <A href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/QandA.html">Frequently Asked Questions</A> </LI>
 </UL>
 
 
@@ -52,11 +52,11 @@ to their solution.
 	<LI> Primary <a href="syllabus.html#text">Text</a> </LI>
 	<LI> <a href="syllabus.html#quizzes">Quizzes</a> and 
 	     <a href="syllabus.html#exams">Exams</a>,
-	     <a href="info/examQuestions.html">sample questions</a>
+	     <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/examQuestions.html">sample questions</a>
 	     </li>
-	<LI> <a href="syllabus.html#projects">Description</a> of projects</LI>
+	<LI> <a href="syllabus.html#projects">Overview of projects</a></LI>
 	<LI> <a href="syllabus.html#grading">Grading</a> weights and criteria </LI>
-	<LI> <a href="info/colab.html">Collaboration & Academic Honesty Policy</a> </LI>
+	<LI> <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/colab.html">Collaboration & Academic Honesty Policy</a> </LI>
 </UL>
 
 <H2>Course Resources</H2>
@@ -77,8 +77,8 @@ to their solution.
 	     on-line forum for topic requests and discussions</LI>
 	<LI> Exam Solutions:
 	<UL>
-	     <LI><a href="TBD">mid-term</a> </LI>
-	     <LI><a href="TBD">final</a> </LI>
+	     <LI><a href="solns/x1.html">mid-term</a> </LI>
+	     <LI><a href="solns/x2.html">final</a> </LI>
 	</UL>
 </UL>
 
@@ -92,6 +92,7 @@ This is done to keep you from getting in trouble when
 you discover that you cannot complete a three week project in
 two days.
 </P>
+
 #ifdef OS
 <P>
 Each deliverable is due a few
@@ -104,14 +105,13 @@ If you wait until the lab session to start a project, the session
 will be over before you have even encountered the real problems,
 and you will have to solve them on your own.
 </P>
-#endif
 <ul>
-#ifdef OS
 #include "os_dates.h"
-#endif OS
-#ifdef  SWE
-#include "swe_dates.h"
 </ul>
+#endif OS
+
+#ifdef SWE
+#include "swe_dates.h"
 #endif  SWE
 
 #ifdef STUDENT_PRES
