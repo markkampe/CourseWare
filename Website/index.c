@@ -42,7 +42,7 @@ to their solution.
 	<LI> <strong>Office Hours</strong>:
 #include "office_hours.h"
 	    </LI>
-	<LI> <A href="QandA.html">Frequently Asked Questions</A> </LI>
+	<LI> <A href="info/QandA.html">Frequently Asked Questions</A> </LI>
 </UL>
 
 
