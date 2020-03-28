@@ -1,16 +1,16 @@
 <P>
 This course is about software project skills other than programming
 (e.g. concept development, requirements, architecture and design, reviews,
-testing, and management).  You will be asked to form teams and come 
-up with a <a href="projects.html">single (large) project</a> concept.  
+testing, and management).  You will be asked to form teams, and come 
+up with a single (large) project concept.  
 Then, over the course of the semester, you will work on different 
-problems within that one project:
+aspects of that one project:
 </P>
 <center>
 <TABLE frame="box" rules="all"><TBODY>
      <col width="40">	<col width="200">	<col width="600">
 <TR> <TH>Due Date<sup>1</sup></TH>	<TH>Assignment<sup>2</sup></TH>	<TH>Summary of Activities</TH></TR>
-<TR> <td></td><td colspan=2><strong>Phase 1: <a href="projects.html#desc_1">Concept Development, Requirements and Proposal</a></strong></td></TR>
+<TR> <td colspan=3><strong>Phase 1: <a href="projects.html#desc_1">Concept Development, Requirements and Proposal</a></strong></td></TR>
 <TR> <TD>P1A_DUE</TD>	<TD><A Href="projects.html#desc_1a">1a. Team, Concept, Plan</TD>
 	<TD>Form teams, identify a preliminary concept, write plan for turning it into a proposal.</TD></TR>
 <TR> <TD>P1B_DUE</TD>	<TD><A Href="projects.html#desc_1b">1b. Competitive Research</TD>
@@ -28,35 +28,70 @@ problems within that one project:
 	    2. Review the processes you followed in this project to see what lessons you can learn
 	    for how to do things more effectively in the future.
 	    </TD></TR>
-<TR> <td></td><td colspan=2><strong>Phase 2: <a href="projects.html#desc_2">Architecture and Review</a></strong></td></TR>
-<TR> <TD>P2A_DUE</TD>	<TD><A Href="projects.html#desc_2a">2a. Prelimnary Architecture</TD>
-	<TD>Develop and refine a preliminary architecture and set of high level component specifications.</TD></TR>
+<TR> <td colspan=3><strong>Phase 2: <a href="projects.html#desc_2">Architecture and Review</a></strong></td></TR>
+<TR> <TD>P2A_DUE</TD>	<TD><A Href="projects.html#desc_2a1">2a. Plan and Prelimnary Architecture</TD>
+	<TD>1. Develop a plan for this project, dividing the work over
+	       your team members and the available time.<br>
+	    2. Develop and document an architecture and high-level component specifications 
+	       for your project.  This includes doing any required research and prototyping to
+	       address critical questions.
+	</TD></TR>
 <TR> <TD>P2B_DUE</TD>	<TD><A Href="projects.html#desc_2b">2b. Architecture Review</TD>
-	<TD>You will study and review another team's proposal, as they will study and review yours, 
-	    write up reports, and work the issues raised in those reviews.</TD></TR>
+	<TD>1. Study another team's architecture, and prepare notes for a design review,
+	       as they will study and pepare for a review of yours.<br>
+	    2. Conduct a design review with that other team, as they will with you.<br>
+	    3. Write up a report of the review
+	    4. Continue to work any issues with the team that raised them.
+	</TD></TR>
 <TR> <TD>P2C_DUE</TD>	<TD><A Href="projects.html#desc_2c">2c. Final Architecture</TD>
-	<TD>Prepare a final architecture and set of high level component specifications
-	    that addresses the issues raised in the reviews.</TD></TR>
-<TR> <td></td><td colspan=2><strong>Phase 3: <a href="projects.html#desc_3">Planning, Specification, Design and Review</a></strong></td></TR>
+	<TD>1. Revise your preliminary architecture based on the results of your review and investigations,
+	       and submit a report on the identified issues and their resolutions.<br>
+	    2. Prepare and submit a final architectural proposal.<br>
+	    3. Review the processes you followed in this project to see what lessons you can learn
+	    for how to do things more effectively in the future.
+	</TD></TR>
+<TR> <td colspan=3><strong>Phase 3: <a href="projects.html#desc_3">Planning, Specification, Design and Review</a></strong></td></TR>
 <TR> <TD>P3A_DUE</TD>	<TD><A Href="projects.html#desc_3a">3a. Planning</TD>
-	<TD>Select the component(s) that you will actually design and implement, 
-	    and prepare a detailed plan for the completion that work.</TD></TR>
+	<TD>1. Select the system components to be designed and implmented<br>
+	    2. Select an owner for each component<br>
+	    3. Develop a schedule and assign responsibilities for the remaing phases
+        </TD></TR>
 <TR> <TD>P3B_DUE</TD>	<TD><A Href="projects.html#desc_3b">3b. Component Specifications</TD>
-	<TD>Elaborate the architecture above the chosen compoents and produce a set
-	    of complete functional specifications for them.</TD></TR>
-<TR> <TD>P3C_DUE</TD>	<TD><A Href="projects.html#desc_3c">3c. Component Design and Test Plan</TD>
-	<TD>Prepare a detailed design and unit-testing plan for each of the chosen components.</TD></TR>
-<TR> <TD>P3D_DUE</TD>	<TD><A Href="projects.html#desc_3d">3d. Design Review </TD>
-	<TD>You will study and review another team's designs, as they will study and review yours,
-	    write up reports, and work the issues raised in those reviews.</TD></TR>
+	<TD> 1. As a team, elaborate the architecture above the chosen pieces to 
+	        develop detailed specfiications for each.<br>
+	     2. As individuals, write up detailed specifications for your assigned component.
+	</TD></TR>
+<TR> <TD>P3C_DUE</TD>	<TD>3c. <A Href="projects.html#desc_3c1">Component Design</a> and 
+				<A Href="projects.html#desc_3c2">Test Plan</a></TD>
+	<TD> 1. As individuals, prepare a detailed design for your assigned component.<br>
+	     2. As individuals, prepare detailed unit-testing plans for your assigned component.
+	</TD></TR>
+<TR> <TD>P3D_DUE</TD>	<TD>3d. Design Review <A Href="projects.html#desc_3d1">notes</a> and 
+					      <A Href="projects.html#desc_3d2">report</a>.</TD>
+	<TD> 1. As individuals, package your specifications, design and test plans for review.</br>
+	     2. As individuals, read each package and prepare notes.</br>
+	     3. As a group, review each package, and write a report for each review.
+	</TD></TR>
 <TR> <TD>P3E_DUE</TD>	<TD><A Href="projects.html#desc_3e">3e. Final Design</TD>
-	<TD>Write up the final form specifications and test plan for the components to
-	    be implemented.</TD></TR>
-<TR> <td></td><td colspan=2><strong>Phase 4: <a href="projects.html#desc_4">Implementation and Testing Sprint</a></strong></td></TR>
-<TR> <TD>P4_DUE</TD>	<TD><A Href="projects.html#desc_4">4. Final Report</TD>
-	<TD>Implement the chosen components and test plans (including pair programming
-	    and code reviews) and present a brief <em>Sprint Review</em> of the
-	    completed work.</TD></TR>
+	<TD> 1. As individuals, revise your specifications, designs, and test plans
+	        to address all important issues raised in the review.<br>
+	     2. As a team, review the processes you have followed, and write up a
+	        post-mortem report.
+	</TD></TR>
+<TR> <td colspan=3><strong>Phase 4: <a href="projects.html#desc_4">Implementation and Testing Sprint</a></strong></td></TR>
+<TR> <TD>P4_DUE</TD>	<TD><A Href="projects.html#desc_4">4. Final Reports</TD>
+	<TD> 1. Each of you will implement the component you designed in phase 2.<br>
+	     2. Two of you will spend (at least) one session doing <em>pair-programming</em>.<br>
+	     3. (at least) one of you will develop your code in a <em>Test Driven Development</em>
+	        fashion (implementing and running tests as you complete each routine or feature).<br>
+	     4. (at least) one of you will implement your component and then submit it to 
+	        <em>code review</em> by other members of your team.<br>
+	     5. Each of you will implement the component test plan you designed (in phase 3)
+	        and use it to validate the correctness of your implementation.<br>
+	     6. As a team, prepare and present a brief sprint review.<br>
+	     7. As a team, review the processes you have followed, and write up a
+	        post-mortem report.
+	</TD></TR>
 </TBODY></TABLE>
 </center>
 
