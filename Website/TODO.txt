@@ -1,11 +1,1 @@
-review and fix SWE key->topic mapping
-finish moving old material into new SWE syllabus
-
-objectives:
-	add another column for what reading they are covered in
-	pull them in to a lecture when either the topic or the reading is hit
-
-
-SOMEDAY:
-	I should be able to generate the project/exam schedule in index.html out of the QUARTER.csv
-	The Season/Year in pre_schedule.html should come from macros
+generate EXAM schedule from QUARTER/SEMESTER

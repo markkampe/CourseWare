@@ -18,6 +18,8 @@
 #define	SCORE_P2	12.5%
 #define	SCORE_P3	12.5%
 #define	SCORE_P4	12.5%
+#endif  SWE
+
 #ifdef UCLA
 #define NUMBER CS121
 #endif  UCLA
@@ -27,39 +29,6 @@
 #ifdef HMC
 #define NUMBER CS121S
 #endif HMC
-
-#if MONTH >= 9
-#define SEASON Fall
-#define P1A_DUE	Sun 09/06/20
-#define P1B_DUE	Sun 09/13/20
-#define P1C_DUE	Sun 09/20/20
-#define P1D_DUE	Sun 09/27/20
-#define P2A_DUE Sun 10/04/20
-#define P2B_DUE	Sun 10/11/20
-#define P2C_DUE	Sun 10/18/20
-#define P3A_DUE Sun 10/25/20
-#define P3B_DUE	Sun 11/01/20
-#define P3C_DUE Sun 11/08/20
-#define P3D_DUE Sun 11/15/20
-#define P3E_DUE Sun 11/29/20
-#define P4_DUE  Sun 12/13/20
-#else	SPRING SEMESTER
-#define SEASON Spring
-#define P1A_DUE	Sun 01/24/21
-#define P1B_DUE	Sun 01/31/21
-#define P1C_DUE	Sun 02/07/21
-#define P1D_DUE	Sun 02/14/21
-#define P2A_DUE Sun 02/21/21
-#define P2B_DUE	Sun 02/28/21
-#define P2C_DUE	Sun 03/14/21
-#define P3A_DUE Sun 03/21/21
-#define P3B_DUE	Sun 03/28/21
-#define P3C_DUE Sun 04/04/21
-#define P3D_DUE Sun 04/11/21
-#define P3E_DUE Sun 04/18/21
-#define P4_DUE  Sun 05/02/21
-#endif SPRING SEMESTER
-#endif  SWE
 
 #ifdef UCLA
 #define SUBMIT CCLE

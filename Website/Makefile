@@ -31,6 +31,7 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	rm -f $(OUTPUTS)
 	# construct intermediates based on the school/course/year/season
 	grep $(MONTH)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
+	./project_dates.sh $(SEMESTER) > project_dates.h
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) $(COURSE)_syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)

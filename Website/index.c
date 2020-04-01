@@ -111,7 +111,8 @@ and you will have to solve them on your own.
 #endif OS
 
 #ifdef SWE
-#include "swe_dates.h"
+#include "project_dates.h"
+#include "swe_projects.h"
 #endif  SWE
 
 #ifdef STUDENT_PRES

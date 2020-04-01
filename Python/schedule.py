@@ -67,11 +67,11 @@ class schedule:
                 day: excel 3 letter day
                 date: m/d/yyyy
                 title: topic for this lecture/day
-                quiz: what to put in quiz field
+                quiz: what to put in quiz field (comment for labs)
         """
         when = self.dayMap[day] + ' ' + date[0:-5]
         if number == 0:
-            self.printActivity(when, title)
+            self.printActivity(when, title, quiz)
         else:
             self.printLecture(when, number, quiz)
 
@@ -89,10 +89,13 @@ class schedule:
               (' ' * (2 * self.indent), "Pages" if self.trial else "Slides")
         print "%s</TR>" % (' ' * self.indent)
 
-    def printActivity(self, date, subject):
+    def printActivity(self, date, subject, comment):
         print "%s<TR>" % (' ' * self.indent)
         print "%s<TD> %s </TD> <TD> %s </TD>" % \
               (' ' * self.indent, date, subject)
+        if comment is not None:
+            print "%s<TD> %s </TD>" % \
+              (' ' * self.indent, comment)
         print "%s</TR>" % (' ' * self.indent)
 
     def printLecture(self, date, lecture, quiz):
