@@ -1,3 +1,9 @@
+#if MONTH >= 9
+#define SEASON Fall
+#else
+#define SEASON Spring
+#endif
+
 #ifdef OS
 #define COURSE Operating Systems Principles
 #ifdef UCLA
