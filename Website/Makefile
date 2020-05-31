@@ -18,7 +18,7 @@ SCHED_PFX=pre_schedule.html
 SLIDES_PFX=pre_slides.html
 KEYS_PFX=pre_keys.html
 
-INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h project_dates.h
+INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
 
 MONTH=9
