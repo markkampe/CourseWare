@@ -46,7 +46,7 @@ to their solution.
 </UL>
 
 
-<H2>Syllabus</H2>
+<H2><a href="syllabus.html">Syllabus</A></H2>
 <UL>
 	<LI> <a href="keys.html">Key Learning Objectives</a> </LI>
 	<LI> Primary <a href="syllabus.html#text">Text</a> </LI>
