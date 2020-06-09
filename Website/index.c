@@ -63,18 +63,24 @@ to their solution.
 <UL>
 	<LI> <A href="schedule.html">Reading and Lecture Schedule</A> </LI>
 	<LI> Copies of <a href="slides/index.html">Lecture Slides</A> </LI>
-	<li> <a href="https://gradescope.com/courses/13796">Gradescope</a> website for exam feedback.</li>
-	<LI>
 #ifdef UCLA
-	     <A href="https://ccle.ucla.edu">CCLE</a>
+	<LI> <A href="https://ccle.ucla.edu">CCLE</a>
+	     on-line forum for topic requests and discussions</LI>
 #endif UCLA
 #ifdef POM
-	     <a href="https://piazza.com/class/xxx">Piazza</a> 
+	<LI> <a href="https://piazza.com/class/xxx">Piazza</a> 
+	     on-line forum for topic requests and discussions</LI>
+	<li> <a href="https://gradescope.com/courses/13796">Gradescope</a>
+		website for project and exam feedback.</li>
 #endif POM
 #ifdef HMC
-	     <a href="https://piazza.com/class/xxx">Piazza</a> 
-#endif HMC
+	<LI> <a href="https://hmc-cs.zoom.us/j/93615831593">Zoom</a>
+	     meeting for lectures and labs</LI>
+	<LI> <a href="https://piazza.com/hmc/fall2020/cs121">Piazza</a> 
 	     on-line forum for topic requests and discussions</LI>
+	<li> <a href="https://gradescope.com/courses/138396">Gradescope</a>
+		website for project and exam feedback.</li>
+#endif HMC
 	<LI> Exam Solutions:
 	<UL>
 	     <LI><a href="solns/x1.html">mid-term</a> </LI>
