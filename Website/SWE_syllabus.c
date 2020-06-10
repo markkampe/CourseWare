@@ -114,6 +114,37 @@ to their solution.
     topics you would like to discuss, please post them to the course discussion forum.
     </P>
 </ul>
+<h2><a name="participation">Participation</A></h2>
+<ul>
+    <P>
+    Grades in this course will include Participation in in-class and on-line discussions.
+    There are a few reasons for this:
+    <ul>
+        <li> engaging in verbal and written discussions of technical
+             issues are a fundamental technical skills that each of us
+             must develop.</li>
+        <li> asking questions and contributing to discussions will increase
+             your own engagement in the course and what you get out of it.</li>
+        <li> asking questions and contributing to discussions helps me
+             identify areas that would benefit from more attention.</li>
+        <li> there are three key elements of learning: reading and lectures,
+             discussion with your class-mates, and practical experience.
+             Asking questions and contributing to discussions is essential
+             to the second pillar.</li>
+    </ul>
+    </P>
+    <P>
+    Participation (both verbal and written) will be graded on the basis of:
+    <UL>
+        <li> the frequency of contributions (or questions)</li>
+        <li> the value of contributions (or questions) 
+             in exposing issues or nucleating discussions</li>
+        <li> the constructiveness of participation in group discussions
+             (respect, giving all an opportunity to contrubute, advancing the discusison)</li>
+        <li> the indicated level of preparation, understanding, and thought</li>
+    </ul>
+    </P>
+</ul>
 
 <h2><a name="quizzes">Quizzes</A></h2>
 <ul>
@@ -351,6 +382,7 @@ to their solution.
 	<TABLE frame="box" rules="all"><TBODY>
 	<TR> <TH>Weight</TH>     <TH>Item</TH></TR>
 	<TR> <TD>SCORE_QUIZ</TD> <TD>quizzes: daily</TD></TR>
+        <TR> <TD>SCORE_PART</TD> <TD>participation: verbal, written</TD></TR>
 	<TR> <TD>SCORE_X1</TD>	 <TD>exam: midterm</TD></TR>
 	<TR> <TD>SCORE_X2</TD>	 <TD>exam: final</TD></TR>
 	<TR> <TD>SCORE_P1</TD>	 <TD>project: 1. proposal</TD></TR>
