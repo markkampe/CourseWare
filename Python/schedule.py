@@ -125,7 +125,7 @@ class schedule:
             if self.trial:
                 s = self.minutes[lecture] if lecture in self.minutes else 0
             else:
-                s = quiz % (lecture) if "%s" in quiz else quiz
+                s = quiz
             print "%s<TD> %s </TD>" % (' ' * 2 * self.indent, s)
 
             if self.trial:
