@@ -74,7 +74,7 @@ to their solution.
 		website for project and exam feedback.</li>
 #endif POM
 #ifdef HMC
-	<LI> <a href="https://hmc-cs.zoom.us/j/93615831593">Zoom</a>
+	<LI> <a href="https://hmc-cs.zoom.us/j/93895586571">Zoom</a>
 	     meeting for lectures and labs</LI>
 	<LI> <a href="https://piazza.com/hmc/fall2020/cs121">Piazza</a> 
 	     on-line forum for topic requests and discussions</LI>
