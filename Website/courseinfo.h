@@ -18,12 +18,13 @@
 #ifdef SWE
 #define COURSE Software Engineering
 #define SCORE_QUIZ	10%
+#define SCORE_PART      10%
 #define SCORE_X1	20%
 #define SCORE_X2	20%
-#define	SCORE_P1	12.5%
-#define	SCORE_P2	12.5%
-#define	SCORE_P3	12.5%
-#define	SCORE_P4	12.5%
+#define	SCORE_P1	10%
+#define	SCORE_P2	10%
+#define	SCORE_P3	10%
+#define	SCORE_P4	10%
 #endif  SWE
 
 #ifdef UCLA
