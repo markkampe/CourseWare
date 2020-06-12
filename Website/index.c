@@ -76,7 +76,7 @@ to their solution.
 #ifdef HMC
 	<LI> <a href="https://hmc-cs.zoom.us/j/93895586571">Zoom</a>
 	     meeting for lectures and labs</LI>
-	<LI> <a href="https://piazza.com/hmc/fall2020/cs121">Piazza</a> 
+	<LI> <a href="https://piazza.com/claremont/fall2020/hmcsci1211fa20/home">Piazza</a> 
 	     on-line forum for topic requests and discussions</LI>
 	<li> <a href="https://gradescope.com/courses/138396">Gradescope</a>
 		website for project and exam feedback.</li>
