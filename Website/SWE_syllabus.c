@@ -7,7 +7,7 @@
 <body>
 <center>
 <h1>COURSE</h1>
-Last updated: Feb 20, 2020
+Last updated: June 20, 2020
 </center>
 
 <h2> <a name="objectives">Course Objectives</a></h2>
@@ -25,8 +25,6 @@ exploiting the features of programming languages and libraries.
 But software is sufficiently subtle and complex that it is not usually
 possible to sit down, think about it for a few minutes, and start coding.
 Building working software requires tools, discipline, and methodology.
-</P>
-<P>
 The goal of this course is to familiarize you with the concepts, tools and techniques
 that are required to successfully pursue non-trivial software projects ranging
 from a few staff-months to a staff-century or more.
