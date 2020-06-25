@@ -5,12 +5,14 @@
 
 <body>
 <center>
-<h1>COURSE</h1>
+<h1>COURSE (NUMBER)</h1>
 #ifdef SWE
 <strong><i><font size="5">(monsters that prey on software projects, and how to vanquish them)</font></i></strong>
-<h2>SEASON YEAR</h2>
 #endif
 <h2> Instructor: <A href="https://www.linkedin.com/in/markkampe">Mark Kampe</A></h2>
+#ifdef HMC
+<img src="CS_dept.png" height="120" width="180">
+#endif
 </center>
 <P>
 </P>

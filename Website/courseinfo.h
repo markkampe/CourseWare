@@ -28,13 +28,13 @@
 #endif  SWE
 
 #ifdef UCLA
-#define NUMBER CS121
+#define NUMBER CS134
 #endif  UCLA
 #ifdef POM
 #define NUMBER CS181F
 #endif  POM
 #ifdef HMC
-#define NUMBER CS121S
+#define NUMBER CS121
 #endif HMC
 
 #ifdef UCLA
