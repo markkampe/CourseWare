@@ -149,7 +149,7 @@ class csvReader:
                 if not hasattr(self, 'cTop'):
                     sys.stderr.write("Lectures: Title column unknown\n")
                     sys.exit(-1)
-            elif cols[self.cLect] != "":
+            elif cols[self.cLect] != "" and cols[self.cTop] != "":
                 obj.addLecture(cols[self.cLect], cols[self.cTop])
             line = line + 1
 
