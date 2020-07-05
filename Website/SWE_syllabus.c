@@ -592,10 +592,9 @@ which prohibit cheating, fabrication, multiple submissions, and facilitating aca
 </p>
 #endif
 #ifdef HMC
-Students must follow the Academic Honesty standards of both 
-<A href="tbd">Havrvey Mudd</A>
-and the
-<A href="tbd">Computer Science Department</a>
+Students must follow the 
+<A href="info/honor-code.html">Academic Honesty standards</a>
+of both Harvey Mudd and the Computer Science Department
 which prohibit cheating, fabrication, multiple submissions, and facilitating academic dishonesty. 
 </p>
 #endif
