@@ -96,7 +96,7 @@ aspects of that one project:
 </center>
 
 <ul>
-	<sup>1</sup> Submissions are due by midnight at the end of the due date.<br>
+	<sup>1</sup> Submissions are (modulo late-day-use) due by midnight at the end of the due date.<br>
 	<sup>2</sup> Unless otherwise specified, all written materials should be 
 		<a href="projects.html#submission">submitted</a>
  		(via e-mail) containing URLs to ASCII text files in a repo on 

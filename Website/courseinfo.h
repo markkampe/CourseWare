@@ -13,6 +13,7 @@
 #define NUMBER CS134
 #define STUDENT_PRES
 #endif  POM
+#define SLIP_DAYS 5
 #endif  OS
 
 #ifdef SWE
@@ -25,6 +26,8 @@
 #define	SCORE_P2	10%
 #define	SCORE_P3	10%
 #define	SCORE_P4	10%
+
+#define SLIP_DAYS 4
 #endif  SWE
 
 #ifdef UCLA
@@ -49,3 +52,4 @@
 #define	SUBMIT TBD.hmc.edu
 #define SUBMIT_URL "http:TBD.cs.hmc.edu"
 #endif  HMC
+

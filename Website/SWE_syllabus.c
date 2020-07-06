@@ -444,8 +444,8 @@ to their solution.
     <ul>
 	<li>there are no make-ups for quizzes, but you can
 	    take a quiz before it is due.</li>
-	<li>each student has five slip-days that can be used for
-	    any lab due date (before the end of the quarter).
+	<li>each student has <strong>SLIP_DAYS slip days</strong> that can be used for
+	    any project submission due date (before the end of the quarter).
 	    After those have been used up, a grade is reduced by 10% for each 24 hours
 	    late the assignment is.</li>
 	<li>if you are unable to make an exam, it may be possible
