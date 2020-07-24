@@ -7,7 +7,7 @@
 <body>
 <center>
 <h1>COURSE</h1>
-Last updated: June 20, 2020
+Last updated: __DATE__
 </center>
 
 #ifdef SWE

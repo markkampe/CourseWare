@@ -26,7 +26,7 @@
 <body>
 <center>
 <h1>COURSE</h1>
-Last updated: Feb 09, 2018
+Last updated: __DATE__
 </center>
 
 <hr>
