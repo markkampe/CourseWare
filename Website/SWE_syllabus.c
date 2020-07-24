@@ -10,29 +10,14 @@
 Last updated: June 20, 2020
 </center>
 
+#ifdef SWE
+#include "suntzu.h"
+#endif
+
 <h2> <a name="objectives">Course Objectives</a></h2>
-<P>
-With appologies to <A href="http://www.artofwarsuntzu.com/Art%20of%20War%20PDF.pdf">Sun Tzu</A>
-<ul><em>
-The art of software development is of vital importance to every enterprise.<br>
-It is a matter of life and death, a road either to success or to ruin.<br>
-Hence, it is a subject of inquiry which can, on no account, be neglected.
-</em></ul>
-</p>
-<P>
-Students are assumed to have a good understanding of programming and 
-exploiting the features of programming languages and libraries.
-But software is sufficiently subtle and complex that it is not usually
-possible to sit down, think about it for a few minutes, and start coding.
-Building working software requires tools, discipline, and methodology.
-The goal of this course is to familiarize you with the concepts, tools and techniques
-that are required to successfully pursue non-trivial software projects ranging
-from a few staff-months to a staff-century or more.
-It is not a survey course.  
-It is a very practical course dealing with real-world problems, the issues
-that complicate them, and the approaches that have been successfully applied
-to their solution.
-</P>
+#ifdef SWE
+#include "SWE_blurb.h"
+#endif
 
 <h2> <a name="instructor">Instructor:</a>
 <a href="http://www.linkedin.com/in/markkampe">Mark Kampe</a>
