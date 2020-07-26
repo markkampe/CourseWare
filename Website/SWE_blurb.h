@@ -15,7 +15,7 @@ whose goal is to develop:
     <li> methodologies to approach the creation of good
          specifications, architecture, designs, and test plans.</li>
     <li> your ability to undersand, describe, and review 
-         complex software systems and processes.</li>
+         complex software systems and development processes.</li>
     <li> your ability to recognize, analyze, and discuss the
          problems that arise in such efforts.</li>
 </ul>
