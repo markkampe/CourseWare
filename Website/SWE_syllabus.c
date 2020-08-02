@@ -430,7 +430,7 @@ Last updated: __DATE__
 	<li>there are no make-ups for quizzes, but you can
 	    take a quiz before it is due.</li>
 	<li>each student has <strong>SLIP_DAYS slip days</strong> that can be used for
-	    any project submission due date (before the end of the quarter).
+	    any project submission due date (before the end of the semester).
 	    After those have been used up, a grade is reduced by 10% for each 24 hours
 	    late the assignment is.</li>
 	<li>if you are unable to make an exam, it may be possible
@@ -444,8 +444,7 @@ Last updated: __DATE__
 	    You are encouraged to check the on-line grade book regularly to ensure that all of
 	    your assignement grades have been properly recorded.
 	</li>
-	<li>I am always willing to explain the correct answers and 
-	    <strong>exam</strong> grading criteria.</li>
+	<li>I am always willing to explain the correct answers and grading criteria.</li>
 	<li>I am always willing to regrade an <strong>exam</strong> problem 
 	    if I misunderstood a clearly correct answer ... 
 	    but this does not extend to 
@@ -588,8 +587,8 @@ which prohibit cheating, fabrication, multiple submissions, and facilitating aca
 Students are encouraged to study together, and to discuss general
 problem-solving techniques that are useful on assignments; 
 but all exams are to be completed individually without assistance or references;
-when working on the projects students must not share work with others,
-and must specify the sources for all parts of their submitted work. 
+when working on the projects students must not share work with others (outside their team),
+and must specify the sources for all non-original parts of submitted work. 
 </p>
 #ifdef PAPER
 <P>

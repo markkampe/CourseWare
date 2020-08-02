@@ -97,14 +97,21 @@ aspects of that one project:
 
 <ul>
 	<sup>1</sup> Submissions are (modulo late-day-use) due by midnight at the end of the due date.<br>
-	<sup>2</sup> Unless otherwise specified, all written materials should be 
-		<a href="projects.html#submission">submitted</a>
- 		(via e-mail) containing URLs to ASCII text files in a repo on 
-		<a href="https://github.com">Github</a>.
-	<ul>
-		Work-products will be considered to have been submitted at the time of the last
-		<em>commit</em> and <em>push</em>.<br>
-	</ul>
+	<sup>2</sup> The same 
+		<a href="projects.html#submission">general submission process</a>
+		is used for all project deliverables.
+		Each deliverable (including how it will be graded) is 
+		described in the associated
+		<a href="projects.html">project descriptions</a>,
+		but the preferred format in most cases is ASCII text,
+		and should include history
+		(e.g. enabled in 
+		<a href="https://support.google.com/docs/answer/190843?hl=en-GB">Google Docs</a>
+		or reflected in 
+		<a href="https://github.com">Github</a> commits).
+	<P>
+	Work-products will be considered to have been submitted at the time of the last
+	update or <em>commit</em> and <em>push</em>.<br>
 	<P>
 	<a href="projects.html#grading">General comments on project rules and grading</a> can be 
 	found at the end of the project descriptions.
