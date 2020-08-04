@@ -18,6 +18,8 @@ whose goal is to develop:
          complex software systems and development processes.</li>
     <li> your ability to recognize, analyze, and discuss the
          problems that arise in such efforts.</li>
+    <li> your ability to orgnize and effectively manage
+         large and complex team projects.</li>
 </ul>
 </P>
 <P>
