@@ -7,7 +7,6 @@
 <body>
 <center>
 <h1>COURSE</h1>
-Last updated: __DATE__
 </center>
 
 #ifdef SWE
@@ -610,6 +609,12 @@ and I seek <u>full</u> prosecution of every case I report.
 </p>
 </UL>
 
+
+<P>
+<center>
+Last updated: __DATE__
+</center>
+</P>
 
 <br><hr><br>
 <font face = "Arial Helvetica" color = #0000FF size = 2>

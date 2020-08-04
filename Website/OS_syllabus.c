@@ -26,7 +26,6 @@
 <body>
 <center>
 <h1>COURSE</h1>
-Last updated: __DATE__
 </center>
 
 <hr>
@@ -651,6 +650,11 @@ href='http://sites.computer.org/ccse/'>IEEE/ACM Software Engineering
 </ul>
 <br><br>
 *These sections are taken, with permission, from Prof Eggert's CS111 Syllabus</a>.
+<P>
+<center>
+Last updated: __DATE__
+</center>
+</p>
 <br><hr><br>
 <font face = "Arial Helvetica" color = #0000FF size = 2>
 For information about these pages, contact

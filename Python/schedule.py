@@ -322,8 +322,10 @@ if __name__ == '__main__':
     if opts.epilog is not None:
         print ""
         print "<P>"
+        print "<center>"
         now = datetime.date.today()
-        print "Last updated: %d/%d/%d" % (now.month, now.day, now.year)
+        print "(Last updated: %d/%d/%d)" % (now.month, now.day, now.year)
+        print "</center>"
         print "</P>"
         interpolate(opts.epilog)
     else:
