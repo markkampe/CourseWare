@@ -23,7 +23,7 @@ OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
 
 MONTH=9
 YEAR=2020
-
+TOPICID=--topicID
 
 # Problems with this rule:
 #	unconditional --epilog="swe_post.html"
@@ -40,7 +40,7 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	# construct the schedule, learning objectices, and slides index
 	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
 		--prolog=$(SCHED_PFX) --epilog=swe_post.html --quizzes=$(QUIZZES)\
-		$(READINGS) > schedule.html
+		$(READINGS) $(TOPICID) > schedule.html
 	python $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
 		$(OBJECTIVES) > keys.html

@@ -38,7 +38,10 @@ class schedule:
         self.topicMap[topicID] = lecture
         if lecture not in self.topics:
             self.topics[lecture] = []
-        self.topics[lecture].append(subject)
+        if self.topic_id:
+            self.topics[lecture].append(topicID + " " + subject)
+        else:
+            self.topics[lecture].append(subject)
         if lecture not in self.minutes:
             self.minutes[lecture] = time
         else:
@@ -294,6 +297,9 @@ if __name__ == '__main__':
                       default="quizzes/")
     parser.add_option("-x", "--trial", dest="trial", action="store_true",
                       default=False)
+    parser.add_option("-i", "--topicID", dest="topic_id", action="store_true",
+                      default=False)
+
     (opts, files) = parser.parse_args()
 
     # count the file names to decide what to do
@@ -302,6 +308,7 @@ if __name__ == '__main__':
         sys.exit(-1)
 
     obj = schedule(opts.slidepfx, opts.quizpfx, opts.trial)
+    obj.topic_id = opts.topic_id
 
     if opts.topics is not None:     # build topics->lectures map
         csvReader(opts.topics).readTopics(obj, opts.column)
