@@ -121,23 +121,27 @@ class pager:
     # flush out the accumulated question out to the current
     # page, forcing out the page if it is full or we are done
     #
+    # the force argument will be used after all questions
+    # have been processed to pad out the last page
+    #
     def flush(self, force=False):
         # force out the current line
         self.lineBreak()
 
-        # see if we need to skip to a new page
+        # see if there is room for this question on current page
         Plen = len(self.page)
         Qlen = len(self.question)
-        if Plen + Qlen > self.length:
+        if self.length > 0 and Plen + Qlen > self.length:
             self.force()
 
         # append this question to the page
-        self.page.extend(self.question)
-        self.question = []
-        self.prevBlank = False
+        if Qlen > 0:
+            self.page.extend(self.question)
+            self.question = []
+            self.prevBlank = False
 
-        # see if we need to force it out
-        if force:
+        # see if we must force page break after this question
+        if self.length == 0 or force:
             self.force()
 
         # and tell them how large this line was
@@ -153,6 +157,10 @@ class pager:
     #
     def force(self):
 
+        # if page is empty, there is nothing to do
+        if len(self.page) == 0:
+            return
+
         # how many excess lines and padding points
         padPoints = 0
         lines = 0
@@ -161,8 +169,6 @@ class pager:
                 padPoints += 1
             else:
                 lines += 1
-        if padPoints == 0:
-            padPoints = 1
         excess = self.length - lines
 
         # force out the buffered questions
@@ -173,8 +179,8 @@ class pager:
                 self.output.write(l)
                 lines += 1
             else:
-                # padding points
-                x = int(excess / padPoints)
+                # each padding point gets 1/N of the excess
+                x = int(excess / padPoints) if excess > 0 else 1
                 while x > 0:
                     self.output.write('\n')
                     lines += 1
@@ -183,9 +189,12 @@ class pager:
                 padPoints -= 1
 
         # pad us out to a page boundary
-        while lines < self.length:
-            self.output.write('\n')
-            lines += 1
+        if self.length > 0:
+            while lines < self.length:
+                self.output.write('\n')
+                lines += 1
+        else:
+            self.output.write('\f\n')
 
         # and reset the buffered page
         self.page = []
