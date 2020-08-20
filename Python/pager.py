@@ -5,6 +5,7 @@
 #   a pager filters all of the output that goes into an exm,
 #   doing word-wrapping and page-padding to a specified page size.
 #
+import sys
 
 
 class pager:
@@ -122,7 +123,8 @@ class pager:
     # page, forcing out the page if it is full or we are done
     #
     # the force argument will be used after all questions
-    # have been processed to pad out the last page
+    # have been processed to force the last question out even
+    # if the page is not yet full
     #
     def flush(self, force=False):
         # force out the current line
@@ -131,8 +133,9 @@ class pager:
         # see if there is room for this question on current page
         Plen = len(self.page)
         Qlen = len(self.question)
-        if self.length > 0 and Plen + Qlen > self.length:
-            self.force()
+        if Qlen > 0 and Plen + Qlen > self.length:
+            # sys.stderr.write("force before " + self.question[0] + "\n");
+            self.force(True)
 
         # append this question to the page
         if Qlen > 0:
@@ -141,8 +144,9 @@ class pager:
             self.prevBlank = False
 
         # see if we must force page break after this question
-        if self.length == 0 or force:
-            self.force()
+        if force:
+            # sys.stderr.write("forced force\n")
+            self.force(False)
 
         # and tell them how large this line was
         return Qlen
@@ -155,10 +159,14 @@ class pager:
     #   page out, we will divide any remaining lines
     #   evenly among the padding points.
     #
-    def force(self):
+    #   If new_page is specified, we should pad the
+    #   output to the next page boundary (because
+    #   more is coming).
+    def force(self, new_page):
 
         # if page is empty, there is nothing to do
         if len(self.page) == 0:
+            # sys.stderr.write("force: empty page\n")
             return
 
         # how many excess lines and padding points
@@ -189,12 +197,15 @@ class pager:
                 padPoints -= 1
 
         # pad us out to a page boundary
-        if self.length > 0:
-            while lines < self.length:
-                self.output.write('\n')
-                lines += 1
-        else:
-            self.output.write('\f\n')
+        if new_page:
+            if self.length > 0:
+                # sys.stderr.write("force " + str(lines) + " lines\n")
+                while lines < self.length:
+                    self.output.write('\n')
+                    lines += 1
+            else:
+                # sys.stderr.write("force: formfeed\n")
+                self.output.write('\f\n')
 
         # and reset the buffered page
         self.page = []
