@@ -68,11 +68,53 @@
 	<li> <a href="https://gradescope.com/courses/138396">Gradescope</a>
 		website for project and exam feedback.</li>
 #endif HMC
-	<LI> Exam Solutions:
-	<UL>
-	     <LI><a href="solns/x1.html">mid-term</a> </LI>
-	     <LI><a href="solns/x2.html">final</a> </LI>
-	</UL>
+</UL>
+
+<H2>Exams</H2>
+<P>
+Practical skills will be exercised in the projects.
+Your mastery of concepts and issues will be assessed in
+<a href="syllabus.html#exams">mid-term and final exams</a>.
+#ifdef REMOTE_EXAMS
+<P>
+You will be able to take these exams remotely.
+When the scheduled exam period begins:
+<UL>
+   <LI>The exam URL in the <a href="schedule.html">course schedule</A> will come to life.</li>
+   <LI>Download/save the (ASCII text) exam file on your local computer.</li>
+   <LI><u>Your submission must also be in ASCII text</u>, so you should do your 
+       editing with a standard text editor (e.g. <em>vi</em>, <em>emacs</em>, <em>notepad /a</em>).</li>
+   <LI>Enter your name and student ID on the first page.</li>
+   <LI>Enter your answers after each question. 
+       <BR>
+       Please take care not to delete the form-feed in front of each 
+       question, as these are used to convert your submission into
+       a gradable format.</li>
+   <LI>When you are done, <u>and within five minutes of the end of the
+       scheduled exam period</u>:
+       <ul>
+       	    <li>save your exam in a file that includes your name:
+	        e.g. <tt>x1_kampe.txt</tt></li>
+ 	    <li>subimit your exam by up-loading it to <a href=SUBMIT_URL>SUBMIT</a>.
+	    </li>
+       </ul>
+       </li>
+</UL>
+</P>
+<P>
+The exams will be converted to pdf 
+#else
+The exams will be scanned to pdf 
+#endif
+and up-loaded to 
+<a href="http://www.Gradescope.com">Gradescope</a> for grading,
+and where you will be able to view the graded results.
+<br>
+After all exams have been confirmed to have been submitted, 
+solutions will be posted on-line:
+<UL>
+     <LI><a href="solns/x1.html">mid-term</a> </LI>
+     <LI><a href="solns/x2.html">final</a> </LI>
 </UL>
 
 <H2>Projects and Due Dates</H2>

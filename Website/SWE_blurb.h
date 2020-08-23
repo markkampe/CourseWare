@@ -10,7 +10,7 @@ Building working software requires tools, discipline, and methodology.
 This is a course in software development concepts, issues and methodologies,
 whose goal is to develop:
 <ul>
-    <li> your ability to orgnize and effectively manage
+    <li> your ability to organize and effectively manage
          large and complex team projects.</li>
     <li> your ability to gather, define, clarify and validate requirements for 
          non-trivial software projects.</li>

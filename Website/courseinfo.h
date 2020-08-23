@@ -28,6 +28,7 @@
 #define	SCORE_P4	10%
 
 #define SLIP_DAYS 4
+#define REMOTE_EXAMS	TRUE
 #endif  SWE
 
 #ifdef UCLA
@@ -46,10 +47,10 @@
 #endif UCLA
 #ifdef POM
 #define	SUBMIT submit.cs.pomona.edu
-#define SUBMIT_URL "http:submit.cs.pomona.edu"
+#define SUBMIT_URL "http://submit.cs.pomona.edu"
 #endif  POM
 #ifdef HMC
-#define	SUBMIT TBD.hmc.edu
-#define SUBMIT_URL "http:TBD.cs.hmc.edu"
+#define	SUBMIT your Sakai Dropbox
+#define SUBMIT_URL "http://sakai.claremont.edu"
 #endif  HMC
 
