@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# a file produced from schedule generation that I keep around so
+# it can be used in project generation
+project_dates.h
