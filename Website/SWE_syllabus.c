@@ -346,7 +346,8 @@
     management, and post-mortem review skills.  This is accomplished by not
     breaking the second project into small pieces, but rather, requiring the
     students to do this.  The students are not merely responsible for
-    producing the required work products, but plans for their production.
+    producing the required work products, but for creatining and 
+    managing team efforts to produce those work products.
     The project grades are based, in part,
     on the quality of the plans, the dilligence that was paid to them,
     and the insights gained in retrospect.
