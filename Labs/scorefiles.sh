@@ -32,7 +32,7 @@ else
 fi
 
 # get a list of team directory names
-TEAMS=`cat $TEAMFILE | cut -d: -f1 | uniq`
+TEAMS=`cat $TEAMFILE | cut -d, -f1 | sort | uniq`
 
 # suffix for per-student score files
 SUFFIX="_$PROJECT.txt"
@@ -41,7 +41,7 @@ for team in $TEAMS
 do
     if [ -d $PROJECT/$team ]
     then
-	grade=`echo $PROJECT/$team/grading_*.txt`
+	grade=`echo $PROJECT/$team/grading_??.txt`
 	if [ -f $grade ]
 	then
 	    echo "Team: $team"
