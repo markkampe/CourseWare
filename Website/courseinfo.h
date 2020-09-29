@@ -50,7 +50,7 @@
 #define SUBMIT_URL "http://submit.cs.pomona.edu"
 #endif  POM
 #ifdef HMC
-#define	SUBMIT your Sakai Dropbox
+#define	SUBMIT Sakai Assignments
 #define SUBMIT_URL "http://sakai.claremont.edu"
 #endif  HMC
 
