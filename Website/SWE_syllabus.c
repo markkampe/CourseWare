@@ -158,8 +158,10 @@
 	   <li> the definition of a key term</li>
 	   <li> distinctions between key terms </li>
 	   <li> examples of a key concept</li>
-	   <li> effectiveness of techniques</li>
+	   <li> relative efficacy of techniques</li>
 	</ul>
+    </P>
+    <P>
     Most quiz questions can be answered with a single sentence
     (or even a few words).  Since the quizzes are timed, short
     answers are pretty clearly the best.
