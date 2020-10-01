@@ -150,15 +150,19 @@
     </P>
     <P>
     I attempt to choose quiz questions, based on key concepts, that
-    should be trivial to answer based on a single reading.
+    few people could answer from common sense or general knolwedge,
+    but should not be too difficult to answer the day after a single 
+    reading.
     Each quiz will have four or five questions, typically asking
 	<ul>
 	   <li> the definition of a key term</li>
 	   <li> distinctions between key terms </li>
 	   <li> examples of a key concept</li>
+	   <li> effectiveness of techniques</li>
 	</ul>
     Most quiz questions can be answered with a single sentence
-    (or even a few words).
+    (or even a few words).  Since the quizzes are timed, short
+    answers are pretty clearly the best.
     </P>
 #ifdef UCLA
 	<P>
