@@ -102,13 +102,21 @@ aspects of that one project:
 		is used for all project deliverables.
 		Each deliverable (including how it will be graded) is 
 		described in the associated
-		<a href="projects.html">project descriptions</a>,
-		but the preferred format in most cases is ASCII text,
-		and should include history
-		(e.g. enabled in 
-		<a href="https://support.google.com/docs/answer/190843?hl=en-GB">Google Docs</a>
-		or reflected in 
-		<a href="https://github.com">Github</a> commits).
+		<a href="projects.html">project descriptions</a>.
+		Your submissions should not assume that your readers have
+		access to any special or proprietary software.  
+		The best submission formats are probably:
+		<ul>
+		    <li>ASCII text for simple prose</li>
+		    <li><em>pdf</em> or <em>Google Docs</em> for formatted reports w/figures</li>
+		    <li><em>csv</em> or <em>Google Sheets</em> for spread sheets</li>
+		</ul>
+		<p>
+		We will in many cases be looking at how plans or specifications have evolved.
+		This can be captured with <a href="https://github.com">Github</a> commits, 
+		or by enabling history in
+		<a href="https://support.google.com/docs/answer/190843?hl=en-GB">Google Docs</a>.
+		</p>
 	<P>
 	Work-products will be considered to have been submitted at the time of the last
 	update or <em>commit</em> and <em>push</em>.<br>
