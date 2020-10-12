@@ -41,7 +41,7 @@ for team in $TEAMS
 do
     if [ -d $PROJECT/$team ]
     then
-	grade=`echo $PROJECT/$team/grading_??.txt`
+	grade=`echo $PROJECT/$team/grading_*.txt`
 	if [ -f $grade ]
 	then
 	    echo "Team: $team"
