@@ -103,6 +103,7 @@
     topics you would like to discuss, please post them to the course discussion forum.
     </P>
 </ul>
+#if SCORE_PART != 0
 <h2><a name="participation">Participation</A></h2>
 <ul>
     <P>
@@ -134,6 +135,7 @@
     </ul>
     </P>
 </ul>
+#endif
 
 <h2><a name="quizzes">Quizzes</A></h2>
 <ul>
@@ -378,7 +380,9 @@
 	<TABLE frame="box" rules="all"><TBODY>
 	<TR> <TH>Weight</TH>     <TH>Item</TH></TR>
 	<TR> <TD>SCORE_QUIZ</TD> <TD>quizzes: daily</TD></TR>
+#if SCORE_PART != 0
         <TR> <TD>SCORE_PART</TD> <TD>participation: verbal, written</TD></TR>
+#endif
 	<TR> <TD>SCORE_X1</TD>	 <TD>exam: midterm</TD></TR>
 	<TR> <TD>SCORE_X2</TD>	 <TD>exam: final</TD></TR>
 	<TR> <TD>SCORE_P1</TD>	 <TD>project: 1. proposal</TD></TR>
