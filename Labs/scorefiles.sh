@@ -48,8 +48,16 @@ do
 	    members=`grep $team $TEAMFILE | cut -d, -f2`
 	    for student in $members
 	    do
+		# make per-student copy of the team-grade
 		cp $grade $SCORES/$student$SUFFIX
 	    	echo " ... $grade -> $SCORES/$student$SUFFIX"
+
+		# see if there is also a per-student grade
+		if [ -f $PROJECT/$team/"$student"_"$PROJECT" ]
+		then
+		    echo " ...    appending $PROJECT/$team/$student"_"$PROJECT"
+		    cat $PROJECT/$team/"$student"_"$PROJECT" >> $SCORES/$student$SUFFIX
+		fi
 	    done
     	else
 	    echo "Unable to find grade sheet in $PROJECT/$team" >&2
