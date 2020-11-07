@@ -77,7 +77,7 @@
     <p>
     <a href="schedule.html">Lecture, Reading, Lab, and Exam Schedule</A>
     </p>
-    It is not my intention to use the lectures to review topics that are well
+    It is not my preference to use the lectures to review topics that are well
     presented in the reading.  I hope to use the lecture time to:
     <ul>
 	<li> discuss student questions arising from the reading.</li>
@@ -234,7 +234,6 @@
     Different study techniques are more effective for different people.
     This is a general suggestion for review, that is meant only to guide
     your own study efforts:
-    <P>
     <UL>
 	<LI> Start by reviewing the <A href=keys.html>key learning objectives</a>.</li>
 	<LI> If there is a concept, issue or technique that you don't 
@@ -259,7 +258,6 @@
     There is, in some sense, only one project
     for the entire course, but it is broken down into a few distinct phases
     (involving very different activities):
-    </P>
     <OL type=1>
         <LI> <A href="projects.html#desc_1">
                 Requirements and Proposal</A></li>
@@ -329,7 +327,6 @@
         these problems.
         </li>
     </UL>
-    <P>
     My goal, in defining projects for this course, has been to create a series
     of projects that will focus primarily on the <em>software engineering</em>
     skills taught in the course.
@@ -352,7 +349,7 @@
     <P>
     Another goal of these projects is to develop organizational, planning, time
     management, and post-mortem review skills.  This is accomplished by not
-    breaking the second project into small pieces, but rather, requiring the
+    breaking the project into small pieces, but rather, requiring the
     students to do this.  The students are not merely responsible for
     producing the required work products, but for creatining and 
     managing team efforts to produce those work products.
@@ -361,6 +358,14 @@
     and the insights gained in retrospect.
     It is further hoped that the post-mortem reviews will help consolidate
     learning of both process and technical lessons.
+    </P>
+    <P>
+    These are, large team projects;
+    Large enough to give you the opportunity to encounter a wide range
+    of requirements, archictectural, planning, execution, and group
+    problems ... from which I hope you will learn lessons that will 
+    enable you to recognize and evade many tragedies in your future lives.
+    </P>
     <P>
     Thus the assigned projects should be seen, both in terms of the primary
     technical skills they exercise, and successively more demanding sets of
