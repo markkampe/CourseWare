@@ -38,7 +38,14 @@
 #define NUMBER CS181F
 #endif  POM
 #ifdef HMC
+#if YEAR == 2021
+#define NUMBER CS181AA
+#else
 #define NUMBER CS121
+#endif YEAR
+#define ZOOM    "https://hmc-edu.zoom.us/j/93895586571?pwd=bUlYNlRGT2ZRajRtY0tKU0gxK3QwZz09"
+#define PIAZZA  "https://piazza.com/claremont/fall2020/hmcsci1211fa20/home"
+#define GRADESCOPE "https://gradescope.com/courses/138396"
 #endif HMC
 
 #ifdef UCLA
