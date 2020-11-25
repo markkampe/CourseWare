@@ -168,32 +168,6 @@
     (or even a few words).  Since the quizzes are timed, short
     answers are pretty clearly the best.
     </P>
-#ifdef UCLA
-	<P>
-        When classes had only 40-50 students, quiz questions were short-answer, 
-        I graded them personally, and returned them the next day.
-	With classes of 120-160 students this is no longer possible, and
-	I have been forced to move to automated <a href="https://moodle.com">moodle</a> quizzes,
-	administered on the CCLE website.
-	</P>
-	<P>
-	It is very difficult to do short-answer questions in moodle, as even minor variations
-	in punctuation result in answers being scorred as incorrect.  As a result, virtually
-	all quiz questions are multiple-choice or matching.  In order to keep these
-	questions from being trivial, it is necessary to include options that sound reasonable,
-	but are wrong in some detail.
-	I (along with most students) dislike this format ... but despite these irritations,
-	experience shows that quiz scores are well corellated with (and a little bit better than)
-	exam scores.  Most A-students seem to earn quiz scores in the 90s.
-	</P>
-	<IMG src="quiz_vs_exam.jpg" alt="scatter plot of quiz vs exam scores"></IMG>
-	<P>
-	While I feel locked into the format, I am concerned about ensuring the fairness of
-	questions and the relevance of the topics they cover.  If you have suggestions for how
-	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
-	your suggestions.
-	</P>
-#endif
 </ul>
 
 
@@ -592,7 +566,8 @@ which prohibit cheating, fabrication, multiple submissions, and facilitating aca
 #endif
 #ifdef HMC
 Students must follow the 
-<A href="info/honor-code.html">Academic Honesty standards</a>
+<A href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/honor-code.html">
+Academic Honesty Standards</a>
 of both Harvey Mudd and the Computer Science Department
 which prohibit cheating, fabrication, multiple submissions, and facilitating academic dishonesty. 
 </p>
