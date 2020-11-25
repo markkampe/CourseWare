@@ -11,7 +11,7 @@
 #endif
 <h2> Instructor: <A href="https://www.linkedin.com/in/markkampe">Mark Kampe</A></h2>
 #ifdef HMC
-<img src="CS_dept.png" height="120" width="180">
+<img src="http://www.cs.hmc.edu/~markk/CS_dept.png" height="120" width="180">
 #endif
 </center>
 <P>
