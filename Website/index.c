@@ -61,11 +61,11 @@
 		website for project and exam feedback.</li>
 #endif POM
 #ifdef HMC
-	<LI> <a href="https://hmc-edu.zoom.us/j/93895586571?pwd=bUlYNlRGT2ZRajRtY0tKU0gxK3QwZz09">
+	<LI> <a href=ZOOM>
              Zoom</a> meeting for lectures and labs</LI>
-	<LI> <a href="https://piazza.com/claremont/fall2020/hmcsci1211fa20/home">Piazza</a> 
+	<LI> <a href=PIAZZA>Piazza</a> 
 	     on-line forum for topic requests and discussions</LI>
-	<li> <a href="https://gradescope.com/courses/138396">Gradescope</a>
+	<li> <a href=GRADESCOPE>Gradescope</a>
 		website for project and exam feedback.</li>
 #endif HMC
 </UL>
