@@ -21,8 +21,8 @@ KEYS_PFX=pre_keys.html
 INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
 
-MONTH=9
-YEAR=2020
+MONTH=1
+YEAR=2021
 TOPICID=--topicID
 
 # Problems with this rule:
