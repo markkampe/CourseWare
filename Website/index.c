@@ -27,7 +27,7 @@
 	<LI> <strong>Office Hours</strong>:
 #include "office_hours.h"
 	    </LI>
-	<LI> <A href="info/QandA.html">Frequently Asked Questions</A> </LI>
+	<LI> <A href="FAQ.html">Frequently Asked Questions</A> </LI>
         #ifdef SWE
         #include "SWE_blurb.h"
         #endif
