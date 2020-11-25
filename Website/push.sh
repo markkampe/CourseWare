@@ -4,9 +4,11 @@
 #
 ACCOUNT=markk@knuth.cs.hmc.edu
 DIR=public_html
-COURSE=cs121.f20
+COURSE=cs181aa
+SEMESTER=s
+YEAR=21
 
-DEST=$ACCOUNT:$DIR/$COURSE
+DEST=$ACCOUNT:$DIR/$COURSE.$SEMESTER$YEAR
 echo "updating HTML course information on $DEST"
 scp index.html schedule.html syllabus.html keys.html $DEST
 scp slides.html $DEST/slides/index.html
