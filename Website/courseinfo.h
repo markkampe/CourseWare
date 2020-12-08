@@ -44,8 +44,8 @@
 #define NUMBER CS121
 #endif YEAR
 #define ZOOM    "https://hmc-edu.zoom.us/j/93895586571?pwd=bUlYNlRGT2ZRajRtY0tKU0gxK3QwZz09"
-#define PIAZZA  "https://piazza.com/claremont/fall2020/hmcsci1211fa20/home"
-#define GRADESCOPE "https://gradescope.com/courses/138396"
+#define PIAZZA  "https://piazza.com/claremont/spring2021/hmcsci181aa/home"
+#define GRADESCOPE "https://gradescope.com/courses/214146"
 #endif HMC
 
 #ifdef UCLA
