@@ -50,37 +50,35 @@ aspects of that one project:
 	    3. Review the processes you followed in this project to see what lessons you can learn
 	    for how to do things more effectively in the future.
 	</TD></TR>
-<TR> <td colspan=3><strong>Phase 3: <a href="projects.html#desc_3">Planning, Specification, Design and Review</a></strong></td></TR>
-<TR> <TD>P3A_DUE</TD>	<TD><A Href="projects.html#desc_3a">3a. Planning</TD>
+<TR> <td colspan=3><strong>Phase 3: <a href="projects.html#desc_3">Component Specifications, Design and Test Plan</a></strong></td></TR>
+<TR> <TD>P3A_DUE</TD>	<TD>3a. <A Href="projects.html#desc_3a">Component Selection and Specifications</TD>
 	<TD>1. Select the system components to be designed and implmented<br>
 	    2. Select an owner for each component<br>
-	    3. Develop a schedule and assign responsibilities for the remaing phases
-        </TD></TR>
-<TR> <TD>P3B_DUE</TD>	<TD><A Href="projects.html#desc_3b">3b. Component Specifications</TD>
-	<TD> 1. As a team, elaborate the architecture above the chosen pieces to 
+	    3. Develop a schedule and assign responsibilities for the remaing phases<br>
+	    4. As a team, elaborate the architecture above the chosen pieces to 
 	        develop detailed specfiications for each.<br>
-	     2. As individuals, write up detailed specifications for your assigned component.
-	</TD></TR>
-<TR> <TD>P3C_DUE</TD>	<TD>3c. <A Href="projects.html#desc_3c1">Component Design</a> and 
-				<A Href="projects.html#desc_3c2">Test Plan</a></TD>
+	    5. As individuals, write up detailed specifications for your assigned component.
+        </TD></TR>
+<TR> <TD>P3B_DUE</TD>	<TD>3b. <A Href="projects.html#desc_3b1">Component Design</a> and 
+				<A Href="projects.html#desc_3b2">Test Plan</a></TD>
 	<TD> 1. As individuals, prepare a detailed design for your assigned component.<br>
 	     2. As individuals, prepare detailed unit-testing plans for your assigned component.
 	</TD></TR>
-<TR> <TD>P3D_DUE</TD>	<TD>3d. Design Review <A Href="projects.html#desc_3d1">notes</a> and 
-					      <A Href="projects.html#desc_3d2">report</a>.</TD>
+<TR> <TD>P3C_DUE</TD>	<TD>3c. Design Review <A Href="projects.html#desc_3c1">notes</a> and 
+					      <A Href="projects.html#desc_3c2">report</a>.</TD>
 	<TD> 1. As individuals, package your specifications, design and test plans for review.</br>
 	     2. As individuals, read each package and prepare notes.</br>
 	     3. As a group, review each package, and write a report for each review.
 	</TD></TR>
-<TR> <TD>P3E_DUE</TD>	<TD><A Href="projects.html#desc_3e">3e. Final Design</TD>
+<TR> <TD>P3D_DUE</TD>	<TD><A Href="projects.html#desc_3d">3d. Final Design</TD>
 	<TD> 1. As individuals, revise your specifications, designs, and test plans
 	        to address all important issues raised in the review.<br>
 	     2. As a team, review the processes you have followed, and write up a
 	        post-mortem report.
 	</TD></TR>
 <TR> <td colspan=3><strong>Phase 4: <a href="projects.html#desc_4">Implementation and Testing Sprint</a></strong></td></TR>
-<TR> <TD>P4_DUE</TD>	<TD><A Href="projects.html#desc_4">4. Final Reports</TD>
-	<TD> 1. Each of you will implement the component you designed in phase 2.<br>
+<TR> <TD>P4D_DUE</TD>	<TD><A Href="projects.html#desc_4">4. Final Reports</TD>
+	<TD> 1. Each of you will implement the component you designed in phase 3.<br>
 	     2. Two of you will spend (at least) one session doing <em>pair-programming</em>.<br>
 	     3. (at least) one of you will develop your code in a <em>Test Driven Development</em>
 	        fashion (implementing and running tests as you complete each routine or feature).<br>
@@ -88,8 +86,10 @@ aspects of that one project:
 	        <em>code review</em> by other members of your team.<br>
 	     5. Each of you will implement the component test plan you designed (in phase 3)
 	        and use it to validate the correctness of your implementation.<br>
-	     6. As a team, prepare and present a brief sprint review.<br>
-	     7. As a team, review the processes you have followed, and write up a
+	     6. As a team, design a demo that shows your (independently implemented)
+	        components working together.<br>
+	     7. As a team, prepare and present a brief sprint review.<br>
+	     8. As a team, review the processes you have followed, and write up a
 	        post-mortem report.
 	</TD></TR>
 </TBODY></TABLE>

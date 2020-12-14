@@ -11,13 +11,13 @@ then
 	exit 1
 fi
 
-PROJECTS="P1A P1B P1C P1D P2A P2B P2C P3A P3B P3C P3D P3E P4"
+PROJECTS="P1A P1B P1C P1D P2A P2B P2C P3A P3B P3C P3D P4AB P4C P4D"
 
 echo "#ifdef SWE"
 for p in $PROJECTS
 do
 	# grep out the first due line for each project
-	due=`grep "(due" $1 | grep -m1 "$p:" | cut -d, -f5`
+	due=`grep -e "(due" -e "(suggested" $1 | grep -m1 "$p:" | cut -d, -f5`
 
 	# pull the date out of the "(due xxx)"
 	date=`echo $due | cut --complement -d" " -f1 | cut -d")" -f1`
