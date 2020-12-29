@@ -174,6 +174,15 @@
     (or even a few words).  Since the quizzes are timed, short
     answers are pretty clearly the best.
     </P>
+    <P>
+    It is important that you review the feedback you receive on
+    your quiz answers ...
+    <ol type="a">
+    	<li> to improve your understanding.</li>
+	<li> to help me identify bad questions or grading errors.</li>
+	<li> because quiz questions where people have trouble often
+	     reappear on exams.</li>
+    </ol>
 </ul>
 
 
@@ -225,6 +234,12 @@
 	     go back and review the 
 	     <A Href="schedule.html">related reading</a>.</li>
     </UL>
+    </P>
+    <P>
+    Exam (and quiz) questions are almost entirely based on the 
+    <a href="keys.html">key concepts</a> list.  You are encouraged
+    to pose questions and continue discussions of these key concepts
+    in <A href=PIAZZA>Piazza</A>.
     </P>
 </ul>
 
