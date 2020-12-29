@@ -110,12 +110,9 @@ and up-loaded to
 <a href="http://www.Gradescope.com">Gradescope</a> for grading,
 and where you will be able to view the graded results.
 <br>
-After all exams have been confirmed to have been submitted, 
-solutions will be posted on-line:
-<UL>
-     <LI><a href="solns/x1.html">mid-term</a> </LI>
-     <LI><a href="solns/x2.html">final</a> </LI>
-</UL>
+After all exams have been confirmed to have been properly submitted
+solutions will available through another URL in the
+<a href="schedule.html">course schedule</A>.
 
 <H2>Projects and Due Dates</H2>
 <P>
