@@ -120,14 +120,18 @@ aspects of that one project:
 		The best submission formats are probably:
 		<ul>
 		    <li>ASCII text for simple prose</li>
-		    <li><em>pdf</em> or <em>Google Docs</em> for formatted reports w/figures</li>
-		    <li><em>csv</em> or <em>Google Sheets</em> for spread sheets</li>
+		    <li><em>pdf</em> or <em>Google Docs</em> URLs for formatted reports w/figures</li>
+		    <li><em>csv</em> or <em>Google Sheets</em> URLs for spread sheets</li>
 		</ul>
 		<p>
 		We will in many cases be looking at how plans or specifications have evolved.
 		This can be captured with <a href="https://github.com">Github</a> commits, 
 		or by enabling history in
 		<a href="https://support.google.com/docs/answer/190843?hl=en-GB">Google Docs</a>.
+		</p>
+		<p>
+		For anything you submit as a URL (e.g. <em>Google Docs</em> or <em>Github repos</em>),
+		please ensure that they are publicly accessible to anyone with the URL.
 		</p>
 	<P>
 	Work-products will be considered to have been submitted at the time of the last
