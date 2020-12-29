@@ -14,6 +14,7 @@ whose goal is to develop:
          large and complex team projects.</li>
     <li> your ability to gather, define, clarify and validate requirements for 
          non-trivial software projects.</li>
+    <li> your ability to research and learn to use new libraries, services, and tools.</li>
     <li> methodologies to approach the creation of good
          specifications, architecture, designs, and test plans
 	 for efficient and robust software.</li>
