@@ -77,13 +77,15 @@
     <p>
     <a href="schedule.html">Lecture, Reading, Lab, and Exam Schedule</A>
     </p>
-    It is not my preference to use the lectures to review topics that are well
+    The lectures will include reinforcement of key points from the reading, but
+    it is not my preference to use the lectures to review topics that are well
     presented in the reading.  I hope to use the lecture time to:
     <ul>
 	<li> discuss student questions arising from the reading.</li>
 	<li> expand on key results that should be drawn from reading.</li>
 	<li> work through and discuss important but non-trivial examples from the reading.</li>
         <li> have group exercises related to these topics.</li>
+	<li> have group exercises that apply these topics to current project activities.</li>
 	<li> discuss perspectives, implications, and applications not covered by the reading.</li>
     </ul>
     <P>
@@ -91,7 +93,7 @@
     <ul>
     	<li> using the on-line forum to suggest questions and topics
 	     to be discussed during the lecture sessions.</li>
-	<li> asking questions during the lecture sessions.</li>
+	<li> asking questions and raising issues during the lecture sessions.</li>
     </ul>
     </P>
     <P>
@@ -157,11 +159,15 @@
     reading.
     Each quiz will have four or five questions, typically asking
 	<ul>
-	   <li> the definition of a key term</li>
-	   <li> distinctions between key terms </li>
-	   <li> examples of a key concept</li>
-	   <li> relative efficacy of techniques</li>
+	   <li> definitions of or distinctions between key terms</li>
+	   <li> distinctions between key terms</li>
+	   <li> descriptions or examples of key concepts</li>
+	   <li> applicability, efficacies and issues with techniques</li>
+	   <li> key results from studies</li>
 	</ul>
+    Most of these questions will be based on the associated learning
+    objectives, so you may find it helpful to review the list of
+    learning objectives for the next lecture before starting the reading.
     </P>
     <P>
     Most quiz questions can be answered with a single sentence
@@ -240,7 +246,7 @@
         <LI> <A href="projects.html#desc_3">
                 Planning, Specifications, Design, and Review</a></li>
         <LI> <A Href="projects.html#desc_4">
-                Implementation and Testing</a></li>
+                Implementation, Testing, and Delivery</a></li>
     </OL>
     </P>
 
@@ -262,13 +268,14 @@
         processes for evolving them), review, testing, and an introduction
         to projects, process, and organization.
         <P>
-        In a typical Software Engineering project, students spend (at best)
+        In a typical class project, students spend (at best)
         25% of their time on these activities, and 75% of their time coding
         and debugging.  This is realistic (in that it mirrors real software
         development) but it doesn't provide much opportunity for the students
         to apply the taught techniques and develop the associated skills.
 	</P>
         </li>
+
         <LI>
         The success of a small software project probably has more to do with
         the motivation, skill, and experience of the development team than
@@ -284,6 +291,7 @@
         (as opposed to programming) skills.
 	</P>
         </li>
+
         <LI>
         Projects (whether research or commercial) seldom fail because
         the developers lacked sufficient familiarity with languages
@@ -314,7 +322,7 @@
 		to exercise important skills that would be poorly (if at all)
 		exercised by smaller projects.</li>
 
-	   <LI> Each team will then identify a single component of the
+	   <LI> Each student will then identify a single component of the
 		proposed project (that is small enough to be reasonably
 		accomplished in a few weeks), develop specifications,
 		a design, and a test plan, and then build and test that
@@ -353,8 +361,8 @@
 <ul>
 	<P>
 	The greatest portion of the grade is almost evenly divided
-	between exams (your mastery of concepts) and projects (your
-	ability to apply skills and techniques).
+	between exams (your understanding of concepts and issues)
+	and projects (your ability to apply skills and techniques).
 	</p>
 	<TABLE frame="box" rules="all"><TBODY>
 	<TR> <TH>Weight</TH>     <TH>Item</TH></TR>
@@ -376,20 +384,20 @@
     deliverables, each of which will be individually graded
     (and many of which will each be the subject of an entire lecture).
     <P>
-    For each project submission most of the grade will
-    be a group-score (based on the overall quality of the submission).
+    For the early project submissions most of the grade will
+    be a group-score (based on the overall quality of the submissions).
     A smaller portion of the grade will be personal, based on and
     divided (more or less equally) between the
     share and quality of each person's individual contributions
     to the overall effort.  This weighting is because:
     <OL type=a>
-        <LI> in the real world you will be judged, not on
+        <LI> in the real world you are often judged, not on
              the basis of your individual efforts, but on
              the overall quality of your results.</li>
         <LI> teams are not merely a technique for allowing
              individuals to do less work.  A well functioning
              team can do work that none of the individuals
-             would have been able to do.</li>
+             would have been able to do on their own.</li>
         <LI> work division and cooperation are skills
              that are taught in this class.  I expect to
              see the results of the applications of those skills.</li>
@@ -417,7 +425,7 @@
     <h3>Late and make-up policy</h3>
     <ul>
 	<li>there are no make-ups for quizzes, but you can
-	    take a quiz before it is due.</li>
+	    take a quiz well before it is due.</li>
 	<li>each student has <strong>SLIP_DAYS slip days</strong> that can be used for
 	    any project submission due date (before the end of the semester).
 	    After those have been used up, a grade is reduced by 10% for each 24 hours
