@@ -6,6 +6,9 @@ up with a single (large) project concept.
 Then, over the course of the semester, you will work on different 
 aspects of that one project:
 </P>
+
+<IMG src="proj_0.jpg">
+
 <center>
 <TABLE frame="box" rules="all"><TBODY>
      <col width="40">	<col width="200">	<col width="600">
@@ -140,3 +143,4 @@ aspects of that one project:
 	<a href="projects.html#grading">General comments on project rules and grading</a> can be 
 	found at the end of the project descriptions.
 </ul>
+
