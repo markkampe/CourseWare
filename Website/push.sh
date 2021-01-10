@@ -10,7 +10,7 @@ YEAR=21
 
 DEST=$ACCOUNT:$DIR/$COURSE.$SEMESTER$YEAR
 echo "updating HTML course information on $DEST"
-scp index.html schedule.html syllabus.html keys.html FAQ.html $DEST
+scp index.html schedule.html syllabus.html keys.html FAQ.html swe_exercises.html $DEST
 scp slides.html $DEST/slides/index.html
 
 PROJECTS=../../Big-Software/projects
