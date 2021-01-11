@@ -150,11 +150,11 @@ if __name__ == '__main__':
     obj.listFin()
 
     if opts.epilog is not None:
-        print ""
-        print "<P>"
-        now = datetime.date.today()
-        print "Last updated: %d/%d/%d" % (now.month, now.day, now.year)
-        print "</P>"
+        # print ""
+        # print "<P>"
+        # now = datetime.date.today()
+        # print "Last updated: %d/%d/%d" % (now.month, now.day, now.year)
+        # print "</P>"
         interpolate(opts.epilog)
     else:
         print "</BODY>"

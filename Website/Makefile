@@ -17,6 +17,7 @@ OFFICE_HOURS=office_hours
 SCHED_PFX=pre_schedule.html
 SLIDES_PFX=pre_slides.html
 KEYS_PFX=pre_keys.html
+SLIDES_SFX=post_slides.html
 
 INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
@@ -36,6 +37,7 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_slides.c | grep -v '^# ' > $(SLIDES_PFX)
+	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) post_slides.c | grep -v '^# ' > $(SLIDES_SFX)
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
 	# construct the schedule, learning objectices, and slides index
 	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
@@ -44,7 +46,7 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	python $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
 		$(OBJECTIVES) > keys.html
-	python $(PGM_SLIDES) --lectures=$(SCHEDULE) --prolog=$(SLIDES_PFX) > slides.html
+	python $(PGM_SLIDES) --lectures=$(SCHEDULE) --prolog=$(SLIDES_PFX) --epilog=$(SLIDES_SFX) > slides.html
 	rm -f $(INTERMEDIATES)
 
 ucla-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)

@@ -51,7 +51,7 @@
 	<LI> <A href="schedule.html">Reading and Lecture Schedule</A> </LI>
 	<LI> Copies of <a href="slides/index.html">Lecture Slides</A> </LI>
 #ifdef SWE
-	<LI> <A href="swe_exercises.html">In-Class Exercises</A> </LI>
+	<LI> <A href="slides/exercises.html">In-Class Exercises</A> </LI>
 #endif
 #ifdef UCLA
 	<LI> <A href="https://ccle.ucla.edu">CCLE</a>
