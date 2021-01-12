@@ -44,7 +44,7 @@ aspects of that one project:
 	<TD>1. Study another team's architecture, and prepare notes for a design review,
 	       as they will study and pepare for a review of yours.<br>
 	    2. Conduct a design review with that other team, as they will with you.<br>
-	    3. Write up a report of the review
+	    3. Write up a report of the review.<br>
 	    4. Continue to work any issues with the team that raised them.
 	</TD></TR>
 <TR> <TD>P2C_DUE</TD>	<TD><A Href="projects.html#desc_arch_final">2c. Final Architecture</TD>

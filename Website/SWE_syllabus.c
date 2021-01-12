@@ -357,10 +357,10 @@
     learning of both process and technical lessons.
     </P>
     <P>
-    These are, large team projects;
-    Large enough to give you the opportunity to encounter a wide range
+    These are large team projects;
+    <u>Large enough to give you the opportunity to encounter a wide range
     of requirements, archictectural, planning, execution, and group
-    problems ... from which I hope you will learn lessons that will 
+    problems</u> ... from which I hope you will learn lessons that will 
     enable you to recognize and evade many tragedies in your future lives.
     </P>
     <P>
