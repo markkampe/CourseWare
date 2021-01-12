@@ -20,6 +20,7 @@ to guide you as you work through the exercise.
     <LI><A href="#U/I">User Interface Design</A></LI>
     <LI><A href="#routine">Routine Design</A></LI>
     <LI><A href="#patterns">Design Patterns</A></LI>
+    <LI><A href="#robust">Software Robustness</A></LI>
 </UL>
 <A name="users">
 <H2>Users and Use Cases</H2>
@@ -148,6 +149,32 @@ to guide you as you work through the exercise.
 	    <li>how well did it address your problem?</li>
 	    <li>how easy was it to apply this pattern to your problem?</li>
 	    <li>does this cause you to think of changes to your architecture?</li>
+	</ul>
+    </li>
+    <li> Be prepared to discuss your results</li>
+</UL>
+
+<A name="robust">
+<H2>Software Robustness</H2>
+<UL>
+    <li> Consider an at-risk component in your project
+    	<ul>
+	    <li>something that does things that might reasonably fail,
+	        more interesting problems than <em>bad user input</em></li>
+	    <li>interacts with external services that might refuse, fail or be unavailable</li>
+	    <li>complex process whose success has many pre-requisites</li>
+	</ul>
+    </li>
+    <li> suggest a list different things that might give rise to a <em>fault</em>
+    	 (incorrect or undexpected result).
+    	<ul>
+	    <li>rank each by likelihood and impact</li>
+	</ul>
+    </li>
+    <li> for the top 2-3 problems on your list:
+    	<ul>
+	    <li>describe how you would determine that each had occurred</li>
+	    <li>describe an appropriate recovery or containment strategy</li>
 	</ul>
     </li>
     <li> Be prepared to discuss your results</li>
