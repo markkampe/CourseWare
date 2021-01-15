@@ -21,6 +21,7 @@ to guide you as you work through the exercise.
     <LI><A href="#routine">Routine Design</A></LI>
     <LI><A href="#patterns">Design Patterns</A></LI>
     <LI><A href="#robust">Software Robustness</A></LI>
+    <LI><A href="#integration">Integration and Testing Strategy</A></LI>
 </UL>
 <A name="users">
 <H2>Users and Use Cases</H2>
@@ -179,5 +180,41 @@ to guide you as you work through the exercise.
     </li>
     <li> Be prepared to discuss your results</li>
 </UL>
+
+<A name="integration">
+<H2>Integration and Testing Strategy</H2>
+<UL>
+    <li> Consider each component you have chosen for phases 3 and 4.
+    	<ul>
+	    <li>what portions of its functionality is dependent on other components?</li>
+	    <li>how thoroughly can this component be tested in isolation?</li>
+	</ul>
+    </li>
+    <li> Consider building a dummy (test) module for the required external functionality.
+	<ul>
+	    <li>how completely and accurately could you simulate those other components?</li>
+	    <li>how would you control the behavior of those simulations to enable the desired testing?</li>
+	    <li>how easy would it be to build those simulations?</li>
+	</ul>
+    </li>
+    <li> What approach makes the most sense?
+    	<ol type="1">
+	    <li> no external functionality is required </li>
+	    <li> an easily built simulation could provide all of the required functionality </li>
+	    <li> do initial testing with a simulation, but add additional test cases
+	    	 after the real components are available</li>
+	    <li> this component cannot reasonably be built and tested until others are available.</li>
+	</ol>
+    </li>
+    <li> What demo would you plan to give?
+    	 And if you are not planning on completing enough components for a fully
+	 functional product, what dummy component(s) would you have to build in
+	 order to give a compelling demonstration of the functionality you 
+	 did implement?
+    </li>
+    <li> Be prepared to discuss your results</li>
+</UL>
+
+
 </BODY>
 </HTML>
