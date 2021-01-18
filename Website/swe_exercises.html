@@ -22,6 +22,7 @@ to guide you as you work through the exercise.
     <LI><A href="#patterns">Design Patterns</A></LI>
     <LI><A href="#robust">Software Robustness</A></LI>
     <LI><A href="#integration">Integration and Testing Strategy</A></LI>
+    <LI><A href="#systest">System Testing</A></LI>
 </UL>
 <A name="users">
 <H2>Users and Use Cases</H2>
@@ -215,6 +216,25 @@ to guide you as you work through the exercise.
     <li> Be prepared to discuss your results</li>
 </UL>
 
+<A name="systest">
+<H2>System Testing</H2>
+<UL>
+    <li> Consider the unit test cases for your chosen components
+    	<ul>
+	    <li>what <em>whole-product</em> functionality is not yet well exercised?</li>
+	    <li>what additional system test cases should you add to cover them?</li>
+	    <li>might you also have installation, security or other <em>beyond the code</em> issues?</li>
+	</ul>
+    </li>
+    <li> Consider the computation, major I/O, and external services you use
+    	<ul>
+	    <li>might any operations involve significant costs/delays?</li>
+	    <li>how might you measure (and track) delays due to <em>those causes</em>?</li>
+	    <li>does this cause you to consider design and/or testing changes?</li>
+	</ul>
+    </li>
+    <li> Be prepared to discuss your results</li>
+</UL>
 
 </BODY>
 </HTML>
