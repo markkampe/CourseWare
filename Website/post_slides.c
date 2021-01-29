@@ -9,6 +9,7 @@ a breakout discussion group.
 </UL>
 </P>
 
+#include "swe_labs.h"
 #endif
     </BODY>
 </HTML>

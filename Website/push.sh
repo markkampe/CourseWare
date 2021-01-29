@@ -8,12 +8,19 @@ COURSE=cs181aa
 SEMESTER=s
 YEAR=21
 
+TOP_FILES="index.html schedule.html syllabus.html keys.html FAQ.html"
+
 DEST=$ACCOUNT:$DIR/$COURSE.$SEMESTER$YEAR
-echo "updating HTML course information on $DEST"
-scp index.html schedule.html syllabus.html keys.html FAQ.html $DEST
+
+echo "... updating HTML course information on $DEST"
+scp $TOP_FILES $DEST
+
+echo "... updating slides indices in $DEST/slides"
 scp slides.html $DEST/slides/index.html
 scp swe_exercises.html $DEST/slides/exercises.html
+scp swe_labs.html $DEST/slides/labs.html
 
+# update the project descriptions
 PROJECTS=../../Big-Software/projects
 if [ -r $PROJECTS/projects.html ]
 then
@@ -22,3 +29,6 @@ then
 else
     echo "... unable to find an updated $PROJECTS"
 fi
+
+echo "... updating lab session objectives from $PROJECTS/Slides"
+scp $PROJECTS/Slides/*.html $DEST/slides
