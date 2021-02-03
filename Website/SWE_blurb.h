@@ -1,5 +1,15 @@
+<P>
+When the term <em>Software Engineering</em> was coined (over fifty years ago),
+it was defined as:
+<ul>
+	<em>The establishment and use of sound engineering principles,
+	in order to reliably and economically obtain software that
+	satisfies users' requirements, is reliable, and works
+	efficiently in real deployment environments.</em>
+</ul>
+</P>
 <p>
-Students are assumed to have a good understanding of programming and 
+Students in this course are assumed to have a good understanding of programming and 
 exploiting the features of programming languages and libraries.
 <br>
 But interesting software is sufficiently subtle and complex that it is not usually
