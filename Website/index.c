@@ -163,4 +163,8 @@ and you will have to solve them on your own.
 #endif
 </ul>
 </li></ul>
-</p></body></html>
+</p>
+<center>
+Last updated: __DATE__
+</center>
+</body></html>
