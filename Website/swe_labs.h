@@ -12,9 +12,9 @@ The following slides outine the goals for each lab session:
    <li> <A href="lab_1c.html">P1C: Requirements Development</a> </li>
    <li> <A href="lab_1d.html">P1D: Final Proposal</a> </li>
    <li> <A href="lab_2a.html">P2A: Preliminary Architecture</a> </li>
-   <li> Spring Break </li>
+   <li> <A href="lab_2b.html">P2B: Architectural Review</a> </li>
    <li> <A href="lab_2c.html">P2C: Final Architecture</a> </li>
-   <li> Cesar Chavez Day </li>
+   <li> <A href="lab_3a.html">P3A: Component Specifications</a> </li>
    <li> <A href="lab_3b.html">P3B: Component Design and Test Plan</a> </li>
    <li> <A href="lab_3c.html">P3C: Component Design Reviews</a> </li>
    <li> <A href="lab_3d.html">P3D: Final Component Design and Test Plan</a> </li>
@@ -22,9 +22,11 @@ The following slides outine the goals for each lab session:
    <li> <A href="lab_4c.html">P4C: Integration and Demo Preparation</a> </li>
    <li> <A href="lab_4d.html">P4D: Demo and Post-Mortem</a> </li>
 </OL>
+#ifdef ZOOM_LABS
 <P>
 <!-- TODO: This URL should come from courseinfo.h -->
 To schedule time working with individual teams, please add your team
 and a time to the
 <A Href="https://docs.google.com/spreadsheets/d/1qHE-BNpciJUCfKEfkbU_NHKs3dKgATBC1XLBaItuLMA/edit?usp=sharing">Lab sign-up sheet</A>
 </P>
+#endif
