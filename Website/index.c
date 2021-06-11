@@ -64,14 +64,20 @@
 	<li> <a href="https://gradescope.com/courses/13796">Gradescope</a>
 		website for project and exam feedback.</li>
 #endif POM
-#ifdef HMC
+#ifdef ZOOM
 	<LI> <a href=ZOOM>
              Zoom</a> meeting for lectures and labs</LI>
+#endif
+#ifdef	PIAZZA
 	<LI> <a href=PIAZZA>Piazza</a> 
 	     on-line forum for topic requests and discussions</LI>
+#endif
+#ifdef GRADESCOPE
 	<li> <a href=GRADESCOPE>Gradescope</a>
-		website for project and exam feedback.</li>
-#endif HMC
+		website for project and exam feedback.
+	(Entry Code: GRADESCOPE_CODE)
+	</li>
+#endif GRADESCOPE
 </UL>
 
 <H2>Exams</H2>
