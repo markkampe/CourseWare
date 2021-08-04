@@ -28,10 +28,10 @@
 #include "office_hours.h"
 	    </LI>
 	<LI> <A href="FAQ.html">Frequently Asked Questions</A> </LI>
-        #ifdef SWE
-        #include "SWE_blurb.h"
-        #endif
 </UL>
+#ifdef SWE
+#include "SWE_blurb.h"
+#endif
 
 <H2><a href="syllabus.html">Syllabus</A></H2>
 <UL>
