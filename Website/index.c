@@ -66,7 +66,7 @@
 #endif POM
 #ifdef ZOOM
 	<LI> <a href=ZOOM>
-             Zoom</a> meeting for lectures and labs</LI>
+             Zoom</a> meeting for virtual sessions and office hours</LI>
 #endif
 #ifdef	PIAZZA
 	<LI> <a href=PIAZZA>Piazza</a> 

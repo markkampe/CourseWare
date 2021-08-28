@@ -49,6 +49,7 @@
 #define REMOTE_EXAMS	TRUE
 #endif	Spring 2021
 #if YEAR == 2021 && MONTH >= 9
+#define ZOOM    "https://hmc-edu.zoom.us/j/93895586571?pwd=bUlYNlRGT2ZRajRtY0tKU0gxK3QwZz09"
 #define PIAZZA  "https://piazza.com/claremont/fall2021/csci181aa/home"
 #define GRADESCOPE "https://gradescope.com/courses/274176"
 #define GRADESCOPE_CODE KYB7W5
