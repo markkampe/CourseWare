@@ -8,25 +8,22 @@
 These are the exercises to explore and apply lecture topics
 in group break-out sessions.
 </P>
-<P>
-When you leave the lecture to
-go into your discussion groups, keep this in a browser window
-to guide you as you work through the exercise.
-</P>
 <UL>
-    <LI><A href=#teams">Teams and Projects</A></LI>
-    <LI><A href="#users">Users and Use Cases</A></LI>
-    <LI><A href="#prototypes">Modeling and Prototyping</A></LI>
-    <LI><A href="#quality">Quality and Quality Assurance</A></LI>
-    <LI><A href="#U/I">User Interface Design</A></LI>
-    <LI><A href="#routine">Routine Design</A></LI>
-    <LI><A href="#patterns">Design Patterns</A></LI>
-    <LI>Maintainability: <A href="#goodcode">Good & Bad code</a>, 
-        <A href="#ownership">Personal & Public code</A></LI>
-    <LI><A href="#robust">Software Robustness</A></LI>
-    <LI><A href="#integration">Integration and Testing Strategy</A></LI>
-    <LI><A href="#systest">System Testing</A></LI>
-    <LI><A href="#mgmt">Scheduling and Status Tracking</A></LI>
+    <LI><A href=#teams">2, 3(revisit): Teams and Projects</A></LI>
+    <LI><A href="#users">5: Users and Use Cases</A></LI>
+    <LI><A href="#prototypes">6: Modeling and Prototyping</A></LI>
+    <LI><A href="#quality">9: Quality and Quality Assurance</A></LI>
+    <LI><A href="#U/I">11: User Interface Design</A></LI>
+    <LI><A href="#routine">13: Routine Design</A></LI>
+    <LI><A href="#patterns">14: Design Patterns</A></LI>
+    <LI><A href="#robust">16: Software Robustness</A></LI>
+    <LI><A href="#goodcode">17: Good & Bad code</a> (need not be project teams),<br>
+        <A href="#ownership">17: Personal & Public code</A> (need not be project teams)</LI>
+    <LI><A href="#integration">19: Integration and Testing Strategy</A></LI>
+    <LI><A href="#systest">20: System Testing</A></LI>
+    <LI><A href="#processes">21: Assessing our processes</A></LI>
+    <LI><A href="#pairpgm">22: Share your Pair-Programming Experiences</A></LI>
+    <LI><A href="#mgmt">24: Scheduling and Status Tracking</A></LI>
 </UL>
 <A name="teams">
 <H2>Teams and Projects</H2>
@@ -87,6 +84,7 @@ to guide you as you work through the exercise.
     	 that you are planning to use (5-7 minutes)
     	<ul>
 	    <li>what might be hard to master, or might not do what you need?</li>
+	    <li>do you understand the structure they will impose on your implementation?</li>
 	    <li>what things to you need to be assured of before you can
 	    	safely base your plans on each?</li>
 	    <li>what is the simplest project that would answer each question?</li>
@@ -169,13 +167,8 @@ to guide you as you work through the exercise.
 <UL>
     <li> Consider an interesting problem
     	<ul>
-	    <li>ideally one in your own project</li>
+	    <li>ideally one in your own project w/non-trivial information or flow control</li>
 	    <li>consider <em>patterns</em> that might speak to this problem</li>
-	</ul>
-    </li>
-    <li> Sketch a solution without resourse to design patterns
-    	<ul>
-	    a reasonable solution, not a straw-man
 	</ul>
     </li>
     <li> Sketch a solution using the chosen design pattern
@@ -185,6 +178,7 @@ to guide you as you work through the exercise.
 	    <li>does this cause you to think of changes to your architecture?</li>
 	</ul>
     </li>
+    <li> Do you have a need that no pattern seems to address?</li>
     <li> Be prepared to discuss your results</li>
 </UL>
 
@@ -203,12 +197,12 @@ to guide you as you work through the exercise.
     <li> suggest a list different things that might give rise to a <em>fault</em>
     	 (incorrect or undexpected result).
     	<ul>
-	    <li>rank each by likelihood and impact</li>
+	    <li>rank each by likelihood, impact, recoverability</li>
 	</ul>
     </li>
     <li> for the top 2-3 problems on your list:
     	<ul>
-	    <li>describe how you would determine that each had occurred</li>
+	    <li>describe how you would recognize/ascertain that each had occurred</li>
 	    <li>describe an appropriate recovery or containment strategy</li>
 	</ul>
     </li>
@@ -309,6 +303,54 @@ to guide you as you work through the exercise.
 	</ul>
     </li>
     <li> Be prepared to discuss your conclusions/positions</li>
+</UL>
+
+<A name="processes">
+<H2>Assessing our Processes</H2>
+</A>
+<UL>
+    <li> Consider the processes you have used:
+         <ul>
+	     <li> which were fairly clearly agile?</li>
+	     <li> which were fairly clearly up-front planning?</li>
+	     <li> which seemed consistent with either?</li>
+	 </ul>
+    </li>
+    <li> Consider how well they served you:
+         <ul>
+	     <li> which of these processes worked very well?  Why?</li>
+	     <li> which of these processes worked poorly?  Why?</li>
+	 </ul>
+    </li>
+    <li> What might you have done differently:
+         <ul>
+	     <li>what might have been better performed in a more agile fashion?</li>
+	     <li>what might have been better performed in a more disciplined/structured fashion?</li>
+	 </ul>
+    </li>
+</UL>
+
+<A name="pairpgm">
+<H2>Share your Pair-Programming Experiences</H2>
+</A>
+<ul>
+    <li> Have you done "Pair Programming?"
+        <ul>
+	    <li>where ... class? internship?  personal projects?</li>
+	</ul>
+    </li>
+    <li> What roles did you use?
+        <ul>
+	    <li> how were they chosen ... assigned, evolved, found?</li>
+	</ul>
+    </li>
+    <li> What did you learn?
+        <ul>
+	    <li> about pair programming </li>
+	    <li> new design, coding, testing, debugging skills? </li>
+	    <li> about yourself? </li>
+	</ul>
+    </li>
 </UL>
 
 <A name="mgmt">
