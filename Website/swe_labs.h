@@ -18,9 +18,10 @@ The following slides outine the goals for each lab session:
    <li> <A href="lab_3b.html">P3B: Component Design and Test Plan</a> </li>
    <li> <A href="lab_3c.html">P3C: Component Design Reviews</a> </li>
    <li> <A href="lab_3d.html">P3D: Final Component Design and Test Plan</a> </li>
-   <li> <A href="lab_4a.html">P4A: Implementation</a> and <A href="lab_4b.html">P4B: Testing</A></li>
+   <li> <A href="lab_4a.html">P4A: Implementationg and Testing</a> and <A href="lab_4b.html"> P4B Coding Exercises</A></li>
+   <li> ThanksGiving </li>
    <li> <A href="lab_4c.html">P4C: Integration and Demo Preparation</a> </li>
-   <li> <A href="lab_4d.html">P4D: Demo and Post-Mortem</a> </li>
+   <li> <A href="lab_4d.html">P4D: Post-Mortem Report</a> </li>
 </OL>
 #ifdef ZOOM_LABS
 <P>
