@@ -1,14 +1,7 @@
 PGMS=../Python
-ifeq ($(COURSE),SWE)
-    CSVS=$(HOME)/Downloads/SWE_course
-else
-    CSVS=$(HOME)/Downloads/OS_course
-endif
-SEMESTER=$(CSVS)/SEMESTER.csv
-QUARTER=$(CSVS)/QUARTER.csv
-READINGS=$(CSVS)/READINGS.csv
-TOPICS=$(CSVS)/TOPICS.csv
-OBJECTIVES=$(CSVS)/OBJECTIVES.csv
+
+OS_CSVS=$(HOME)/Downloads/OS_course
+SWE_CSVS=$(HOME)/Downloads/SWE_course
 
 PGM_SCHED=$(PGMS)/schedule.py
 PGM_OBJS=$(PGMS)/objectives.py
@@ -28,13 +21,11 @@ MONTH=9
 YEAR=2021
 TOPICID=--topicID
 
-# Problems with this rule:
-#	unconditional --epilog="swe_post.html"
-default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HOURS)
+default: office_hours $(CSVS)/TOPICS.csv $(CSVS)/OBJECTIVES.csv $(CSVS)/READINGS.csv $(SCHEDULE) $(OFFICE_HOURS)
 	rm -f $(OUTPUTS)
 	# construct intermediates based on the school/course/year/season
 	grep $(MONTH)/$(YEAR) $(OFFICE_HOURS) | cut -d? -f2 > office_hours.h
-	./project_dates.sh $(SEMESTER) > project_dates.h
+	./project_dates.sh $(CSVS)/SEMESTER.csv > project_dates.h
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) $(COURSE)_syllabus.c | grep -v '^# ' > syllabus.html
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) index.c | grep -v '^# ' > index.html
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) schedule.c | grep -v '^# ' > $(SCHED_PFX)
@@ -42,29 +33,30 @@ default: office_hours $(TOPICS) $(OBJECTIVES) $(READING) $(SCHEDULE) $(OFFICE_HO
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) post_slides.c | grep -v '^# ' > $(SLIDES_SFX)
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
 	# construct the schedule, learning objectices, and slides index
-	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
-		--prolog=$(SCHED_PFX) --epilog=swe_post.html --quizzes=$(QUIZZES)\
-		$(READINGS) $(TOPICID) > schedule.html
-	python $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(TOPICS) --col=$(LECTURES) \
+	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
+		--prolog=$(SCHED_PFX) --epilog=$(COURSE)_post.html --quizzes=$(QUIZZES)\
+		$(CSVS)/READINGS.csv $(TOPICID) > schedule.html
+	python $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
-		$(OBJECTIVES) > keys.html
+		$(CSVS)/OBJECTIVES.csv > keys.html
 	python $(PGM_SLIDES) --lectures=$(SCHEDULE) --prolog=$(SLIDES_PFX) --epilog=$(SLIDES_SFX) > slides.html
 	rm -f $(INTERMEDIATES)
 
-ucla-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(QUARTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=UCLA COURSE=OS LECTURES=19 SCHEDULE=$(QUARTER) QUIZZES="ccle"
+hmc-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(OS_CSVS)/SEMESTER.csv $(OS_CSVS)/READINGS.csv $(OS_CSVS)/TOPICS.csv $(OS_CSVS)/OBJECTIVES.csv
+	make SCHOOL=HMC COURSE=OS LECTURES=28 SCHEDULE=$(OS_CSVS)/SEMESTER.csv QUIZZES="Sakai" CSVS=$(HOME)/Downloads/OS_course
 
-pom-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=POM COURSE=OS LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="Sakai"
+ucla-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(OS_CSVS)/QUARTER.csv $(OS_CSVS)/READINGS.csv $(OS_CSVS)/TOPICS.csv $(OS_CSVS)/OBJECTIVES.csv
+	make SCHOOL=UCLA COURSE=OS LECTURES=19 SCHEDULE=$(OS_CSVS)/QUARTER.csv QUIZZES="ccle" CSVS=$(HOME)/Downloads/OS_course
+
+pom-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(OS_CSVS)/SEMESTER.csv $(OS_CSVS)/READINGS.csv $(OS_CSVS)/TOPICS.csv $(OS_CSVS)/OBJECTIVES.csv
+	make SCHOOL=POM COURSE=OS LECTURES=28 SCHEDULE=$(OS_CSVS)/SEMESTER.csv QUIZZES="Sakai" CSVS=$(HOME)/Downloads/OS_course
 		
-pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=POM COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES"=Sakai"
+pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SWE_CSVS)/SEMESTER.csv $(SWE_CSVS)/READINGS.csv $(SWE_CSVS)/TOPICS.csv $(SWE_CSVS)/OBJECTIVES.csv
+	make SCHOOL=POM COURSE=SWE LECTURES=28 SCHEDULE=$(SWE_CSVS)/SEMESTER.csv QUIZZES"=Sakai" CSVS=$(HOME)/Downloads/SWE_course
 
-hmc-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=HMC COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="Sakai"
+hmc-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SWE_CSVS)/SEMESTER.csv $(SWE_CSVS)/READINGS.csv $(SWE_CSVS)/TOPICS.csv $(SWE_CSVS)/OBJECTIVES.csv
+	make SCHOOL=HMC COURSE=SWE LECTURES=28 SCHEDULE=$(SWE_CSVS)/SEMESTER.csv QUIZZES="Sakai" CSVS=$(HOME)/Downloads/SWE_course
 
-hmc-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
-	make SCHOOL=HMC COURSE=OS LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="Sakai"
 # project_dates.h is another INTERMEDIATE that is also needed by the projects Makefile
 clean:
 	rm -f $(INTERMEDIATES) $(OUTPUTS)
