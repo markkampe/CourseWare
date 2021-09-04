@@ -137,6 +137,185 @@
 </p>
 </ul>
 
+<h2><a name="schedule">Lecture, Reading, Lab and Exam Schedule</a></h2>
+<ul>
+    <p>
+    <a href="schedule.html">Lecture, Reading, Lab, and Exam Schedule</A>
+    </p>
+    It is not my intention to use the lectures to review topics that are well
+    presented in the reading.  I hope to use the lecture time to:
+    <ul>
+	<li> discuss student questions arising from the reading.</li>
+	<li> expand on key results that should be drawn from reading.</li>
+	<li> work through and discuss important but non-trivial examples from the reading.</li>
+	<li> discuss perspectives, implications, and applications not covered by the reading.</li>
+    </ul>
+    <P>
+    You can help to enrich the quality of the lecture sessions by:
+    <ul>
+    	<li> using the on-line Piazza forum to suggest questions and topics
+	     to be discussed during the lecture sessions.</li>
+	<li> asking questions during the lecture sessions.</li>
+    </ul>
+    </P>
+	<P>
+	To ensure that students have done the reading, and come to class prepared to engage
+	in deeper exploration of the topics, an on-line quiz (based on the assigned reading)
+	will be due before the start of each lecture.  Nobody likes these quizzes, but 
+	experience has shown that 
+		(a) quizzes force students to do the reading before the lectures, and
+		(b) students who have done the reading get more out of the lectures,
+		    and develop a better understanding of the material.
+	</P>
+	<P>
+	All 
+	<A href="slides/index.html">lecture slides</a>
+	will be available on-line before the start of each lecture.
+	This should simplify your own note-taking and give you a starting point for exam preparation.
+	It will also give you the opportunity to see what topics I am planning to discuss
+	in each lecture.  If you find (after reading or a lecture) that there are additional
+	topics you would like to discuss, please post them to the course discussion forum.
+	</P>
+</ul>
+
+<h2><a name="quizzes">Quizzes</A></h2>
+<ul>
+        <P>
+        Years of experience have consistently taught me that the greatest single
+        predictor of how much a student will get from a lecture is how well they
+        understood the material before the start of the lecture.
+        I have found (and student surveys regularly confirm) that giving daily
+        quizzes on the assigned reading gets students to do the reading before
+        the lecture, and greatly enhances learning.
+        A secondary purpose of the quizzes is to
+        enable me to assess what concepts you are having trouble with, so that I
+        can give them greater emphasis in future lectures.
+        </P>
+	<IMG src="quiz_vs_exam.jpg" alt="scatter plot of quiz vs exam scores"></IMG>
+        <P>
+        I attempt to choose quiz questions, based on key concepts, that
+        few people could answer from common sense or general knolwedge,
+        but should not be too difficult to answer the day after a single 
+        reading.
+        Each quiz will have four or five questions, typically asking
+	<ul>
+	   <li> definitions of or distinctions between key terms</li>
+	   <li> distinctions between key terms</li>
+	   <li> descriptions or examples of key concepts</li>
+	   <li> applicability, efficacies and issues with techniques</li>
+	   <li> key results from studies</li>
+	</ul>
+        Most of these questions will be based on the associated learning
+        objectives, so you may find it helpful to review the list of
+        learning objectives for the next lecture before starting the reading.
+        </P>
+        <P>
+        Most quiz questions can be answered with a single sentence
+        (or even a few words).  Since the quizzes are timed, short
+        answers are pretty clearly the best.
+        </P>
+        <P>
+        It is important that you review the feedback you receive on
+        your quiz answers ...
+        <ol type="a">
+        <li> to improve your understanding.</li>
+        <li> to help me identify bad questions or grading errors.</li>
+        <li> because quiz questions where people have trouble often
+             reappear on exams.</li>
+        </ol>
+
+#ifdef MOODLE
+	Moodle ... an apology:
+	<P>
+        When classes had only 40-50 students, quiz questions were short-answer, 
+        I graded them personally, and returned them the next day.
+	With classes of 120-160 students this is no longer possible, and
+	I have been forced to move to automated <a href="https://moodle.com">moodle</a> quizzes,
+	administered on the CCLE website.
+	</P>
+	<P>
+	It is very difficult to do short-answer questions in moodle, as even minor variations
+	in punctuation result in answers being scorred as incorrect.  As a result, virtually
+	all quiz questions are multiple-choice or matching.  In order to keep these
+	questions from being trivial, it is necessary to include options that sound reasonable,
+	but are wrong in some detail.
+	I (along with most students) dislike this format ... but despite these irritations,
+	experience shows that quiz scores are well corellated with (and a little bit better than)
+	exam scores.  Most A-students seem to earn quiz scores in the 90s.
+	</P>
+	<P>
+	While I feel locked into the format, I am concerned about ensuring the fairness of
+	questions and the relevance of the topics they cover.  If you have suggestions for how
+	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
+	your suggestions.
+	</P>
+#endif MOODLE
+</ul>
+
+<h2><a name="exams">Exams</a></h2>
+<ul>
+        <P>
+        There are two exams: a mid-term, and a two-part final.
+        These are closed book exams.
+        The purpose of these exams is to determine whether or not you understand
+        the key concepts that have been discussed in the preceding lectures and
+        chapters.
+        </p>
+        <p>
+        The mid-term, and part-one of the final will be comprised of roughly
+        10-12 multi-part questions, covering (respectively) the first, and
+        second halves of the course.  Some may ask for definitions and examples,
+        but most will ask you to describe how or why something works,
+        to contrast related concepts, to explain which principles are applicable,
+        or to predict what would happen in some situation.
+        The vast majority of these questions will pertain to designated
+        <a href="keys.html">key concepts</a>,
+        and in most cases the answers will have been presented in
+        the text, the lectures or both.  Most exam questions have brief (2-4
+        sentence or a simple diagram) answers.  Typical types of questions
+        might be:
+        <UL>
+        <LI> simple "do you remember" questions, comparable in 
+             nature and difficulty to quiz questions.</li>
+        <LI> moderate "can you describe/contrast/apply" questions,
+             comparable in nature and difficulty to in-class
+             discussions.</li>
+        <LI> moderate "consider this" questions, asking you to
+             find answers not specifically discussed in class.</li>
+        <LI> a philosophical extra credit question, related to key
+             concepts, but un-related to any reading or
+             in-class discussion.</li>
+        </UL>
+        <P>
+        Part-two of the final exam will be a set (6-8) more difficult
+        (analyze this situation, propose a solution) questions spanning
+        the entire course.  You can choose any four of these that you want
+        to answer.
+        <P>
+        Different study techniques are more effective for different people.
+        This is a general suggestion for review, that is meant only to guide
+        your own study efforts:
+        <UL>
+            <LI> Start by reviewing the <A href=keys.html>key learning objectives</a>.</li>
+            <LI> If there is a concept, issue or technique that you don't 
+                 think you could talk about for five minutes, go back and 
+                 review the
+                 <a Href="slides/index.html">lecture notes</a>.  </li>
+            <LI> If anything in the lecture
+                 notes (including the discussion points) is not completely obvious, 
+                 go back and review the 
+                 <A Href="schedule.html">related reading</a>.</li>
+        </UL>
+        </P>
+        <P>
+        Exam (and quiz) questions are almost entirely based on the 
+        <a href="keys.html">key concepts</a> list.  You are encouraged
+        to pose questions and continue discussions of these key concepts
+        in <A href=PIAZZA>Piazza</A>.
+        </P>
+</ul>
+
+
 <h2><a name="projects">Projects</a></h2>
 <ul>
    <p>
@@ -202,150 +381,94 @@
    </p>
 </ul>
 
-<h2><a name="schedule">Lecture, Reading, Lab and Exam Schedule</a></h2>
-<ul>
-    <p>
-    <a href="schedule.html">Lecture, Reading, Lab, and Exam Schedule</A>
-    </p>
-    It is not my intention to use the lectures to review topics that are well
-    presented in the reading.  I hope to use the lecture time to:
-    <ul>
-	<li> discuss student questions arising from the reading.</li>
-	<li> expand on key results that should be drawn from reading.</li>
-	<li> work through and discuss important but non-trivial examples from the reading.</li>
-	<li> discuss perspectives, implications, and applications not covered by the reading.</li>
-    </ul>
-    <P>
-    You can help to enrich the quality of the lecture sessions by:
-    <ul>
-    	<li> using the on-line Piazza forum to suggest questions and topics
-	     to be discussed during the lecture sessions.</li>
-	<li> asking questions during the lecture sessions.</li>
-    </ul>
-    </P>
-	<P>
-	To ensure that students have done the reading, and come to class prepared to engage
-	in deeper exploration of the topics, an on-line quiz (based on the assigned reading)
-	will be due before the start of each lecture.  Nobody likes these quizzes, but 
-	experience has shown that 
-		(a) quizzes force students to do the reading before the lectures, and
-		(b) students who have done the reading get more out of the lectures,
-		    and develop a better understanding of the material.
-	</P>
-	<P>
-	All 
-	<A href="slides/index.html">lecture slides</a>
-	will be available on-line before the start of each lecture.
-	This should simplify your own note-taking and give you a starting point for exam preparation.
-	It will also give you the opportunity to see what topics I am planning to discuss
-	in each lecture.  If you find (after reading or a lecture) that there are additional
-	topics you would like to discuss, please post them to the course discussion forum.
-	</P>
-</ul>
-
 <P>
-
-<H2><a name="officehours">Office Hours</a></H2>
-<P>
-<UL>
-I am not regular faculty, and am only on campus on the days I teach this course.
-I will try to be in my office  one hour before and after each class session.
-If those times do not work for you, it may be possible to schedule an appointment
-at some other time.
-When not on campus, I am generally on-line.
-The most reliable way to reach me is via email or google-talk 
-<a href="mailto:mark.kampe@gmail.com">Mark.Kampe@gmail.com</a>.
-</UL>
 
 <H2><a name="grading">Assignments and Grades</a></H2>
 <P>
 Grades in this course are based on:
 <ul>
-	<li>SCORE_QUIZ% daily quizzes on the assigned reading.
-	    <P>
-	    These must be completed, on-line, prior to each lecture.
-	    Each quiz is a one digit number of short-answer questions.
-	    The purpose of the quizzes is to ensure that you have
-	    you have done the reading, and come to each lecture
-	    prepared for a more in-depth discussion of the topic.
-	    </p>
-	    </li>
+    <li>SCORE_QUIZ% daily quizzes on the assigned reading.
+        <P>
+        These must be completed, on-line, prior to each lecture.
+        Each quiz is a one digit number of short-answer questions.
+        The purpose of the quizzes is to ensure that you have
+        you have done the reading, and come to each lecture
+        prepared for a more in-depth discussion of the topic.
+        </p>
+        </li>
 #ifdef SCORE_PRES
-	<li>SCORE_PRES% student presentations and discussions.
-	    <P>
-	    Students will form two-person teams, choose a lecture, and research and
-	    prepare a related presentation and discussion (beyond the material covered
-	    by the assigned reading and prepared lecture slides).  Suggested topics
-	    are recent problems, solutions, issues, or incidents ... but what
-	    I am looking for is good research and interesting discussions of relevant 
-	    topics.
-	    Plan on a 5-10 minute presentation and a 5-10 minute Q&A/discussion.
-	    </P>
-	    <P>
-	    Each student will participate in two teams (with a different partner
-	    each time).  Presenters will be graded on relevance of topic, depth
-	    of research, and quality of preparation/presentation.  The remainder
-	    of the class will be graded on the regularity and quality of their
-	    participation in these discussions.
-	    </P>
-	    <P>
-	    Presentation topics will be granted first-come-first-served, so you
-	    would be well-advised to form your teams and choose your topics as
-	    soon as possible.  To keep you out of trouble (and maximize your
-	    score) it is recommended that you present a rough outline of your
-	    topic and discussion plan to me one week before the scheduled session.
-	    </P>
-	    </li>
-	    <br>
+    <li>SCORE_PRES% student presentations and discussions.
+        <P>
+        Students will form two-person teams, choose a lecture, and research and
+        prepare a related presentation and discussion (beyond the material covered
+        by the assigned reading and prepared lecture slides).  Suggested topics
+        are recent problems, solutions, issues, or incidents ... but what
+        I am looking for is good research and interesting discussions of relevant 
+        topics.
+        Plan on a 5-10 minute presentation and a 5-10 minute Q&A/discussion.
+        </P>
+        <P>
+        Each student will participate in two teams (with a different partner
+        each time).  Presenters will be graded on relevance of topic, depth
+        of research, and quality of preparation/presentation.  The remainder
+        of the class will be graded on the regularity and quality of their
+        participation in these discussions.
+        </P>
+        <P>
+        Presentation topics will be granted first-come-first-served, so you
+        would be well-advised to form your teams and choose your topics as
+        soon as possible.  To keep you out of trouble (and maximize your
+        score) it is recommended that you present a rough outline of your
+        topic and discussion plan to me one week before the scheduled session.
+        </P>
+    </li> <br>
 #endif
-	<li>SCORE_PROJ% lab projects
-	    <p>
-	    The labs are programming exercises in which you
-	    will use the mechanisms and techniques
-	    that have been discussed in the reading and lecture.
-	    The dual purpose of the labs is to:
-	    <ol type="a">
-	    	<li>consolidate your understanding of non-trivial concepts</li>
-		<li>develop the ability to apply new techniques</li>
-	    </ol>
-	    </p>
-	    Breakdown of points among the individual projects:
-	    <ul>
-		<li>SCORE_P0% Project 0: warm-up exercise</li>
-		<li>SCORE_P1% Project 1: I/O and signals</li>
-		<li>SCORE_P2% Project 2: Synchronization</li>
-		<li>SCORE_P3% Project 3: File Systems</li>
-	    	<li>SCORE_P4% Project 4: Embedded System/Internet of Things</li>
-	    </ul>
-	    </li>
-	    <br>
-	<li>SCORE_EXAM% exams
-	    <p>
-	    All the exams are closed-book, multi-question, with each part
-	    of each question requiring a brief (e.g. 1-3 sentence) answer.
-	    The purpose of the mid-term and part 1 of the final exam is to
-	    assess your familiarity with, and ability to apply the concepts,
-	    principles, and techniques listed in the course learning objectives.
-	    The purpose of (the more difficult) part 2 of the final exam
-	    is to assess your ability to apply these lessons to the
-	    understanding and solution of new and non-trivial problems.
-	    </p>
-	    Breakdown of points among the exams:
-	    <ul>
-		<li>SCORE_X1% midterm (concepts)</li>
-		<li>SCORE_X2% final exam - part 1 (concepts)</li>
-		<li>SCORE_X3% final exam - part 2 (applications)</li>
-	    </ul>
-	    </li>
+    <li>SCORE_PROJ% lab projects
+        <p>
+        The labs are programming exercises in which you
+        will use the mechanisms and techniques
+        that have been discussed in the reading and lecture.
+        The dual purpose of the labs is to:
+        <ol type="a">
+            <li>consolidate your understanding of non-trivial concepts</li>
+            <li>develop the ability to apply new techniques</li>
+        </ol>
+        </p>
+        Breakdown of points among the individual projects:
+        <ul>
+            <li>SCORE_P0% Project 0: warm-up exercise</li>
+            <li>SCORE_P1% Project 1: I/O and signals</li>
+            <li>SCORE_P2% Project 2: Synchronization</li>
+            <li>SCORE_P3% Project 3: File Systems</li>
+            <li>SCORE_P4% Project 4: Embedded System/Internet of Things</li>
+        </ul>
+    </li> <br>
+    <li>SCORE_EXAM% exams
+        <p>
+        All the exams are closed-book, multi-question, with each part
+        of each question requiring a brief (e.g. 1-3 sentence) answer.
+        The purpose of the mid-term and part 1 of the final exam is to
+        assess your familiarity with, and ability to apply the concepts,
+        principles, and techniques listed in the course learning objectives.
+        The purpose of (the more difficult) part 2 of the final exam
+        is to assess your ability to apply these lessons to the
+        understanding and solution of new and non-trivial problems.
+        </p>
+        Breakdown of points among the exams:
+        <ul>
+            <li>SCORE_X1% midterm (concepts)</li>
+            <li>SCORE_X2% final exam - part 1 (concepts)</li>
+            <li>SCORE_X3% final exam - part 2 (applications)</li>
+        </ul>
+    </li>
+    <P>
+    Students with good programming backgrounds generally do very well on the lab projects.
+    Quiz scores tend to be well corellated with scores on the mid-term and part 1 of the final.
+    Scores for part 2 of the final exam (problem solving vs. memory/understanding) tend to 
+    be distributed over a much wider range.
+    </P>
 </ul>
-<P>
-Students with good programming backgrounds generally do very well on the lab projects.
-Quiz scores tend to be well corellated with scores on the mid-term and part 1 of the final.
-Scores for part 2 of the final exam (problem solving vs. memory/understanding) tend to 
-be distributed over a much wider range.
-</P>
-<P>
-Letter Grading Scale:
+<h3>Letter Grading Scale</h3>
 <ul>
     <li>I do not grade on a curve, but a fixed scale.
 	I am not trying to assign students to performance percentiles,
@@ -361,81 +484,8 @@ Letter Grading Scale:
 	more difficult than intended, I will adjust the scale
 	to compensate for my mistake</li>
 </ul>
-</P>
-<a name="quizzes">Quizzes</A>
-<ul>
-    <P>
-    Years of experience have consistently taught me that the greatest single
-    predictor of how much a student will get from a lecture is how well they
-    understood the material before the start of the lecture.
-    I have found (and student surveys regularly confirm) that giving daily
-    quizzes on the assigned reading gets students to do the reading before
-    the lecture, and greatly enhances learning.
-    A secondary purpose of the quizzes is to
-    enable me to assess what concepts you are having trouble with, so that I
-    can give them greater emphasis in future lectures.
-    </P>
-	<IMG src="quiz_vs_exam.jpg" alt="scatter plot of quiz vs exam scores"></IMG>
-    <P>
-    I attempt to choose quiz questions, based on key concepts, that
-    few people could answer from common sense or general knolwedge,
-    but should not be too difficult to answer the day after a single 
-    reading.
-    Each quiz will have four or five questions, typically asking
-	<ul>
-	   <li> definitions of or distinctions between key terms</li>
-	   <li> distinctions between key terms</li>
-	   <li> descriptions or examples of key concepts</li>
-	   <li> applicability, efficacies and issues with techniques</li>
-	   <li> key results from studies</li>
-	</ul>
-    Most of these questions will be based on the associated learning
-    objectives, so you may find it helpful to review the list of
-    learning objectives for the next lecture before starting the reading.
-    </P>
-    <P>
-    Most quiz questions can be answered with a single sentence
-    (or even a few words).  Since the quizzes are timed, short
-    answers are pretty clearly the best.
-    </P>
-    <P>
-    It is important that you review the feedback you receive on
-    your quiz answers ...
-    <ol type="a">
-    	<li> to improve your understanding.</li>
-	<li> to help me identify bad questions or grading errors.</li>
-	<li> because quiz questions where people have trouble often
-	     reappear on exams.</li>
-    </ol>
-	<P>
-	While I feel locked into the format, I am concerned about ensuring the fairness of
-	questions and the relevance of the topics they cover.  If you have suggestions for how
-	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
-	your suggestions.
-	</P>
-#ifdef MOODLE
-	Moodle ... an apology:
-	<P>
-        When classes had only 40-50 students, quiz questions were short-answer, 
-        I graded them personally, and returned them the next day.
-	With classes of 120-160 students this is no longer possible, and
-	I have been forced to move to automated <a href="https://moodle.com">moodle</a> quizzes,
-	administered on the CCLE website.
-	</P>
-	<P>
-	It is very difficult to do short-answer questions in moodle, as even minor variations
-	in punctuation result in answers being scorred as incorrect.  As a result, virtually
-	all quiz questions are multiple-choice or matching.  In order to keep these
-	questions from being trivial, it is necessary to include options that sound reasonable,
-	but are wrong in some detail.
-	I (along with most students) dislike this format ... but despite these irritations,
-	experience shows that quiz scores are well corellated with (and a little bit better than)
-	exam scores.  Most A-students seem to earn quiz scores in the 90s.
-	</P>
-#endif MOODLE
-</ul>
 
-Late and make-up policy:
+<h3>Late and make-up policy</h3>
 <ul>
 	<li>there are no make-ups for quizzes, but you can
 	    take a quiz before it is due.</li>
@@ -448,24 +498,24 @@ Late and make-up policy:
 </ul>
 <a name="adjustments">Grade Adjustments</a>:
 <ul>
-	<li>I will always correct any (promptly reported) error in score computation or recording.
-	    You are encouraged to check the on-line grade book regularly to ensure that all of
-	    your assignement grades have been properly recorded.
+    <li>I will always correct any (promptly reported) error in score computation or recording.
+        You are encouraged to check the on-line grade book regularly to ensure that all of
+        your assignement grades have been properly recorded.
+    </li>
+    <li>I am always willing to explain the correct answers and 
+        <strong>exam</strong> grading criteria.</li>
+    <li>I am always willing to regrade an <strong>exam</strong> problem 
+        if I misunderstood a clearly correct answer ... 
+        but this does not extend to 
+        <ul>
+            <li>reinterpreting vague or poorly written answers</li>
+            <li>giving credit for not having properly or fully understood problem</li>
+        </ul>
 	</li>
-	<li>I am always willing to explain the correct answers and 
-	    <strong>exam</strong> grading criteria.</li>
-	<li>I am always willing to regrade an <strong>exam</strong> problem 
-	    if I misunderstood a clearly correct answer ... 
-	    but this does not extend to 
-	    <ul>
-	    	<li>reinterpreting vague or poorly written answers</li>
-		<li>giving credit for not having properly or fully understood problem</li>
-	    </ul>
-	    </li>
-	<li>I will correct a quiz score if the auto-grader was unable to accept
+    <li>I will correct a quiz score if the auto-grader was unable to accept
 	    a correct answer.</li>
-	<li>I <u>never</u> raise grades in response to excuses or hardship stories.</li>
-	<li>I <u>never</u> assign makeup projects.  The only opportunity to improve 
+    <li>I <u>never</u> raise grades in response to excuses or hardship stories.</li>
+    <li>I <u>never</u> assign makeup projects.  The only opportunity to improve 
 	    a grade is before the assignment is submitted.</li>
 </ul>
 #ifdef PROTEST_PROCESS
@@ -580,6 +630,14 @@ Students must follow the Academic Honesty standards of both
 and the
 <a href="https://www.pomona.edu/academics/departments/computer-science/courses-requirements/academic-honesty">
 Computer Science Department</a>
+which prohibit cheating, fabrication, multiple submissions, and facilitating academic dishonesty. 
+</p>
+#endif
+#ifdef HMC
+Students must follow the 
+<A href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/honor-code.html">
+Academic Honesty Standards</a>
+of both Harvey Mudd and the Computer Science Department
 which prohibit cheating, fabrication, multiple submissions, and facilitating academic dishonesty. 
 </p>
 #endif
