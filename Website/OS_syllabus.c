@@ -1,23 +1,9 @@
 #include "courseinfo.h"
 #ifdef	UCLA
-#define PTE_PROCESS
-#define PROTEST_PROCESS
-#define GRADESCOPE Gradescope
-#define SCORE_X3	10
-#define	SCORE_EXAM	40
-#define	SCORE_P4	15
-#define	SCORE_PROJ	50	
+#    define PTE_PROCESS
+#    define PROTEST_PROCESS
+#    define GRADESCOPE Gradescope
 #endif  UCLA
-#ifdef POMONA
-#define	SCORE_PRES	10
-#define SCORE_X3	10
-#define	SCORE_EXAM	40
-#define	SCORE_P4	5
-#define	SCORE_PROJ	40	
-#endif  POMONA
-#define SCORE_QUIZ	10
-#define SCORE_X1	15
-#define SCORE_X2	15
 <html>
 <head>
 <title>NUMBER Syllabus</title>
@@ -325,10 +311,10 @@ Grades in this course are based on:
 	    </p>
 	    Breakdown of points among the individual projects:
 	    <ul>
-		<li>5% Project 0: warm-up exercise</li>
-		<li>10% Project 1: I/O and signals</li>
-		<li>10% Project 2: Synchronization</li>
-		<li>10% Project 3: File Systems</li>
+		<li>SCORE_P0% Project 0: warm-up exercise</li>
+		<li>SCORE_P1% Project 1: I/O and signals</li>
+		<li>SCORE_P2% Project 2: Synchronization</li>
+		<li>SCORE_P3% Project 3: File Systems</li>
 	    	<li>SCORE_P4% Project 4: Embedded System/Internet of Things</li>
 	    </ul>
 	    </li>
@@ -376,8 +362,59 @@ Letter Grading Scale:
 	to compensate for my mistake</li>
 </ul>
 </P>
-<a name="quizzes">Moodle Quizzes</A> ... an apology:
+<a name="quizzes">Quizzes</A>
 <ul>
+    <P>
+    Years of experience have consistently taught me that the greatest single
+    predictor of how much a student will get from a lecture is how well they
+    understood the material before the start of the lecture.
+    I have found (and student surveys regularly confirm) that giving daily
+    quizzes on the assigned reading gets students to do the reading before
+    the lecture, and greatly enhances learning.
+    A secondary purpose of the quizzes is to
+    enable me to assess what concepts you are having trouble with, so that I
+    can give them greater emphasis in future lectures.
+    </P>
+	<IMG src="quiz_vs_exam.jpg" alt="scatter plot of quiz vs exam scores"></IMG>
+    <P>
+    I attempt to choose quiz questions, based on key concepts, that
+    few people could answer from common sense or general knolwedge,
+    but should not be too difficult to answer the day after a single 
+    reading.
+    Each quiz will have four or five questions, typically asking
+	<ul>
+	   <li> definitions of or distinctions between key terms</li>
+	   <li> distinctions between key terms</li>
+	   <li> descriptions or examples of key concepts</li>
+	   <li> applicability, efficacies and issues with techniques</li>
+	   <li> key results from studies</li>
+	</ul>
+    Most of these questions will be based on the associated learning
+    objectives, so you may find it helpful to review the list of
+    learning objectives for the next lecture before starting the reading.
+    </P>
+    <P>
+    Most quiz questions can be answered with a single sentence
+    (or even a few words).  Since the quizzes are timed, short
+    answers are pretty clearly the best.
+    </P>
+    <P>
+    It is important that you review the feedback you receive on
+    your quiz answers ...
+    <ol type="a">
+    	<li> to improve your understanding.</li>
+	<li> to help me identify bad questions or grading errors.</li>
+	<li> because quiz questions where people have trouble often
+	     reappear on exams.</li>
+    </ol>
+	<P>
+	While I feel locked into the format, I am concerned about ensuring the fairness of
+	questions and the relevance of the topics they cover.  If you have suggestions for how
+	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
+	your suggestions.
+	</P>
+#ifdef MOODLE
+	Moodle ... an apology:
 	<P>
         When classes had only 40-50 students, quiz questions were short-answer, 
         I graded them personally, and returned them the next day.
@@ -395,13 +432,7 @@ Letter Grading Scale:
 	experience shows that quiz scores are well corellated with (and a little bit better than)
 	exam scores.  Most A-students seem to earn quiz scores in the 90s.
 	</P>
-	<IMG src="quiz_vs_exam.jpg" alt="scatter plot of quiz vs exam scores"></IMG>
-	<P>
-	While I feel locked into the format, I am concerned about ensuring the fairness of
-	questions and the relevance of the topics they cover.  If you have suggestions for how
-	to improve quiz questions, I am interested ... and you can earn (quiz) extra credit if I adopt
-	your suggestions.
-	</P>
+#endif MOODLE
 </ul>
 
 Late and make-up policy:

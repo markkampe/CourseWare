@@ -7,25 +7,40 @@
 /* OS course parameters	*/
 #ifdef OS
 #    define COURSE Operating Systems Principles
-#    define SCORE_PROJ	50
 #    define SCORE_P4	15
-#    define SCORE_EXAM	40
+#    define SCORE_QUIZ	10
 #    define SCORE_X1	15
 #    define SCORE_X2	15
 #    define SCORE_X3	10
+#    define SCORE_EXAM 40
+#    define SCORE_P0	5
+#    define SCORE_P1	10
+#    define SCORE_P2	10
+#    define SCORE_P3	10
+#
 #    ifdef UCLA
 #	define NUMBER CS111
+#	define	SCORE_P4	15
+#	define SCORE_PROJ	50
+#	define MOODLE_QUIZ	TRUE
 #    endif  UCLA
 #
 #    ifdef POM
 #	define NUMBER CS134
 #	define STUDENT_PRES
+#	define SCORE_P4		5
+#	define SCORE_PROJ	40
+#	define SCORE_PRES	10
 #    endif  POM
 #
 #    ifdef HMC
 #	define NUMBER CS134
 #	define STUDENT_PRES
+#	define SCORE_PRES	10
+#	define SCORE_P4		5
+#	define SCORE_PROJ	40
 #    endif  HMC
+#
 #    define SLIP_DAYS 5
 #endif  OS
 
