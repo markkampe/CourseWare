@@ -1,17 +1,19 @@
 PGMS=../Python
-CSVS=$(HOME)/Downloads/SWE_course
-#CSVS=$(HOME)/Downloads/OS_course
-#CSVS=$(HOME)/Downloads
-
-PGM_SCHED=$(PGMS)/schedule.py
-PGM_OBJS=$(PGMS)/objectives.py
-PGM_SLIDES=$(PGMS)/slides.py
-
+ifeq ($(COURSE),SWE)
+    CSVS=$(HOME)/Downloads/SWE_course
+else
+    CSVS=$(HOME)/Downloads/OS_course
+endif
 SEMESTER=$(CSVS)/SEMESTER.csv
 QUARTER=$(CSVS)/QUARTER.csv
 READINGS=$(CSVS)/READINGS.csv
 TOPICS=$(CSVS)/TOPICS.csv
 OBJECTIVES=$(CSVS)/OBJECTIVES.csv
+
+PGM_SCHED=$(PGMS)/schedule.py
+PGM_OBJS=$(PGMS)/objectives.py
+PGM_SLIDES=$(PGMS)/slides.py
+
 OFFICE_HOURS=office_hours
 
 SCHED_PFX=pre_schedule.html
@@ -61,6 +63,8 @@ pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS)
 hmc-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
 	make SCHOOL=HMC COURSE=SWE LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="Sakai"
 
+hmc-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SEMESTER) $(READINGS) $(TOPICS) $(OBJECTIVES)
+	make SCHOOL=HMC COURSE=OS LECTURES=28 SCHEDULE=$(SEMESTER) QUIZZES="Sakai"
 # project_dates.h is another INTERMEDIATE that is also needed by the projects Makefile
 clean:
 	rm -f $(INTERMEDIATES) $(OUTPUTS)
