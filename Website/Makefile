@@ -15,7 +15,7 @@ KEYS_PFX=pre_keys.html
 SLIDES_SFX=post_slides.html
 
 INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
-OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html
+OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html FAQ.html
 
 MONTH=9
 YEAR=2021
@@ -32,6 +32,7 @@ default: office_hours $(CSVS)/TOPICS.csv $(CSVS)/OBJECTIVES.csv $(CSVS)/READINGS
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_slides.c | grep -v '^# ' > $(SLIDES_PFX)
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) post_slides.c | grep -v '^# ' > $(SLIDES_SFX)
 	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
+	gcc -E -w -D$(SCHOOL) -D$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) FAQ.c | grep -v '^# ' > FAQ.html
 	# construct the schedule, learning objectices, and slides index
 	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
 		--prolog=$(SCHED_PFX) --epilog=$(COURSE)_post.html --quizzes=$(QUIZZES)\
