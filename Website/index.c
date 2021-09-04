@@ -39,7 +39,12 @@
 	<LI> Primary <a href="syllabus.html#text">Text</a> </LI>
 	<LI> <a href="syllabus.html#quizzes">Quizzes</a> and 
 	     <a href="syllabus.html#exams">Exams</a>,
+#ifdef SWE
 	     <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/examQuestions.html">sample questions</a>
+#endif
+#ifdef OS
+	     <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Operating-Systems-Reading/blob/master/SampleQuestions.html">sample questions</a>
+#endif
 	     </li>
 	<LI> <a href="syllabus.html#projects">Overview of projects</a></LI>
 	<LI> <a href="syllabus.html#grading">Grading</a> weights and criteria </LI>
