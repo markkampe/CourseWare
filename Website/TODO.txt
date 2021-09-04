@@ -1,1 +1,9 @@
-generate EXAM schedule from QUARTER/SEMESTER
+1 fix the spring 22 calendar
+
+2 Syllabus Quiz section is still Moodle
+  Syllabus has no exams section
+
+3 FAQ is constant, need separate for OS
+  sample exam questions are constant, need separate for OS
+
+4 generate EXAM schedule from QUARTER/SEMESTER
