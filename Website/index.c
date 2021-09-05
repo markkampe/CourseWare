@@ -153,7 +153,8 @@ will be over before you have even encountered the real problems,
 and you will have to solve them on your own.
 </P>
 <ul>
-#include "os_dates.h"
+#include "project_dates.h"
+#include "os_projects.h"
 </ul>
 #endif OS
 
