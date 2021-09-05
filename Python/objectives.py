@@ -152,6 +152,13 @@ class csvReader:
                     sys.exit(-1)
             elif cols[self.cLect] != "" and cols[self.cTop] != "":
                 obj.addLecture(cols[self.cLect], cols[self.cTop])
+            elif cols[self.cLect] == "" and cols[self.cTop] != "":
+                # this might be a project, which also have learning objectives
+                topic = cols[self.cTop]
+                colon = topic.find(':')
+                if topic[0] == 'P' and colon > 0:
+                    project = topic[0:colon]
+                    obj.addLecture(project, topic[colon+1:])
             line = line + 1
 
     def readTopics(self, obj, lectHead):
