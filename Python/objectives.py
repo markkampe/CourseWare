@@ -87,6 +87,16 @@ class objectives:
         eol = "<BR>" if breaks else ","
         for x in range(0, self.lectures):
             lect = self.tags[x]
+
+            # see if there are any objectives for this lecture
+            none = True
+            for c in self.used:
+                catlist = self.lists[c]
+                if catlist[lect]:
+                    none = False
+            if none:
+                continue
+
             print "%s<TR>" % (' ' * indent)
             print "%s<TD>%s</TD>" % (' ' * (2 * indent), self.tags[x])
             if len(self.titles) > 0:
