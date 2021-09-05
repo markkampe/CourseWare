@@ -66,7 +66,8 @@ class objectives:
         else:
             # add this to the per lecture sub-list for that category
             catdict = self.lists[category]
-            catdict[lecture].append((title, priority, difficulty))
+            if lecture in catdict:
+                catdict[lecture].append((title, priority, difficulty))
             if category not in self.used:
                 self.used.append(category)
             return None
