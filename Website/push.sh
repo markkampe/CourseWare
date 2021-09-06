@@ -52,6 +52,7 @@ then
 	PROJECTS=../../OS_projects
 	LIST="P0_warmup P1A_termio P1B_compress P2A_lock P2B_contention P3A_fs P3B_analyze P4A_bringup P4B_sensors P4C_iot"
 	echo "... updating project assignments from $PROJECTS"
+	scp $PROJECTS/ordering.html $DEST/projects
 	for p in $LIST
 	do
 		scp $PROJECTS/$p/ASSIGNMENT/* $DEST/projects
