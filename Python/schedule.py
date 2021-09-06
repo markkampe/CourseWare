@@ -96,6 +96,17 @@ class schedule:
         print "%s<TR>" % (' ' * self.indent)
         print "%s<TD> %s </TD> <TD> %s </TD>" % \
               (' ' * self.indent, date, subject)
+
+        # labs may have readings as well
+        print "%s<TD>" % (' ' * 2 * self.indent)
+        colon = subject.find(':')
+        if colon > 0:
+            lecture = subject[0:colon]
+            if lecture in self.readings:
+                for r in self.readings[lecture]:
+                    print "%s%s<br>" % (' ' * 3 * self.indent, r)
+        print "%s</TD>" % (' ' * 2 * self.indent)
+
         if comment is not None:
             print "%s<TD> %s </TD>" % \
               (' ' * self.indent, comment)
