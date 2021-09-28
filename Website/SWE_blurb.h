@@ -40,8 +40,8 @@ whose goal is to develop:
 This is a very practical course dealing with real-world problems, the issues
 that complicate them, and the approaches that have been successfully applied
 to their solution.
-There is a moderate amount (averaging ~40pp per lecture) of
-relatively straight forward reading.
+There is a moderate amount (averaging ~40pp) of
+relatively straight forward reading for each lecture.
 The large (full semester) team projects have weekly deliverables,
-and will requrire a great deal of work.
+and will requrire a great deal of time and work.
 </P>
