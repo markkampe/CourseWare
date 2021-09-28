@@ -43,5 +43,5 @@ to their solution.
 There is a moderate amount (averaging ~40pp) of
 relatively straight forward reading for each lecture.
 The large (full semester) team projects have weekly deliverables,
-and will requrire a great deal of time and work.
+and will require a great deal of time and work.
 </P>
