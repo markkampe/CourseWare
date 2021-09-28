@@ -41,3 +41,8 @@ This is a very practical course dealing with real-world problems, the issues
 that complicate them, and the approaches that have been successfully applied
 to their solution.
 </P>
+<P>
+This course involves a moderate amount of reading (averaging ~40pp per lecture),
+most of which is quite straight forward.  The large (full semester) team projects,
+however, have weekly deliverables and will involve a great deal of work.
+</P>
