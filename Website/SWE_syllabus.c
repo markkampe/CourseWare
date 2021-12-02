@@ -246,6 +246,14 @@
 <h2><a name="projects">Projects</a></h2>
 <ul>
     <P>
+    Success in small projects (a few hundred lines of code in a familiar
+    problem domain) is primarily dependent on the programming ability of
+    the implementer(s).  In larger projects most of the effort goes, not
+    into programming, but into requirements, architecture, design,
+    integration, and testing ... and productivity may be more dependent on
+    team communication and coordination than on individual ability.
+    </P>
+    <P>
     By the end of this course, the students will have not only studied,
     but actually performed, all of the major steps of a large software project.
     It is hoped that these exercises will consolidate the learning of these skills 
