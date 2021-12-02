@@ -252,6 +252,8 @@
     into programming, but into requirements, architecture, design,
     integration, and testing ... and productivity may be more dependent on
     team communication and coordination than on individual ability.
+    Software Engineering is about all of those <em>other skills</em> that
+    are required to successfully pursue larger projects.
     </P>
     <P>
     By the end of this course, the students will have not only studied,
