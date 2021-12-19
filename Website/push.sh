@@ -4,9 +4,9 @@
 #
 ACCOUNT=markk@knuth.cs.hmc.edu
 DIR=public_html
-COURSE=cs181aa
-SEMESTER=f
-YEAR=21
+COURSE=cs134
+SEMESTER=s
+YEAR=22
 
 TOP_FILES="index.html schedule.html syllabus.html keys.html FAQ.html"
 
