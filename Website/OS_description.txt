@@ -1,0 +1,41 @@
+#
+# these are comparitive notes on various school's course descriptions, so I
+# can check how well I comply with them.
+#
+UCLA CS111 Website
+
+	Operating System Principles is meant to provide you with a solid grounding in the
+	basic principles of operating system design.  This grounding will give you a deeper
+	understanding of how a vital piece of system software operates and introduce you to
+	important concepts that are frequently used in large software systems you are likely
+	to encounter in your future work. 
+
+UCLA CS111 Catalog
+
+	Introduction to operating systems design and evaluation. Computer software systems
+	performance, robustness, and functionality. Kernel structure, bootstrapping,
+	input/output (I/O) devices and interrupts. Processes and threads; address spaces,
+	memory management, and virtual memory. Scheduling, synchronization. File systems:
+	layout, performance, robustness. Distributed systems: networking, remote procedure
+	call (RPC), asynchronous RPC, distributed file systems, transactions.
+	Protection and security.
+
+	Exercises involving applications using, and internals of, real-world operating systems.
+
+HMC Catalog
+
+	Design and implementation of operating systems, including processes, memory management,
+	synchronization, scheduling, protection, file systems, and I/O. These are used explore
+	more general problems and solutions in the design of other large software systems,
+	including simplicity; efficiency; event-driven programming; abstraction ; client-server
+	architecture; distributed systems; mechanism vs. policy; orthogonality; naming and binding;
+	static vs. dynamic, space vs. time, and other trade-offs; optimization; caching; and
+	managing large code bases.
+
+	Individual projects provide experience in understanding and exploiting basic system
+	services, mutual exclusion and contention for parallel processes, file system 
+	structure and integrity, embedded platforms, and secure communication.
+
+HMC Mine:
+
+	I am OK with the HMC description.
