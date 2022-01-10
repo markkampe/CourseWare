@@ -67,4 +67,5 @@ then
 		    fi
 		done
 	done
+	scp presentations.html $DEST
 fi

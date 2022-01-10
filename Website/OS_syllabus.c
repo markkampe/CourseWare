@@ -382,51 +382,46 @@
 </ul>
 
 <P>
+</P>
+<H2><a name="presentations">Student Presentations</a></H2>
+<ul>
+	<P>
+	Students will form two-person teams, choose a lecture, and research and
+	prepare a related presentation and discussion (beyond the material covered
+	by the assigned reading and prepared lecture slides).  Suggested topics
+	are recent problems, solutions, issues, or incidents ... but what
+	I am looking for is good research and interesting discussions of relevant 
+	topics.
+	</p>
 
+	Activity Objectives:
+	<ul>
+		<li> To develop and demonstrate the ability to do research into current OS-related topics.</li>
+		<li> To develop and demonstrate the ability to prepare and deliver Transfer-of-Information presentations.</li>
+		<li> To develop additional depth and explore interesting issues beyond the planned course syllabus.</li>
+	</ul>
+</ul>
+<P>
 <H2><a name="grading">Assignments and Grades</a></H2>
 <P>
 Grades in this course are based on:
 <ul>
     <li>SCORE_QUIZ% daily quizzes on the assigned reading.
-        <P>
-        These must be completed, on-line, prior to each lecture.
-        Each quiz is a one digit number of short-answer questions.
-        The purpose of the quizzes is to ensure that you have
-        you have done the reading, and come to each lecture
-        prepared for a more in-depth discussion of the topic.
-        </p>
-        </li>
+	<P>
+	These must be completed, on-line, prior to each lecture.
+	Each quiz is a one digit number of short-answer questions.
+	The purpose of the quizzes is to ensure that you have
+	you have done the reading, and come to each lecture
+	prepared for a more in-depth discussion of the topic.
+	</p>
+	</li>
 #ifdef SCORE_PRES
     <li>SCORE_PRES% student presentations and discussions.
-        <P>
-        Students will form two-person teams, choose a lecture, and research and
-        prepare a related presentation and discussion (beyond the material covered
-        by the assigned reading and prepared lecture slides).  Suggested topics
-        are recent problems, solutions, issues, or incidents ... but what
-        I am looking for is good research and interesting discussions of relevant 
-        topics.
-        Plan on a 5-10 minute presentation and a 5-10 minute Q&A/discussion, and
-	note that it may be necessary to schedule your presentation shortly after
-	the most closely related lecture.
-        </P>
-        <P>
-        Each student will participate in STUDENT_PRES
-#if STUDENT_PRES == one
-	team.
-#else
-	teams (with a different partner each time).
-#endif
+	<P>
 	Presenters will be graded on relevance of topic, depth
         of research, and quality of preparation/presentation.  The remainder
         of the class will be graded on the regularity and quality of their
         participation in these discussions.
-        </P>
-        <P>
-        Presentation topics will be granted first-come-first-served, so you
-        would be well-advised to form your teams and choose your topics as
-        soon as possible.  To keep you out of trouble (and maximize your
-        score) it is recommended that you present a rough outline of your
-        topic and discussion plan to me one week before the scheduled session.
         </P>
     </li> <br>
 #endif

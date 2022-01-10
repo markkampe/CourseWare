@@ -47,6 +47,9 @@
 #endif
 	     </li>
 	<LI> <a href="syllabus.html#projects">Overview of projects</a></LI>
+#ifdef STUDENT_PRES
+	<LI> <A href="syllabus.html#presentations">Student presentations</A></LI>
+#endif
 	<LI> <a href="syllabus.html#grading">Grading</a> weights and criteria </LI>
 	<LI> <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/colab.html">Collaboration & Academic Honesty Policy</a> </LI>
 </UL>
@@ -164,7 +167,12 @@ and you will have to solve them on your own.
 #endif  SWE
 
 #ifdef STUDENT_PRES
-	<P></P>
+<H2>Student Presentations</H2>
+	<P>
+	Students will form two-person teams, choose topics generatlly related to scheduled
+	lectures, reserach some intersting aspect of that topic, and deliver a brief in-class
+	presenatation followed by a brief class discussion or activity.
+	</P>
 	<li> Scheduled Student presentations:
 	<ul>
 		<TABLE><TBODY>
