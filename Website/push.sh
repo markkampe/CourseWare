@@ -55,6 +55,16 @@ then
 	scp $PROJECTS/ordering.html $DEST/projects
 	for p in $LIST
 	do
-		scp $PROJECTS/$p/ASSIGNMENT/* $DEST/projects
+		# I enumerate what to copy because there are some macro files
+		# and instructions in these directories that should not be copied
+		scp $PROJECTS/$p/ASSIGNMENT/P*_check.sh $DEST/projects
+		scp $PROJECTS/$p/ASSIGNMENT/*.html $DEST/projects
+		for f in $PROJECTS/$p/ASSIGNMENT/*.{h,png,csv,img,crt,script,gp}
+		do
+		    if [ -f "$f" ]
+		    then
+		        scp $f $DEST/projects
+		    fi
+		done
 	done
 fi
