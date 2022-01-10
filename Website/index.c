@@ -74,7 +74,7 @@
              Zoom</a> meeting for virtual sessions and office hours</LI>
 #endif
 #ifdef	PIAZZA
-	<LI> <a href=PIAZZA>Piazza</a> 
+	<LI> <a href=PIAZZA>Piazza</a>  (access code "cs134")
 	     on-line forum for topic requests and discussions</LI>
 #endif
 #ifdef GRADESCOPE
