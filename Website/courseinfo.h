@@ -27,7 +27,7 @@
 #
 #    ifdef POM
 #	define NUMBER CS134
-#	define STUDENT_PRES
+#	define STUDENT_PRES	two
 #	define SCORE_P4		5
 #	define SCORE_PROJ	40
 #	define SCORE_PRES	10
@@ -35,7 +35,7 @@
 #
 #    ifdef HMC
 #	define NUMBER CS134
-#	define STUDENT_PRES
+#	define STUDENT_PRES	one
 #	define SCORE_PRES	10
 #	define SCORE_P4		5
 #	define SCORE_PROJ	40
@@ -88,6 +88,12 @@
 #define GRADESCOPE "https://gradescope.com/courses/274176"
 #define GRADESCOPE_CODE KYB7W5
 #endif	Fall 2021
+#if YEAR == 2022 && month < 9
+#define ZOOM    "https://hmc-edu.zoom.us/j/92322253125?pwd=eGcvdjBTTCt3UG05WjNsclhIL25BZz09"
+#define PIAZZA  "https://piazza.com/claremont/spring2022/cs134"
+#define GRADESCOPE "https://gradescope.com/courses/342421"
+#define GRADESCOPE_CODE 742653
+#endif	Spring 2022
 
 /* school-specfic submission mechanisms	*/
 #ifdef UCLA

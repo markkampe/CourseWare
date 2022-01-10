@@ -405,11 +405,18 @@ Grades in this course are based on:
         are recent problems, solutions, issues, or incidents ... but what
         I am looking for is good research and interesting discussions of relevant 
         topics.
-        Plan on a 5-10 minute presentation and a 5-10 minute Q&A/discussion.
+        Plan on a 5-10 minute presentation and a 5-10 minute Q&A/discussion, and
+	note that it may be necessary to schedule your presentation shortly after
+	the most closely related lecture.
         </P>
         <P>
-        Each student will participate in two teams (with a different partner
-        each time).  Presenters will be graded on relevance of topic, depth
+        Each student will participate in STUDENT_PRES
+#if STUDENT_PRES == one
+	team.
+#else
+	teams (with a different partner each time).
+#endif
+	Presenters will be graded on relevance of topic, depth
         of research, and quality of preparation/presentation.  The remainder
         of the class will be graded on the regularity and quality of their
         participation in these discussions.
