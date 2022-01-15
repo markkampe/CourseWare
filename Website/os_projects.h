@@ -1,4 +1,10 @@
-	<li> <A Href="projects/ordering.html">Obtaining your Embedded System</A></li>
+	<li>
+#ifdef SOC_CHECKOUT
+	Checking-out (or purchasing your own) 
+#else
+	Purchasing your own
+#endif
+	<A Href="projects/ordering.html">Embedded Development System</A></li>
 	<LI> Project Due Dates (submission via <A Href=SUBMIT_URL>SUBMIT</A>)
 		<P>
 			Projects follow quickly after the readings and lectures in which 

@@ -93,6 +93,7 @@
 #define PIAZZA  "https://piazza.com/claremont/spring2022/cs134"
 #define GRADESCOPE "https://gradescope.com/courses/342421"
 #define GRADESCOPE_CODE 742653
+#define SOC_CHECKOUT true
 #endif	Spring 2022
 
 /* school-specfic submission mechanisms	*/
