@@ -1,4 +1,4 @@
-	<li> <A Href="projects/ordering.html">Ordering your Embedded System</A></li>
+	<li> <A Href="projects/ordering.html">Obtaining your Embedded System</A></li>
 	<LI> Project Due Dates (submission via <A Href=SUBMIT_URL>SUBMIT</A>)
 		<P>
 			Projects follow quickly after the readings and lectures in which 
