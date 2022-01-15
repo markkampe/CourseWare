@@ -47,7 +47,7 @@
 	has been covered.
 	Projects 0, 4 and (to a lesser extent) 1 are much less dependent on reading
 	and lectures and can be started at any time.
-	You will find that, if you start each project as soon as possible, you will earn
-	much better project scores.
+	You will find that, if you start each project as soon as possible, you will
+	experience less time pressure and earn better project scores.
 	</p>
 	</LI>
