@@ -21,8 +21,8 @@
 			before the associated lab session, you will have already encountered 
 			the difficulties, and we can help you during the lab session.  
 			If you wait until the lab session to start a project, the session 
-			will be over before you have even encountered the real problems, 
-			and you will have to solve them on your own.
+			may be over before you have even encountered the real problems, 
+			and you may have to solve them on your own.
 		</P>
 		
 		<TABLE><TBODY>
