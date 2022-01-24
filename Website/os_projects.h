@@ -36,8 +36,8 @@
 		<TR> <TD>P2B_DUE</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>		</TR>
 		<TR> <TD>P3A_DUE</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A>
 			(optionally w/2 person teams)</TD></TR>
-		<TR> <TD>P3B_DUE</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis
-			(optionally w/2 person teams)</A></TD>	</TR>
+		<TR> <TD>P3B_DUE</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis</A>
+			(optionally w/2 person teams)</TD>	</TR>
 		<TR> <TD>P4C_DUE</TD>	<TD><A Href="projects/P4C.html">P4C. IOT Secure communication</A></TD>	</TR>
 		</TBODY></TABLE>
 
