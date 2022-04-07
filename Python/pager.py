@@ -16,6 +16,9 @@ class pager:
         self.length = pagelen   # page length
         self.hang = 0           # hanging indent
 
+        # formfeed rather than blank lines for space at bottom of page
+        self.formfeed = True
+
         self.thisline = ""      # accumulated line
         self.question = []      # accumulated question
         self.page = []          # accumulated page
@@ -170,23 +173,29 @@ class pager:
             return
 
         # how many excess lines and padding points
-        padPoints = 0
-        lines = 0
+        padPoints = 0       # empty lines
+        lines = 0           # lines printed so far
+        lastLine = 0        # last non-blank line
         for l in self.page:
             if l is None:
                 padPoints += 1
             else:
-                lines += 1
+                lines += 1      # one more line of text
+                if l != "\n":   # find the last non-blank line
+                    lastLine = lines
         excess = self.length - lines
 
         # force out the buffered questions
-        lines = 0
+        processed = 0           # of input lines processed
+        lines = 0               # of output lines generated
         for l in self.page:
             if l is not None:
                 # normal lines
-                self.output.write(l)
-                lines += 1
-            else:
+                processed += 1
+                if l != "\n" or processed <= lastLine:
+                    self.output.write(l)
+                    lines += 1
+            elif processed < lastLine:
                 # each padding point gets 1/N of the excess
                 x = int(excess / padPoints) if excess > 0 else 1
                 while x > 0:
@@ -198,14 +207,14 @@ class pager:
 
         # pad us out to a page boundary
         if new_page:
-            if self.length > 0:
+            if self.length == 0 or self.formfeed:
+                # sys.stderr.write("force: formfeed\n")
+                self.output.write('\f\n')
+            else:
                 # sys.stderr.write("force " + str(lines) + " lines\n")
                 while lines < self.length:
                     self.output.write('\n')
                     lines += 1
-            else:
-                # sys.stderr.write("force: formfeed\n")
-                self.output.write('\f\n')
 
         # and reset the buffered page
         self.page = []
