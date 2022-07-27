@@ -160,7 +160,6 @@
     Each quiz will have four or five questions, typically asking
 	<ul>
 	   <li> definitions of or distinctions between key terms</li>
-	   <li> distinctions between key terms</li>
 	   <li> descriptions or examples of key concepts</li>
 	   <li> applicability, efficacies and issues with techniques</li>
 	   <li> key results from studies</li>
