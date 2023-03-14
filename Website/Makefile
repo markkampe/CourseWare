@@ -1,7 +1,9 @@
 PGMS=../Python
+PYTHON=python2.7		# I should upgrade this stuff to python3
 
 OS_CSVS=$(HOME)/Downloads/OS_course
 SWE_CSVS=$(HOME)/Downloads/SWE_course
+SYS_CSVS=$(HOME)/Downloads/SYS_course
 
 PGM_SCHED=$(PGMS)/schedule.py
 PGM_OBJS=$(PGMS)/objectives.py
@@ -17,8 +19,10 @@ SLIDES_SFX=post_slides.html
 INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html FAQ.html
 
-MONTH=9
-YEAR=2021
+# CS134 9/23
+# CS105 1/24
+MONTH=1
+YEAR=2024
 TOPICID=--topicID
 
 default: office_hours $(CSVS)/TOPICS.csv $(CSVS)/OBJECTIVES.csv $(CSVS)/READINGS.csv $(SCHEDULE) $(OFFICE_HOURS)
@@ -34,13 +38,13 @@ default: office_hours $(CSVS)/TOPICS.csv $(CSVS)/OBJECTIVES.csv $(CSVS)/READINGS
 	gcc -E -w -D$(SCHOOL) -D$(COURSE)=$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) pre_keys.c | grep -v '^# ' > $(KEYS_PFX)
 	gcc -E -w -D$(SCHOOL) -D$(COURSE)=$(COURSE) -DMONTH=$(MONTH) -DYEAR=$(YEAR) FAQ.c | grep -v '^# ' > FAQ.html
 	# construct the schedule, learning objectices, and slides index
-	python $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
+	$(PYTHON) $(PGM_SCHED) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
 		--prolog=$(SCHED_PFX) --epilog=$(COURSE)_post.html --quizzes=$(QUIZZES)\
 		$(CSVS)/READINGS.csv $(TOPICID) > schedule.html
-	python $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
+	$(PYTHON) $(PGM_OBJS) --lectures=$(SCHEDULE) --topics=$(CSVS)/TOPICS.csv --col=$(LECTURES) \
 		--prolog=$(KEYS_PFX) --epilog=post.html -d \
 		$(CSVS)/OBJECTIVES.csv > keys.html
-	python $(PGM_SLIDES) --lectures=$(SCHEDULE) --prolog=$(SLIDES_PFX) --epilog=$(SLIDES_SFX) > slides.html
+	$(PYTHON) $(PGM_SLIDES) --lectures=$(SCHEDULE) --prolog=$(SLIDES_PFX) --epilog=$(SLIDES_SFX) > slides.html
 	rm -f $(INTERMEDIATES)
 
 hmc-os: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(OS_CSVS)/SEMESTER.csv $(OS_CSVS)/READINGS.csv $(OS_CSVS)/TOPICS.csv $(OS_CSVS)/OBJECTIVES.csv
@@ -57,6 +61,9 @@ pom-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SWE_CSVS)/SEMESTER.csv $(SWE_CS
 
 hmc-sw: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SWE_CSVS)/SEMESTER.csv $(SWE_CSVS)/READINGS.csv $(SWE_CSVS)/TOPICS.csv $(SWE_CSVS)/OBJECTIVES.csv
 	make SCHOOL=HMC COURSE=SWE LECTURES=28 SCHEDULE=$(SWE_CSVS)/SEMESTER.csv QUIZZES="Sakai" CSVS=$(HOME)/Downloads/SWE_course
+
+hmc-sys: $(PGM_SCHED) $(PGM_OBJS) $(PGM_SLIDES) $(SYS_CSVS)/SEMESTER.csv $(SYS_CSVS)/READINGS.csv $(SYS_CSVS)/TOPICS.csv $(SYS_CSVS)/OBJECTIVES.csv
+	make SCHOOL=HMC COURSE=SYS LECTURES=28 SCHEDULE=$(SYS_CSVS)/SEMESTER.csv  CSVS=$(HOME)/Downloads/SYS_course
 
 # project_dates.h is another INTERMEDIATE that is also needed by the projects Makefile
 clean:

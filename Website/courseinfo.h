@@ -75,6 +75,13 @@
 #    define SLIP_DAYS 4
 #endif  SWE
 
+/* Computer Systems course parameters	*/
+#ifdef	SYS
+#define COURSE Computer Systems
+#define NUMBER CS105
+
+#endif	SYS
+
 /* semester-specific web-site references */
 #if YEAR == 2021 && MONTH < 9
 #define ZOOM    "https://hmc-edu.zoom.us/j/93895586571?pwd=bUlYNlRGT2ZRajRtY0tKU0gxK3QwZz09"
