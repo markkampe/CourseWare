@@ -4,10 +4,10 @@
 #
 ACCOUNT=markk@knuth.cs.hmc.edu
 DIR=public_html
-#COURSE=cs134
-COURSE=cs105
-SEMESTER=s
-YEAR=24
+COURSE=cs134
+#COURSE=cs105
+SEMESTER=f
+YEAR=23
 
 TOP_FILES="index.html schedule.html syllabus.html keys.html FAQ.html"
 
