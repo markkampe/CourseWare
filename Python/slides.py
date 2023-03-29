@@ -73,8 +73,8 @@ class csvReader:
                 self.cDay = c
             elif s in ["Date", "date"]:
                 self.cDate = c
-            elif s in ["Quiz", "quiz"]:
-                self.cQuiz = c
+            elif s in ["Quiz", "quiz", "Other", "other"]:
+                self.cOther = c
             elif s == lectHead:
                 self.cLec = c
 
@@ -98,14 +98,14 @@ class csvReader:
                 if not hasattr(self, 'cDate'):
                     sys.stderr.write("Lectures: Date column unknown\n")
                     sys.exit(-1)
-                if not hasattr(self, 'cQuiz'):
-                    sys.stderr.write("Lectures: Quiz column unknown\n")
+                if not hasattr(self, 'cOther'):
+                    sys.stderr.write("Lectures: Quiz/Other column unknown\n")
                     sys.exit(-1)
             elif cols[self.cDate] != "":
                 c = cols[self.cLect]
                 l = 0 if (c == "") else c
                 obj.addLecture(l, cols[self.cDay], cols[self.cDate],
-                               cols[self.cTop], cols[self.cQuiz])
+                               cols[self.cTop], cols[self.cOther])
             line = line + 1
 
 
