@@ -40,3 +40,18 @@ do
 	echo "#define $p"_DUE $date
 done
 echo "#endif	OS"
+
+SYS_PROJ="P1 P2 P3 P4 P5 P6 P7"
+echo "#ifdef SYS"
+for p in $SYS_PROJ
+do
+	# grep out the first due line for each project
+	due=`grep -e "(due" -e "(suggested" $1 | grep -m1 "$p:" | cut -d, -f5`
+
+	# pull the date out of the "(due xxx)"
+	date=`echo $due | cut --complement -d" " -f1 | cut -d")" -f1`
+
+	# output a define for this project due date
+	echo "#define $p"_DUE $date
+done
+echo "#endif	SYS"
