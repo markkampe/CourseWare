@@ -31,9 +31,9 @@
 		<TR> <TD>P1A_DUE</TD>	<TD><A Href="projects/P1A.html">P1A. I/O and IPC</A></TD>		</TR>
 		<TR> <TD>P1B_DUE</TD>	<TD><A Href="projects/P1B.html">P1B. Compressed Communication</A></TD>	</TR>
 		<TR> <TD>P4A_DUE</TD>	<TD><A Href="projects/P4A.html">P4A. Embedded System Bringup</A></TD>	</TR>
-		<TR> <TD>P4B_DUE</TD>	<TD><A Href="projects/P4B.html">P4B. Sensors and communication</A></TD>	</TR>
 		<TR> <TD>P2A_DUE</TD>	<TD><A Href="projects/P2A.html">P2A. Mutual Exclusion</A></TD>		</TR>
 		<TR> <TD>P2B_DUE</TD>	<TD><A Href="projects/P2B.html">P2B. Contention</A></TD>		</TR>
+		<TR> <TD>P4B_DUE</TD>	<TD><A Href="projects/P4B.html">P4B. Sensors and communication</A></TD>	</TR>
 		<TR> <TD>P3A_DUE</TD>	<TD><A Href="projects/P3A.html">P3A. File System interpretation</A>
 			(optionally w/2 person teams)</TD></TR>
 		<TR> <TD>P3B_DUE</TD>	<TD><A Href="projects/P3B.html">P3B. File System analysis</A>
