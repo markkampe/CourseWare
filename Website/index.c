@@ -166,6 +166,11 @@ and you will have to solve them on your own.
 #include "swe_projects.h"
 #endif  SWE
 
+#ifdef SYS
+#include "project_dates.h"
+#include "sys_projects.h"
+#endif
+
 #ifdef STUDENT_PRES
 <H2>Student Presentations</H2>
 	<P>
@@ -181,6 +186,7 @@ and you will have to solve them on your own.
 		</TBODY></TABLE>
 	</ul>
 #endif
+
 </ul>
 </li></ul>
 </p>
