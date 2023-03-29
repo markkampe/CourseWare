@@ -136,14 +136,14 @@ solutions will available through another URL in the
 <P>
 Projects follow quickly after the readings and lectures in which
 the associated principles are presented.
+
+#ifdef OS
 Project deliverables are spread (relatively) uniformly throughout
 the course (one per week).
 This is done to keep you from getting in trouble when
 you discover that you cannot complete a three week project in
 two days.
 </P>
-
-#ifdef OS
 <P>
 Each deliverable is due a few
 days after the associated lab session, and most of them require
@@ -162,11 +162,13 @@ and you will have to solve them on your own.
 #endif OS
 
 #ifdef SWE
+</P>
 #include "project_dates.h"
 #include "swe_projects.h"
 #endif  SWE
 
 #ifdef SYS
+</P>
 #include "project_dates.h"
 #include "sys_projects.h"
 #endif
