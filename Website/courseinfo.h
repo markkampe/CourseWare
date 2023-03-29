@@ -1,4 +1,4 @@
-#if MONTH >= 9
+#if MONTH >= 8
 #    define SEASON Fall
 #else
 #    define SEASON Spring
