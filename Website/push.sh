@@ -69,4 +69,11 @@ then
 		done
 	done
 	scp presentations.html $DEST
+	
+	LIST="functions.sh logfilter.c pipe_test.c pty_test.c sensorlog.py"
+	echo "... updating project testing tools from $PROJECTS/tools"
+	for s in $LIST
+	do
+	    scp $PROJECTS/tools/$s $DEST/Software
+	done
 fi
