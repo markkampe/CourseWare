@@ -92,6 +92,7 @@
 <P>
 Practical skills will be exercised in the projects.
 Your mastery of concepts and issues will be assessed in
+quizzes, 
 <a href="syllabus.html#exams">mid-term and final exams</a>.
 #ifdef REMOTE_EXAMS
 <P>
@@ -133,11 +134,11 @@ solutions will available through another URL in the
 <a href="schedule.html">course schedule</A>.
 
 <H2>Projects and Due Dates</H2>
+#ifdef OS
 <P>
 Projects follow quickly after the readings and lectures in which
 the associated principles are presented.
 
-#ifdef OS
 Project deliverables are spread (relatively) uniformly throughout
 the course (one per week).
 This is done to keep you from getting in trouble when
@@ -162,12 +163,24 @@ and you will have to solve them on your own.
 #endif OS
 
 #ifdef SWE
+<P>
+Projects follow quickly after the readings and lectures in which
+the associated principles are presented.
 </P>
 #include "project_dates.h"
 #include "swe_projects.h"
 #endif  SWE
 
 #ifdef SYS
+<P>
+This course involves many skills and understandings that can be introduced
+in the lectures, but can only be mastered by working on real problems.
+These projects are intended to be performed by two person teams, so that
+you can work together on developing approaches and analyzing problems.
+Depending on difficulty, you will have one, two or three weeks for 
+each project. 
+They are, in most cases, due at 5PM on the Friday on which the next
+project begins.
 </P>
 #include "project_dates.h"
 #include "sys_projects.h"
