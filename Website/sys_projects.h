@@ -94,7 +94,7 @@
     <LI> implementing a simple web client and server
     <P>
     	You will learn to use the POSIX socket APIs to establish network 
-	connections (on both the client and server sides) and to implement
+	(server-side) connections and to implement
 	the most basic HTTP operation (GET, with correct headers and
 	error handling) for remote file access.
 	You will then extend your server to use multi-threading to enable 
