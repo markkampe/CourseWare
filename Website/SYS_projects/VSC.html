@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Using Visual Studio Code on a remote server</title>
+</head>
+<body>
+<P>
+Most of the labs in this course involve writing and testing C code on
+a Linux system. Most of your notebooks are likely running MacOS or
+Windows, which will not be able to run most of these projects.
+Fortunately we have a departmental Linux server (wilkes.cs.hmc.edu)
+set up for your use.  You will need to:
+<ul>
+    <li> If you do not already have one, get a cs.hmc.edu account, 
+         confirm that you can log in with it.<br>
+	 It would be best if you got this under control before 
+	 showing up for the first lab session.</li>
+	<P></P>
+    <li> From your notebook (or a lab machine), open an <em>ssh</em> 
+         (<em>putty</em> on Windows systems) session to wilkes.cs.hmc.edu
+	 and confirm that you are able to log in.<br>
+	 Create a new sub-directory for your projects in this course:
+	 <pre>
+ wilkes% cd			# make sure you are in your $HOME directory
+ wilkes% mkdir CS105_projects	# you can choose any name you like
+ wilkes% 
+	 </pre>
+	 </li>
+    <li> If you do not already have it, download and install 
+    	 <A href="https://code.visualstudio.com/download">Visual Studio Code</A>
+	 (from Microsoft) on your personal machine, and add the 
+	 <A href="https://code.visualstudio.com/docs/remote/ssh">remote ssh connection</A> 
+	 extension.
+	 <br>
+	 Open a remote Visual Studio connection to wilkes.cs.hmc.edu,
+	 and change to the new sub-directory you created for these projects.
+	 <br>
+	 In the remote session, start a terminal session so you can type
+	 shell commands to compile and run your programs.
+	 </li>
+	<P></P>
+    <li> You may find that Visual Studio regularly asks you to re-enter your password
+	to establish new connections.  If this becomes bothersome, you can (there are
+	numerous tutorials on the internet):
+	<ul>
+	    <li>If you do not already have one, use the 
+		<A href="https://man7.org/linux/man-pages/man1/ssh-keygen.1.html">ssh-keygen</a>
+		command to create a new RSA public/private key pair
+		on your personal notebook (do not do this on a lab machine).</li>
+	    <li>install a copy of the public key (<em>id_rsa.pub</em>,with rw-------
+		protection) in the 
+		<em>.ssh</em> sub-directory of your $(HOME) directory on Wilkes.</li>
+	</ul>
+	Once you have done this, <em>ssh</em> and <em>Visual Studio</em> should be able
+	to automatically log in to Wilkes (from your personal notebook) without your
+	needing to enter your password.
+	</li>
+</ul>
+<P>
+There are (at least) two ways to get a lab-starter onto Wilkes:
+<ul>
+   <li>	download it onto your local machine, and then drag that file into
+   	the (remote session) <em>Visual Studio</em> Explorer window.</li>
+   <P></P>
+   <li> in a remote terminal session, use the Linux 
+	<A href="https://man7.org/linux/man-pages/man1/wget.1.html">wget</a>
+	command to directly download the lab-starter onto Wilkes.
+	<pre>
+wilkes% wget https://cs.hmc.edu/courses/cs105/projects/bits-handout.tar
+wilkes%
+	</pre>
+	Note: you can copy the URL for the hand-out by hovering over the link
+	(e.g. in the course schedule) and doing a right-click "copy link location",
+	and then paste it after your wilkes <em>wget</em> command.
+	</li>
+</ul>
+Either way you will then have to use the Linux
+<A href="https://man7.org/linux/man-pages/man1/tar.1.html">tar</a>
+command to extract the files:
+<pre>
+	wilkes% tar xvf bits-handout.tar
+	wilkes%
+</pre>
+In most cases, this will create a new sub-directory just for that project.
+</P>
+</body>
+</html>
