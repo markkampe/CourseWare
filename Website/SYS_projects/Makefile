@@ -3,7 +3,7 @@
 semester = s24
 repos = "/cs/grader/cs105gra/lab-grading"
 repo_b = "/cs/cs105/bomb/bomblab.64bit"
-repo_a = "/cs/cs105/bufbomb/attackalb"
+repo_a = "/cs/cs105/bufbomb/attacklab"
 
 all: bitslab debuglab bomblab attacklab synclab fgreplab serverlab
 
@@ -13,11 +13,10 @@ push: all
 bitslab: bits/writeup/bitslab.pdf bits/bits-handout.tar
 
 bits/writeup/bitslab.pdf:
-	cd bits; make lab-writeup
+	cd bits/writeup; make
 
 bits/bits-handout.tar:
-	@echo build of the bits program does not yet work
-	#cd bits; make handout-tarfile	# does not build correctly, likely due to clone errors
+	cd bits; make handout-tarfile
 
 debuglab: debugger/debugger_handout.pdf debugger/code/problem1.c debugger/code/problem2.c
 
@@ -63,26 +62,45 @@ clean:
 	cd debugger; make primaryclean
 	cd bomb/writeup; make clean
 	cd attack/writeup; make clean
-	cd ringbuf; make clean
+	cd ringbuf; make clean;
 	cd fgrep/writeup; make primaryclean
 	cd networks; make clean
+	cd ringbuf/writeup; make clean;
 
 pull:
 	cd debugger; git pull;
 	cd ringbuf; git pull;
 	cd fgrep; git pull;
 	cd networks; git pull;
-	scp -r $(repo_b)/writeup bomb
-	scp -r $(repo_a)/writeup attack; scp -r $(repo_a)/src attack
-	@echo cp -r $(repos)/bits . still doesn't work
-#
-# you must newgrp cs105adm to access these repos/sources
-#
+	cd exams; git pull
+	# can't get these out of RCS, so just re-copy the most interesting files
+	cp $(repos)/bits/writeup/{Makefile,README,bitslab.tex} bits/writeup
+	cp $(repo_b)/writeup/{Makefile,README,bomblab.tex} bomb/writeup
+	cp $(repo_a)/writeup/{Makefile,attacklab.tex,example.s,example.ed,rop.pdf,rop.pptx,refs.bib} attack/writeup
+	cp $(repo_a)/writeup/{c2tex,farm-eg.c,farm-eg.d} attack/writeup
+	scp -r $(repo_a)/writeup/itables attack/writeup
+	cp $(repo_a)/src/build/{visible,buf}.c attack/src/build
+	cp $(repo_a)/src/solve/readd.pl attack/src/solve
+	chmod 660 attack/writeup/attacklab.tex
+	chmod 770 attack/src/solve/readd.pl
+
 clone:
-	@echo cp -r $(repos)/bits . STILL DOES NOT WORK
 	git clone $(repos)/debugger
 	git clone $(repos)/ringbuf
 	git clone $(repos)/fgrep
 	git clone $(repos)/networks
-	mkdir bomb; scp -r $(repo_b)/writeup bomb
-	mkdir attack; scp -r $(repo_a)/writeup attack; scp -r $(repo_a)/src attack
+	git clone /cs/grader/cs105gra//exams.git
+	# bomb lab (not in git) is just a simple tex source
+	mkdir bomb  bomb/writeup; cp $(repo_b)/writeup/{Makefile,README,bomblab.tex} bomb/writeup
+	# bits lab (not in git) requires a tex document and a bunch of source files
+	mkdir bits bits/writeup; cp $(repos)/bits/writeup/{Makefile,README,bitslab.tex} bits/writeup
+	scp -r $(repos)/bits/src bits; scp -r $(repos)/bits/contest bits; cp $(repos)/bits/Makefile bits
+	# attack lab (not in git) draws on numerous source files and a few programs
+	mkdir attack attack/writeup attack/src attack/src/build attack/src/solve; 
+	cp $(repo_a)/writeup/{Makefile,attacklab.tex,example.s,example.ed,rop.pdf,rop.pptx,refs.bib} attack/writeup
+	cp $(repo_a)/writeup/{c2tex,farm-eg.c,farm-eg.d} attack/writeup
+	scp -r $(repo_a)/writeup/itables attack/writeup
+	cp $(repo_a)/src/build/{visible,buf}.c attack/src/build
+	cp $(repo_a)/src/solve/readd.pl attack/src/solve
+	chmod 660 attack/writeup/attacklab.tex
+	ichmod 770 attack/src/solve/readd.pl
