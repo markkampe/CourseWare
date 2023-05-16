@@ -182,6 +182,7 @@ each project.
 They are, in most cases, due at 5PM on the Friday on which the next
 project begins.
 </P>
+<H3>Overview of Projects</H3>
 #include "project_dates.h"
 #include "sys_projects.h"
 #endif
