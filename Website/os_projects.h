@@ -6,24 +6,6 @@
 #endif
 	<A Href="projects/ordering.html">Embedded Development System</A></li>
 	<LI> Project Due Dates (submission via <A Href=SUBMIT_URL>SUBMIT</A>)
-		<P>
-			Projects follow quickly after the readings and lectures in which 
-			the associated principles are presented.
-			Project deliverables are spread (relatively) uniformly throughout 
-			the course (one per week).
-			This is done to keep you from getting in trouble when
-			you discover that you cannot complete a three week project in 
-			two days.
-			Each deliverable is due a few
-			days after the associated lab session, and most of them require
-			you to encounter, recognize and solve one or two non-trivial problems.
-			If you start the projects
-			before the associated lab session, you will have already encountered 
-			the difficulties, and we can help you during the lab session.  
-			If you wait until the lab session to start a project, the session 
-			may be over before you have even encountered the real problems, 
-			and you may have to solve them on your own.
-		</P>
 		
 		<TABLE><TBODY>
 		<TR> <TH>Due</TH>		<TH>Project</TH></TR>
