@@ -51,7 +51,8 @@
 	<LI> <A href="syllabus.html#presentations">Student presentations</A></LI>
 #endif
 	<LI> <a href="syllabus.html#grading">Grading</a> weights and criteria </LI>
-	<LI> <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/colab.html">Collaboration & Academic Honesty Policy</a> </LI>
+	<LI> <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/colab.html">Collaboration</a> & 
+	     <a href="http://htmlpreview.github.io/?https://github.com/markkampe/Big-Software/blob/master/info/honor-code.html">Academic Honesty Policy</a> </LI>
 </UL>
 
 <H2>Course Resources</H2>
