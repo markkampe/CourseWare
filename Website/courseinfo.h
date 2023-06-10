@@ -95,13 +95,20 @@
 #define GRADESCOPE "https://gradescope.com/courses/274176"
 #define GRADESCOPE_CODE KYB7W5
 #endif	Fall 2021
-#if YEAR == 2022 && month < 9
+#if YEAR == 2022 && MONTH < 9
 #define ZOOM    "https://hmc-edu.zoom.us/j/92322253125?pwd=eGcvdjBTTCt3UG05WjNsclhIL25BZz09"
 #define PIAZZA  "https://piazza.com/claremont/spring2022/cs134"
 #define GRADESCOPE "https://gradescope.com/courses/342421"
 #define GRADESCOPE_CODE 742653
 #define SOC_CHECKOUT true
 #endif	Spring 2022
+#if YEAR == 2023 && MONTH >= 8
+#define ZOOM	"https://hmc-edu.zoom.us/j/97801994098?pwd=MlNiQjZPdVEwS3RKVzExSmdFQ1NQQT09"
+#define PIAZZA  "https://piazza.com/hmc/fall2023/cs134"
+#define GRADESCOPE "https://gradescope.com/courses/541779"
+#define GRADESCOPE_CODE WVRK63
+#define SOC_CHECKOUT true
+#endif	Fall 2023
 
 /* school-specfic submission mechanisms	*/
 #ifdef UCLA
