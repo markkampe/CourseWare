@@ -159,15 +159,6 @@
     </ul>
     </P>
 	<P>
-	To ensure that students have done the reading, and come to class prepared to engage
-	in deeper exploration of the topics, an on-line quiz (based on the assigned reading)
-	will be due before the start of each lecture.  Nobody likes these quizzes, but 
-	experience has shown that 
-		(a) quizzes force students to do the reading before the lectures, and
-		(b) students who have done the reading get more out of the lectures,
-		    and develop a better understanding of the material.
-	</P>
-	<P>
 	All 
 	<A href="slides/index.html">lecture slides</a>
 	will be available on-line before the start of each lecture.
