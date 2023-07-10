@@ -104,9 +104,9 @@
 #endif	Spring 2022
 #if YEAR == 2023 && MONTH >= 8
 #define ZOOM	"https://hmc-edu.zoom.us/j/97801994098?pwd=MlNiQjZPdVEwS3RKVzExSmdFQ1NQQT09"
-#define PIAZZA  "https://piazza.com/hmc/fall2023/cs134"
-#define GRADESCOPE "https://gradescope.com/courses/541779"
-#define GRADESCOPE_CODE WVRK63
+#define CANVAS "https://harveymuddcollege.instructure.com/courses/396"
+#define GRADESCOPE "https://gradescope.com/courses/551450"
+#define GRADESCOPE_CODE RZPB6B
 #define SOC_CHECKOUT true
 #endif	Fall 2023
 
