@@ -481,7 +481,10 @@ Grades in this course are based on:
 <h3>Late and make-up policy</h3>
 <ul>
 	<li>there are no make-ups for quizzes, but you can
-	    take a quiz before it is due.</li>
+	    take a quiz before it is due,
+	    and I will drop one or two of your lowest quiz scores
+	    in computing your final grade.
+	    </li>
 	<li>each student has <strong>SLIP_DAYS slip days</strong> that can be used for
 	    any lab due date (before the end of the quarter).
 	    After those have been used up, a grade is reduced by 10% for each 24 hours
