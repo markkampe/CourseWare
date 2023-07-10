@@ -73,20 +73,24 @@
 	<li> <a href="https://gradescope.com/courses/13796">Gradescope</a>
 		website for project and exam feedback.</li>
 #endif POM
-#ifdef ZOOM
-	<LI> <a href=ZOOM>
-             Zoom</a> meeting for virtual sessions and office hours</LI>
-#endif
 #ifdef	PIAZZA
 	<LI> <a href=PIAZZA>Piazza</a>  (access code "cs134")
 	     on-line forum for topic requests and discussions</LI>
 #endif
+#ifdef CANVAS
+	<LI> <a href=CANVAS>Canvas</a>
+	     on-line forum for announcements and discussions</LI>
+#endif CANVAS
 #ifdef GRADESCOPE
 	<li> <a href=GRADESCOPE>Gradescope</a>
 		website for project and exam feedback.
 	(Entry Code: GRADESCOPE_CODE)
 	</li>
 #endif GRADESCOPE
+#ifdef ZOOM
+	<LI> <a href=ZOOM>
+             Zoom</a> meeting for virtual sessions and office hours</LI>
+#endif
 </UL>
 
 <H2>Exams</H2>
