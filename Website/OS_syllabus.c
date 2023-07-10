@@ -360,12 +360,13 @@
 		    system hobby projects</li>
 		<li>a suitable micro-USB power supply for the embedded board </li>
 	     </ul>
-	     All of these parts are widely avaiable and,
-	     ironically, they will cost you just about the same amount
-	     of money you would have otherwise spent on an Operating
-	     Systems text.  But, if you are taking this course, the 
-	     odds are that you will find many other uses for your embedded
-	     development system after this course is over.
+	     All of these parts are widely avaiable and, ironically, cost just about 
+	     the same amount of money you would have otherwise spent on an Operating
+	     Systems text.  
+	     We also have a few of these systems available for checkout ...
+	     but, if you are taking this course, the odds are that you will find 
+	     many other uses for such embedded development systems after this
+	     course is over.
         </li>
    </ul>
    </p>
