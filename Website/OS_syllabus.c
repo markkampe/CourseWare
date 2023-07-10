@@ -153,7 +153,7 @@
     <P>
     You can help to enrich the quality of the lecture sessions by:
     <ul>
-    	<li> using the on-line Piazza forum to suggest questions and topics
+    	<li> using the on-line forum to suggest questions and topics
 	     to be discussed during the lecture sessions.</li>
 	<li> asking questions during the lecture sessions.</li>
     </ul>
@@ -310,7 +310,7 @@
         Exam (and quiz) questions are almost entirely based on the 
         <a href="keys.html">key concepts</a> list.  You are encouraged
         to pose questions and continue discussions of these key concepts
-        in <A href=PIAZZA>Piazza</A>.
+        in the on-line forum.
         </P>
 </ul>
 
