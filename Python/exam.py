@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 #
 #   This is a utility to operate on exam-question files,
 #   pulling out an exam, solutions, or rubric.  This enables
