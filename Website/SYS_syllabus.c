@@ -266,11 +266,13 @@
         <a href="keys.html">key concepts</a>,
         and in most cases the answers will have been presented in
         the text, the lectures or both.  Most exam questions have brief (2-4
-        sentence or a simple diagram) answers.  Typical types of questions
-        might be:
+        sentence, list, or a simple diagram) answers.
+	Typical types of questions might be:
         <UL>
         <LI> simple "do you remember" questions, comparable in 
              nature and difficulty to quiz questions.</li>
+        <LI> moderate "list and briefly describe the steps" question,
+             for processes covered in the reading and lectures.</li>
         <LI> moderate "can you describe/contrast/apply" questions,
              comparable in nature and difficulty to in-class
              discussions.</li>

@@ -270,6 +270,8 @@
         <LI> moderate "can you describe/contrast/apply" questions,
              comparable in nature and difficulty to in-class
              discussions.</li>
+        <LI> moderate "list and briefly describe the steps" question,
+             for processes covered in the reading and lectures.</li>
         <LI> moderate "consider this" questions, asking you to
              find answers not specifically discussed in class.</li>
         <LI> a philosophical extra credit question, related to key
