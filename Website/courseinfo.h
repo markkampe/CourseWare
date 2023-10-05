@@ -109,6 +109,13 @@
 #define GRADESCOPE_CODE RZPB6B
 #define SOC_CHECKOUT true
 #endif	Fall 2023
+#if YEAR == 2024 && MONTH < 9
+#define ZOOM	"https://hmc-edu.zoom.us/j/FIXME
+#define CANVAS "https://harveymuddcollege.instructure.com/courses/FIXME"
+#define GRADESCOPE "https://gradescope.com/courses/FIXME"
+#define GRADESCOPE_CODE FIXME
+#define SOC_CHECKOUT false
+#endif	Spring 2024
 
 /* school-specfic submission mechanisms	*/
 #ifdef UCLA
