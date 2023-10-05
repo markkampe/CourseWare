@@ -19,6 +19,8 @@ SLIDES_SFX=post_slides.html
 INTERMEDIATES=$(SCHED_PFX) $(SLIDES_PFX) $(KEYS_PFX) office_hours.h
 OUTPUTS=index.html schedule.html slides.html keys.html syllabus.html FAQ.html
 
+MONTH_121=1
+YEAR_121=2024
 MONTH_134=9
 YEAR_134=2023
 MONTH_105=1
