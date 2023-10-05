@@ -127,6 +127,6 @@
 #    define SUBMIT_URL "http://submit.cs.pomona.edu"
 #endif  POM
 #ifdef HMC
-#    define	SUBMIT Sakai Assignments
-#    define SUBMIT_URL "http://sakai.claremont.edu"
+#    define	SUBMIT Canvas Assignments
+#    define SUBMIT_URL "https://harveymuddcollege.instructure.com/courses/396"
 #endif  HMC
