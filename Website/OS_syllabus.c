@@ -380,7 +380,9 @@
 <ul>
 	<P>
 	Students will form two-person teams, choose a lecture, and research and
-	prepare a related presentation and discussion (beyond the material covered
+	prepare a related 
+        <a href="presentations.html">presentation and discussion</a>
+        (beyond the material covered
 	by the assigned reading and prepared lecture slides).  Suggested topics
 	are recent problems, solutions, issues, or incidents ... but what
 	I am looking for is good research and interesting discussions of relevant 
