@@ -160,6 +160,10 @@ class question:
                             (self.number, self.name, self.descr)
                     output.write(title)
                     firstLine = False
+                # end of RUBRIC section
+                if "===" in line:
+                    output.write('\n')
+                    break;
                 output.write("\t" + line)
 
     def solnIntro(self, output):
