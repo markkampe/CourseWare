@@ -65,11 +65,7 @@
 #    endif  POM
 #
 #    ifdef HMC
-#	if YEAR <= 2020
-#	    define NUMBER CS121
-#	else
-#	    define NUMBER CS181AA
-#	endif YEAR
+#	define NUMBER CS181AA
 #    endif HMC
 #
 #    define SLIP_DAYS 4
@@ -110,10 +106,10 @@
 #define SOC_CHECKOUT true
 #endif	Fall 2023
 #if YEAR == 2024 && MONTH < 9
-#define ZOOM	"https://hmc-edu.zoom.us/j/FIXME
-#define CANVAS "https://harveymuddcollege.instructure.com/courses/FIXME"
+#define ZOOM	"https://hmc-edu.zoom.us/j/96743441280?pwd=bUh3L01JblVnc3lNaDd5clNSOUhUZz09"
+#define CANVAS "https://harveymuddcollege.instructure.com/courses/994"
 #define GRADESCOPE "https://gradescope.com/courses/FIXME"
-#define GRADESCOPE_CODE FIXME
+#define GRADESCOPE "https://www.gradescope.com/courses/678705"
 #define SOC_CHECKOUT false
 #endif	Spring 2024
 
