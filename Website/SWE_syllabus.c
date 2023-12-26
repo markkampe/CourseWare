@@ -238,7 +238,7 @@
     Exam (and quiz) questions are almost entirely based on the 
     <a href="keys.html">key concepts</a> list.  You are encouraged
     to pose questions and continue discussions of these key concepts
-    in <A href=PIAZZA>Piazza</A>.
+    on the course Canvas site.
     </P>
 </ul>
 
