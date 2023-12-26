@@ -14,12 +14,12 @@ The following slides outine the goals for each lab session:
    <li> <A href="lab_2a.html">P2A: Preliminary Architecture</a> </li>
    <li> <A href="lab_2b.html">P2B: Architectural Review</a> </li>
    <li> <A href="lab_2c.html">P2C: Final Architecture</a> </li>
-   <li> <A href="lab_3a.html">P3A: Component Specifications</a> </li>
-   <li> <A href="lab_3b.html">P3B: Component Design and Test Plan</a> </li>
+   <li> <A href="lab_3a.html">P3A: Component Specifications</a> and <A href="lab_3b.html">P3B: Component Design and Test Plan</a> </li>
+   <li> Spring Break </li>
    <li> <A href="lab_3c.html">P3C: Component Design Reviews</a> </li>
+   <li> Cesar Chavez </li>
    <li> <A href="lab_3d.html">P3D: Final Component Design and Test Plan</a> </li>
    <li> <A href="lab_4a.html">P4A: Implementationg and Testing</a> and <A href="lab_4b.html"> P4B Coding Exercises</A></li>
-   <li> ThanksGiving </li>
    <li> <A href="lab_4c.html">P4C: Integration and Demo Preparation</a> </li>
    <li> <A href="lab_4d.html">P4D: Post-Mortem Report</a> </li>
 </OL>
