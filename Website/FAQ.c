@@ -18,6 +18,8 @@ I have been very active in the development and refining of engineering
 tools and processes.  I have always loved teaching.  
 I teach this course because it is critical material,
 and I care about helping the next generation of engineers master it.
+</P>
+<A href="why_I_love_OS.html>"> Why I love operating systems </A>
 #ifdef SWE
 <P>
 Software is, in one way or another, what most of us are going
