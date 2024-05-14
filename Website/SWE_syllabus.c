@@ -188,7 +188,7 @@
 <h2><a name="exams">Exams</a></h2>
 <ul>
     <P>
-    There are two exams: a mid-term, and a (whole course) final.
+    There are two exams: a mid-term, and a final.
     These are closed book exams.
     The purpose of these exams is to determine whether or not you understand
     the key concepts that have been discussed in the preceding lectures and
