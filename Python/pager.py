@@ -176,24 +176,24 @@ class pager:
         padPoints = 0       # empty lines
         lines = 0           # lines printed so far
         lastLine = 0        # last non-blank line
-        for l in self.page:
-            if l is None:
+        for line in self.page:
+            if line is None:
                 padPoints += 1
             else:
                 lines += 1      # one more line of text
-                if l != "\n":   # find the last non-blank line
+                if line != "\n":   # find the last non-blank line
                     lastLine = lines
         excess = self.length - lines
 
         # force out the buffered questions
         processed = 0           # of input lines processed
         lines = 0               # of output lines generated
-        for l in self.page:
-            if l is not None:
+        for line in self.page:
+            if line is not None:
                 # normal lines
                 processed += 1
-                if l != "\n" or processed <= lastLine:
-                    self.output.write(l)
+                if line != "\n" or processed <= lastLine:
+                    self.output.write(line)
                     lines += 1
             elif processed < lastLine:
                 # each padding point gets 1/N of the excess

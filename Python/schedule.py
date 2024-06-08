@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 #   process readings, topics and lectures to create a lecture schedule
 #       day/date, title, topics, readings, quiz, slides
@@ -54,15 +54,15 @@ class schedule:
         if topic not in self.topicMap:
             return
 
-        l = self.topicMap[topic]
-        # print "READING %d(%s): %s(%dpp)" % (l, topic, url, pp)
-        if l not in self.readings:
-            self.readings[l] = []
-        self.readings[l].append(url)
-        if l not in self.pages:
-            self.pages[l] = pp
+        art = self.topicMap[topic]
+        # print "READING %d(%s): %s(%dpp)" % (art, topic, url, pp)
+        if art not in self.readings:
+            self.readings[art] = []
+        self.readings[art].append(url)
+        if art not in self.pages:
+            self.pages[art] = pp
         else:
-            self.pages[l] += pp
+            self.pages[art] += pp
 
     def addLecture(self, number, day, date, title, quiz):
         """ register a new lecture by its number and title
@@ -162,7 +162,7 @@ class csvReader:
         and uses the schedule class to record them
     """
     def __init__(self, infile):
-        input = open(infile, 'rb')
+        input = open(infile, 'r')
         self.instream = reader(input, skipinitialspace=True)
 
     def analyze(self, cols, lectHead=None):
@@ -223,8 +223,8 @@ class csvReader:
                     sys.exit(-1)
             elif cols[self.cDate] != "":
                 c = cols[self.cLect]
-                l = 0 if (c == "") else c
-                obj.addLecture(l, cols[self.cDay], cols[self.cDate],
+                lect = 0 if (c == "") else c
+                obj.addLecture(lect, cols[self.cDay], cols[self.cDate],
                                cols[self.cTop], cols[self.cOther])
             line = line + 1
 
@@ -249,9 +249,9 @@ class csvReader:
                     sys.stderr.write("Topics: Minutes column unknown\n")
                     sys.exit(-1)
             elif cols[self.cLec] != "":
-                l = cols[self.cLec]
+                lect = cols[self.cLec]
                 m = int(cols[self.cMin]) if cols[self.cMin] != "" else 0
-                obj.addTopic(l, cols[self.cTop], cols[self.cSub], m)
+                obj.addTopic(lect, cols[self.cTop], cols[self.cSub], m)
             line = line + 1
 
     # note a reading
@@ -280,7 +280,7 @@ class csvReader:
 def interpolate(file, indent=0):
     """ copy a file to our output with optional indentation """
     if os.path.exists(file):
-        input = open(file, 'rb')
+        input = open(file, 'r')
         for line in input:
             print "%s%s" % (' ' * indent, line.rstrip('\n'))
         input.close()

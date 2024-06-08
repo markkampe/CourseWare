@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 #   process lectures to create an index to lecture slides
 #
@@ -29,11 +29,11 @@ class schedule:
         """
         try:
             # only numbered lectures have slides
-            l = int(number)
+            lect = int(number)
         except ValueError:
-            l = 0
-        if l != 0:
-            self.printLecture(l, title)
+            lect = 0
+        if lect != 0:
+            self.printLecture(lect, title)
         else:
             self.printActivity(title)
 
@@ -58,7 +58,7 @@ class csvReader:
         and uses the schedule class to record them
     """
     def __init__(self, infile):
-        input = open(infile, 'rb')
+        input = open(infile, 'r')
         self.instream = reader(input, skipinitialspace=True)
 
     def analyze(self, cols, lectHead=None):
@@ -103,8 +103,8 @@ class csvReader:
                     sys.exit(-1)
             elif cols[self.cDate] != "":
                 c = cols[self.cLect]
-                l = 0 if (c == "") else c
-                obj.addLecture(l, cols[self.cDay], cols[self.cDate],
+                lect = 0 if (c == "") else c
+                obj.addLecture(lect, cols[self.cDay], cols[self.cDate],
                                cols[self.cTop], cols[self.cOther])
             line = line + 1
 
@@ -112,7 +112,7 @@ class csvReader:
 def interpolate(file, indent=0):
     """ copy a file to our output with optional indentation """
     if os.path.exists(file):
-        input = open(file, 'rb')
+        input = open(file, 'r')
         for line in input:
             print "%s%s" % (' ' * indent, line.rstrip('\n'))
         input.close()

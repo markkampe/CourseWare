@@ -23,7 +23,7 @@ class question:
             sys.stderr.write("ERROR: unable to open exam file " + file + "\n")
             self.input = None
         else:
-            self.input = open(file, 'rb')
+            self.input = open(file, 'r')
 
         # default attributes
         self.name = qname
@@ -108,10 +108,10 @@ class question:
                     pager.addLine(line.rstrip())
 
         # see if we owe any padding lines
-        l = self.lines
-        while l > 0:
+        lcount = self.lines
+        while lcount > 0:
             pager.addLine('\n')
-            l -= 1
+            lcount -= 1
 
         # flush the output and note the line count
         return pager.flush()
@@ -163,7 +163,7 @@ class question:
                 # end of RUBRIC section
                 if "===" in line:
                     output.write('\n')
-                    break;
+                    break
                 output.write("\t" + line)
 
     def solnIntro(self, output):

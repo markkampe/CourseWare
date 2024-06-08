@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 #
 #   This is a utility to operate on exam-question files,
 #   pulling out an exam, solutions, or rubric.  This enables
@@ -23,11 +23,11 @@ def interpolate(infile, output):
 
     # see if we can open the input file
     if not os.path.exists(infile):
-        print "Unable to open file: %s" % (infile)
+        print("Unable to open file: " + infile)
         return
 
     # process the input file
-    input = open(infile, 'rb')
+    input = open(infile, 'r')
     for line in input:
         output.write(line)
     input.close()
@@ -96,7 +96,7 @@ if __name__ == '__main__':
         # pull out the fields for this question
         fields = stripped.split(',')
         if len(fields) < 4:
-            print("ignoring line %d: %d fields" % (lineNum, len(fields)))
+            print("ignoring line {0}: {1} fields".format(lineNum, len(fields)))
             continue
 
         xname = fields[0].strip()
@@ -109,8 +109,8 @@ if __name__ == '__main__':
         sum = q.summary()
 
         if not heading:
-            print "## " + q.heading(False)
-            print "-- " + q.heading(True)
+            print("## " + q.heading(False))
+            print("-- " + q.heading(True))
             heading = True
 
         # prefixed number may be line count or question number
@@ -119,7 +119,7 @@ if __name__ == '__main__':
             prefix = "%2d " % (q.printExam(pager))
         elif qnum != "":
             prefix = "%2s " % (qnum)
-        print prefix + sum
+        print(prefix + sum)
 
         if outS:
             q.printSolution(outS)

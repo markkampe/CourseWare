@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 #   Right now this does what I need it to do, as simply as possible
 #   Maybe someday I should make it autoconfig categories list from
@@ -123,7 +123,7 @@ class csvReader:
         and uses the objectives class to record them
     """
     def __init__(self, infile):
-        input = open(infile, 'rb')
+        input = open(infile, 'r')
         self.instream = reader(input, skipinitialspace=True)
 
     def analyze(self, cols, lectHead=None):
@@ -186,8 +186,8 @@ class csvReader:
                     sys.exit(-1)
             elif cols[self.cLect] != "":
                 try:
-                    l = cols[self.cLect]
-                    obj.addTopic(l, cols[self.cTop])
+                    lect = cols[self.cLect]
+                    obj.addTopic(lect, cols[self.cTop])
                 except ValueError:
                     pass
             line = line + 1
@@ -215,8 +215,8 @@ class csvReader:
                 t = cols[self.cTop]
                 p = cols[self.cPri]
                 if t in obj.topicMap.keys() and p != '':
-                    l = obj.topicMap[t]
-                    err = obj.addObjective(l, cols[self.cObj],
+                    lect = obj.topicMap[t]
+                    err = obj.addObjective(lect, cols[self.cObj],
                                            cols[self.cCat], int(p))
                     if err is not None:
                         sys.stderr.write("%d: %s\n" % (line, err))
