@@ -81,57 +81,57 @@ class schedule:
     def tableHead(self):
         """ called to produce the start of the table definition """
 
-        print "<TABLE align=center border cellspacing=0 cellpadding=5>"
-        print "%s<TR>" % (' ' * self.indent)
-        print "%s<TH>Date</TH>" % (' ' * (2 * self.indent))
-        print "%s<TH>Lecture/Lab Topics</TH>" % (' ' * (2 * self.indent))
-        print "%s<TH>Assigned Reading</TH>" % (' ' * (2 * self.indent))
-        print "%s<TH>%s</TH>" % \
-              (' ' * (2 * self.indent), "Minutes" if self.trial else "Other")
-        print "%s<TH>%s</TH>" % \
-              (' ' * (2 * self.indent), "Pages" if self.trial else "Slides")
-        print "%s</TR>" % (' ' * self.indent)
+        print("<TABLE align=center border cellspacing=0 cellpadding=5>")
+        print("%s<TR>" % (' ' * self.indent))
+        print("%s<TH>Date</TH>" % (' ' * (2 * self.indent)))
+        print("%s<TH>Lecture/Lab Topics</TH>" % (' ' * (2 * self.indent)))
+        print("%s<TH>Assigned Reading</TH>" % (' ' * (2 * self.indent)))
+        print("%s<TH>%s</TH>" % \
+              (' ' * (2 * self.indent), "Minutes" if self.trial else "Other"))
+        print("%s<TH>%s</TH>" % \
+              (' ' * (2 * self.indent), "Pages" if self.trial else "Slides"))
+        print("%s</TR>" % (' ' * self.indent))
 
     def printActivity(self, date, subject, comment):
-        print "%s<TR>" % (' ' * self.indent)
-        print "%s<TD> %s </TD> <TD> %s </TD>" % \
-              (' ' * self.indent, date, subject)
+        print("%s<TR>" % (' ' * self.indent))
+        print("%s<TD> %s </TD> <TD> %s </TD>" % \
+              (' ' * self.indent, date, subject))
 
         # labs may have readings as well
-        print "%s<TD>" % (' ' * 2 * self.indent)
+        print("%s<TD>" % (' ' * 2 * self.indent))
         colon = subject.find(':')
         if colon > 0:
             lecture = subject[0:colon]
             if lecture in self.readings:
                 for r in self.readings[lecture]:
-                    print "%s%s<br>" % (' ' * 3 * self.indent, r)
-        print "%s</TD>" % (' ' * 2 * self.indent)
+                    print("%s%s<br>" % (' ' * 3 * self.indent, r))
+        print("%s</TD>" % (' ' * 2 * self.indent))
 
         if comment is not None:
-            print "%s<TD> %s </TD>" % \
-              (' ' * self.indent, comment)
-        print "%s</TR>" % (' ' * self.indent)
+            print("%s<TD> %s </TD>" % \
+              (' ' * self.indent, comment))
+        print("%s</TR>" % (' ' * self.indent))
 
     def printLecture(self, date, lecture, quiz):
-        print "%s<TR>" % (' ' * self.indent)
-        print "%s<TD> %s </TD>" % (' ' * 2 * self.indent, date)
+        print("%s<TR>" % (' ' * self.indent))
+        print("%s<TD> %s </TD>" % (' ' * 2 * self.indent, date))
 
-        print "%s<TD>" % (' ' * 2 * self.indent)
+        print("%s<TD>" % (' ' * 2 * self.indent))
         if lecture in self.topics.keys():
             for t in self.topics[lecture]:
-                print "%s%s<br>" % (' ' * 3 * self.indent, t)
+                print("%s%s<br>" % (' ' * 3 * self.indent, t))
         else:
             sys.stderr.write("ERROR: scheduled lecture %s has no topics\n" %
                              (lecture))
             sys.exit(-1)
 
-        print "%s</TD>" % (' ' * 2 * self.indent)
+        print("%s</TD>" % (' ' * 2 * self.indent))
 
-        print "%s<TD>" % (' ' * 2 * self.indent)
+        print("%s<TD>" % (' ' * 2 * self.indent))
         if lecture in self.readings:
             for r in self.readings[lecture]:
-                print "%s%s<br>" % (' ' * 3 * self.indent, r)
-        print "%s</TD>" % (' ' * 2 * self.indent)
+                print("%s%s<br>" % (' ' * 3 * self.indent, r))
+        print("%s</TD>" % (' ' * 2 * self.indent))
 
         try:
             # numbered lectures have quizzes and slides
@@ -140,21 +140,21 @@ class schedule:
                 s = self.minutes[lecture] if lecture in self.minutes else 0
             else:
                 s = quiz
-            print "%s<TD> %s </TD>" % (' ' * 2 * self.indent, s)
+            print("%s<TD> %s </TD>" % (' ' * 2 * self.indent, s))
 
             if self.trial:
                 s = self.pages[lecture] if lecture in self.pages else 0
             else:
                 s = "%s<a href=\"%slecture_%s.pdf\">lecture %s</a>" % \
                     (' ' * 2 * self.indent, self.slides, lecture, lecture)
-            print "%s<TD> %s </TD>" % (' ' * 2 * self.indent, s)
+            print("%s<TD> %s </TD>" % (' ' * 2 * self.indent, s))
         except ValueError:
             pass
 
-        print "%s</TR>" % (' ' * self.indent)
+        print("%s</TR>" % (' ' * self.indent))
 
     def tableFin(self):
-        print "</TABLE>"
+        print("</TABLE>")
 
 
 class csvReader:
@@ -282,7 +282,7 @@ def interpolate(file, indent=0):
     if os.path.exists(file):
         input = open(file, 'r')
         for line in input:
-            print "%s%s" % (' ' * indent, line.rstrip('\n'))
+            print("%s%s" % (' ' * indent, line.rstrip('\n')))
         input.close()
 
 
@@ -329,7 +329,7 @@ if __name__ == '__main__':
     if opts.prolog is not None:
         interpolate(opts.prolog)
     else:
-        print "<HTML>"
+        print("<HTML>")
 
     # print the table
     obj.tableHead()
@@ -338,15 +338,15 @@ if __name__ == '__main__':
     obj.tableFin()
 
     if opts.epilog is not None:
-        print ""
-        print "<P>"
-        print "<center>"
+        print("")
+        print("<P>")
+        print("<center>")
         now = datetime.date.today()
-        print "(Last updated: %d/%d/%d)" % (now.month, now.day, now.year)
-        print "</center>"
-        print "</P>"
+        print("(Last updated: %d/%d/%d)" % (now.month, now.day, now.year))
+        print("</center>")
+        print("</P>")
         interpolate(opts.epilog)
     else:
-        print "</HTML>"
+        print("</HTML>")
 
     sys.exit(0)

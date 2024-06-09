@@ -39,18 +39,18 @@ class schedule:
 
     def listHead(self):
         """ called to produce the start of the table definition """
-        print "<OL type=\"1\">"
+        print("<OL type=\"1\">")
 
     def printActivity(self, subject):
         """ I don't think activities have any place here """
         return
 
     def printLecture(self, lecture, title):
-        print '%s<LI><A href="%slecture_%s.pdf">%s</A></LI>' % \
-              ((' ' * self.indent), self.slides, lecture, title)
+        print('%s<LI><A href="%slecture_%s.pdf">%s</A></LI>' % \
+              ((' ' * self.indent), self.slides, lecture, title))
 
     def listFin(self):
-        print "</OL>"
+        print("</OL>")
 
 
 class csvReader:
@@ -114,7 +114,7 @@ def interpolate(file, indent=0):
     if os.path.exists(file):
         input = open(file, 'r')
         for line in input:
-            print "%s%s" % (' ' * indent, line.rstrip('\n'))
+            print("%s%s" % (' ' * indent, line.rstrip('\n')))
         input.close()
 
 
@@ -140,8 +140,8 @@ if __name__ == '__main__':
     if opts.prolog is not None:
         interpolate(opts.prolog)
     else:
-        print "<HTML>"
-        print "<BODY>"
+        print("<HTML>")
+        print("<BODY>")
 
     # print the table
     obj.listHead()
@@ -157,7 +157,7 @@ if __name__ == '__main__':
         # print "</P>"
         interpolate(opts.epilog)
     else:
-        print "</BODY>"
-        print "</HTML>"
+        print("</BODY>")
+        print("</HTML>")
 
     sys.exit(0)

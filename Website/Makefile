@@ -1,5 +1,5 @@
 PGMS=../Python
-PYTHON=python2.7		# I should upgrade this stuff to python3
+PYTHON=python3
 
 OS_CSVS=$(HOME)/Downloads/OS_course
 SWE_CSVS=$(HOME)/Downloads/SWE_course

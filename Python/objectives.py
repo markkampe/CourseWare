@@ -75,14 +75,14 @@ class objectives:
     def table(self, breaks=False, indent=4):
         """ called after all registrations to print the table """
 
-        print "<TABLE align=center border cellspacing=0 cellpadding=5>"
-        print "%s<TR>" % (' ' * indent)
-        print "%s<TH>Lect/Lab</TH>" % (' ' * (2 * indent))
+        print( "<TABLE align=center border cellspacing=0 cellpadding=5>")
+        print( "%s<TR>" % (' ' * indent))
+        print( "%s<TH>Lect/Lab</TH>" % (' ' * (2 * indent)))
         if len(self.titles) > 0:
-            print "%s<TH>Subject</TH>" % (' ' * (2 * indent))
+            print( "%s<TH>Subject</TH>" % (' ' * (2 * indent)))
         for list in self.used:
-            print "%s<TH>%s</TH>" % ((' ' * (2 * indent)), list)
-        print "%s</TR>" % (' ' * indent)
+            print( "%s<TH>%s</TH>" % ((' ' * (2 * indent)), list))
+        print( "%s</TR>" % (' ' * indent))
 
         eol = "<BR>" if breaks else ","
         for x in range(0, self.lectures):
@@ -97,25 +97,25 @@ class objectives:
             if none:
                 continue
 
-            print "%s<TR>" % (' ' * indent)
-            print "%s<TD>%s</TD>" % (' ' * (2 * indent), self.tags[x])
+            print( "%s<TR>" % (' ' * indent))
+            print( "%s<TD>%s</TD>" % (' ' * (2 * indent), self.tags[x]))
             if len(self.titles) > 0:
-                print "%s<TD>%s</TD>" % \
-                      (' ' * (2 * indent), self.titles[lect])
+                print( "%s<TD>%s</TD>" % \
+                      (' ' * (2 * indent), self.titles[lect]))
 
             for c in self.used:
                 catlist = self.lists[c]
                 # for each category
-                print "%s<TD>" % (' ' * (2 * indent))
+                print( "%s<TD>" % (' ' * (2 * indent)))
                 leclist = catlist[lect]
                 for (t, p, d) in leclist:
                     pfx = self.prefix[p] if p in self.prefix else ""
                     sfx = self.suffix[p] if p in self.suffix else ""
-                    print "%s%s%s%s%s" % \
-                          (' ' * (3 * indent), pfx, t, sfx, eol)
-                print "%s</TD>" % (' ' * (2 * indent))
-            print "%s</TR>" % (' ' * indent)
-        print "</TABLE>"
+                    print( "%s%s%s%s%s" % \
+                          (' ' * (3 * indent), pfx, t, sfx, eol))
+                print( "%s</TD>" % (' ' * (2 * indent)))
+            print( "%s</TR>" % (' ' * indent))
+        print( "</TABLE>")
 
 
 class csvReader:
@@ -226,9 +226,9 @@ class csvReader:
 def interpolate(file, indent=0):
     """ copy a file to our output with optional indentation """
     if os.path.exists(file):
-        input = open(file, 'rb')
+        input = open(file, 'r')
         for line in input:
-            print "%s%s" % (' ' * indent, line.rstrip('\n'))
+            print("%s%s" % (' ' * indent, line.rstrip('\n')))
         input.close()
 
 
@@ -279,27 +279,27 @@ if __name__ == '__main__':
     if opts.prolog is not None:
         interpolate(opts.prolog)
     else:
-        print "<HTML>"
+        print("<HTML>")
 
     if opts.describe:
-        print "<UL>"
+        print("<UL>")
         for c in categories:
             if c in obj.used:
-                print "    <LI> <STRONG>%s</STRONG>" % (c)
+                print("    <LI> <STRONG>%s</STRONG>" % (c))
                 interpolate(c + ".txt", 8)
-                print "    </LI>"
-        print "</UL>"
+                print("    </LI>")
+        print("</UL>")
 
     obj.table(True)
 
     if opts.epilog is not None:
-        print ""
-        print "<P>"
+        print("")
+        print("<P>")
         now = datetime.date.today()
-        print "Last updated: %d/%d/%d" % (now.month, now.day, now.year)
-        print "</P>"
+        print("Last updated: %d/%d/%d" % (now.month, now.day, now.year))
+        print("</P>")
         interpolate(opts.epilog)
     else:
-        print "</HTML>"
+        print("</HTML>")
 
     sys.exit(0)
