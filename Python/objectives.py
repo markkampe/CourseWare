@@ -27,8 +27,8 @@ class objectives:
         self.titles = {}    # title of each day
         self.topicMap = {}  # map from topics to lectures
         self.lists = {}     # there is a dict of categories
-                            # each entry is a dict of per-lecture entries
-                            # each element is [title, priority, difficulty]
+        #                     each entry is a dict of per-lecture entries
+        #                     each element is [title, priority, difficulty]
         self.used = []      # list of categories actually used
 
         # create a list for each category
@@ -75,14 +75,14 @@ class objectives:
     def table(self, breaks=False, indent=4):
         """ called after all registrations to print the table """
 
-        print( "<TABLE align=center border cellspacing=0 cellpadding=5>")
-        print( "%s<TR>" % (' ' * indent))
-        print( "%s<TH>Lect/Lab</TH>" % (' ' * (2 * indent)))
+        print("<TABLE align=center border cellspacing=0 cellpadding=5>")
+        print("%s<TR>" % (' ' * indent))
+        print("%s<TH>Lect/Lab</TH>" % (' ' * (2 * indent)))
         if len(self.titles) > 0:
-            print( "%s<TH>Subject</TH>" % (' ' * (2 * indent)))
+            print("%s<TH>Subject</TH>" % (' ' * (2 * indent)))
         for list in self.used:
-            print( "%s<TH>%s</TH>" % ((' ' * (2 * indent)), list))
-        print( "%s</TR>" % (' ' * indent))
+            print("%s<TH>%s</TH>" % ((' ' * (2 * indent)), list))
+        print("%s</TR>" % (' ' * indent))
 
         eol = "<BR>" if breaks else ","
         for x in range(0, self.lectures):
@@ -97,25 +97,25 @@ class objectives:
             if none:
                 continue
 
-            print( "%s<TR>" % (' ' * indent))
-            print( "%s<TD>%s</TD>" % (' ' * (2 * indent), self.tags[x]))
+            print("%s<TR>" % (' ' * indent))
+            print("%s<TD>%s</TD>" % (' ' * (2 * indent), self.tags[x]))
             if len(self.titles) > 0:
-                print( "%s<TD>%s</TD>" % \
+                print("%s<TD>%s</TD>" %
                       (' ' * (2 * indent), self.titles[lect]))
 
             for c in self.used:
                 catlist = self.lists[c]
                 # for each category
-                print( "%s<TD>" % (' ' * (2 * indent)))
+                print("%s<TD>" % (' ' * (2 * indent)))
                 leclist = catlist[lect]
                 for (t, p, d) in leclist:
                     pfx = self.prefix[p] if p in self.prefix else ""
                     sfx = self.suffix[p] if p in self.suffix else ""
-                    print( "%s%s%s%s%s" % \
+                    print("%s%s%s%s%s" %
                           (' ' * (3 * indent), pfx, t, sfx, eol))
-                print( "%s</TD>" % (' ' * (2 * indent)))
-            print( "%s</TR>" % (' ' * indent))
-        print( "</TABLE>")
+                print("%s</TD>" % (' ' * (2 * indent)))
+            print("%s</TR>" % (' ' * indent))
+        print("</TABLE>")
 
 
 class csvReader:

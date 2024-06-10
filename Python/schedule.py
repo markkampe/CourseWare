@@ -86,15 +86,15 @@ class schedule:
         print("%s<TH>Date</TH>" % (' ' * (2 * self.indent)))
         print("%s<TH>Lecture/Lab Topics</TH>" % (' ' * (2 * self.indent)))
         print("%s<TH>Assigned Reading</TH>" % (' ' * (2 * self.indent)))
-        print("%s<TH>%s</TH>" % \
+        print("%s<TH>%s</TH>" %
               (' ' * (2 * self.indent), "Minutes" if self.trial else "Other"))
-        print("%s<TH>%s</TH>" % \
+        print("%s<TH>%s</TH>" %
               (' ' * (2 * self.indent), "Pages" if self.trial else "Slides"))
         print("%s</TR>" % (' ' * self.indent))
 
     def printActivity(self, date, subject, comment):
         print("%s<TR>" % (' ' * self.indent))
-        print("%s<TD> %s </TD> <TD> %s </TD>" % \
+        print("%s<TD> %s </TD> <TD> %s </TD>" %
               (' ' * self.indent, date, subject))
 
         # labs may have readings as well
@@ -108,8 +108,8 @@ class schedule:
         print("%s</TD>" % (' ' * 2 * self.indent))
 
         if comment is not None:
-            print("%s<TD> %s </TD>" % \
-              (' ' * self.indent, comment))
+            print("%s<TD> %s </TD>" %
+                  (' ' * self.indent, comment))
         print("%s</TR>" % (' ' * self.indent))
 
     def printLecture(self, date, lecture, quiz):

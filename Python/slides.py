@@ -46,7 +46,7 @@ class schedule:
         return
 
     def printLecture(self, lecture, title):
-        print('%s<LI><A href="%slecture_%s.pdf">%s</A></LI>' % \
+        print('%s<LI><A href="%slecture_%s.pdf">%s</A></LI>' %
               ((' ' * self.indent), self.slides, lecture, title))
 
     def listFin(self):
