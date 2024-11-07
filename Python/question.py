@@ -89,7 +89,7 @@ class question:
             return
 
         # set the hanging indent
-        pager.setHang(len(self.number) + 2)
+        pager.set_hang(len(self.number) + 2)
 
         # seek to the question
         inSection = False
@@ -104,15 +104,15 @@ class question:
             elif inSection:
                 if firstLine:
                     prefix = "%s: " % (self.number)
-                    pager.addLine(prefix + line.rstrip())
+                    pager.add_line(prefix + line.rstrip())
                     firstLine = False
                 else:
-                    pager.addLine(line.rstrip())
+                    pager.add_line(line.rstrip())
 
         # see if we owe any padding lines
         lcount = self.lines
         while lcount > 0:
-            pager.addLine('\n')
+            pager.add_line('\n')
             lcount -= 1
 
         # flush the output and note the line count

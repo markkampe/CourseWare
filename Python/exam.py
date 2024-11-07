@@ -10,7 +10,7 @@ import sys
 # pylint: disable=W0402     # upgrade to a new parser
 from optparse import OptionParser
 from question import question
-from pager import pager
+from pager import Pager
 
 # IDEA
 #   automatically choose output file names based on the exam name?
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     if opts.exams:
         # pylint: disable=R1732     # "with" would be inappropriate here
         out_x = open(opts.exams, 'w', encoding='ascii')
-        pager = pager(out_x, int(opts.line_width), int(opts.page_length))
+        pager = Pager(out_x, int(opts.line_width), int(opts.page_length))
         pager.flush(True)
     else:
         pager = None
