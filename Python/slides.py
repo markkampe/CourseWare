@@ -51,6 +51,7 @@ def list_fin():
     """ called to produce the end of the list """
     print("</OL>")
 
+
 def list_head():
     """ called to produce the start of the list """
     print("<OL type=\"1\">")
