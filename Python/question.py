@@ -1,29 +1,32 @@
-#
-# this is used by the exam.py utility
-#
-#   The question class understands the format of the question information
-#   files, and knows how to output that information as:
-#       summary
-#       exam question
-#       exam solution
-#       grading rubric
-#
+"""
+this is used by the exam.py utility
+
+   The question class understands the format of the question information
+   files, and knows how to output that information as:
+       summary
+       exam question
+       exam solution
+       grading rubric
+"""
 import sys
 import os.path
 
 
-class question:
-
-    def __init__(self, qname, role=None, number=None, dir=None):
+# pylint: disable=R0902     # yes, we have many attributes
+class Question:
+    """
+    in program representation of the information in a single exam question file
+    """
+    def __init__(self, qname, role=None, number=None, directory=None):
         """ instantiate a question """
-
         # see if we can find the file
-        file = dir + "/" + qname if dir else qname
+        file = directory + "/" + qname if directory else qname
         if not os.path.exists(file):
             sys.stderr.write("ERROR: unable to open exam file " + file + "\n")
             self.input = None
         else:
-            self.input = open(file, 'r')
+            # pylint: disable=R1732     # "with" would not be approriate here
+            self.input = open(file, 'r', encoding='ascii')
 
         # default attributes
         self.name = qname
@@ -44,12 +47,14 @@ class question:
         self.format = "%-4s %-5s %d,%s %-32.32s    %-10.10s   %s"
 
     def close(self):
+        """ close the input file for this question """
         self.input.close()
 
     def heading(self, lines=False):
+        """ print out the column headings """
         return self.dash if lines else self.head
 
-    def summary(self, output=None):
+    def summary(self):
         """ read the summary and return the description """
 
         if self.input is None:
@@ -62,50 +67,51 @@ class question:
                 args = (self.status, self.name, self.priority, self.difficulty,
                         self.descr, self.lect, self.text)
                 return self.format % args
-            else:
-                name, var = line.partition("=")[::2]
-                if name == "descr":
-                    self.descr = var.rstrip()
-                elif name == "text" and var.rstrip() != "":
-                    self.text = var.rstrip()
-                elif name == "lect" and var.rstrip() != "":
-                    self.lect = var.rstrip()
-                elif name == "status" and var.rstrip() != "":
-                    self.status = var.rstrip()
-                elif name == "diff" and var.rstrip() != "":
-                    self.difficulty = var.rstrip()
-                elif name == "lines" and var.rstrip() != "":
-                    self.lines = int(var)
-                elif name == "pri" and var.rstrip() != "":
-                    self.priority = int(var)
-                elif name == "time" and var.rstrip() != "":
-                    self.time = int(var)
-                elif name == "result" and var.rstrip() != "":
-                    self.result = var.rstrip()
+            name, var = line.partition("=")[::2]
+            if name == "descr":
+                self.descr = var.rstrip()
+            elif name == "text" and var.rstrip() != "":
+                self.text = var.rstrip()
+            elif name == "lect" and var.rstrip() != "":
+                self.lect = var.rstrip()
+            elif name == "status" and var.rstrip() != "":
+                self.status = var.rstrip()
+            elif name == "diff" and var.rstrip() != "":
+                self.difficulty = var.rstrip()
+            elif name == "lines" and var.rstrip() != "":
+                self.lines = int(var)
+            elif name == "pri" and var.rstrip() != "":
+                self.priority = int(var)
+            elif name == "time" and var.rstrip() != "":
+                self.time = int(var)
+            elif name == "result" and var.rstrip() != "":
+                self.result = var.rstrip()
+        # didn't find it
+        return "ERROR"
 
-    def printExam(self, pager):
+    def print_exam(self, pager):
         """ print out the exam question """
         if self.input is None:
-            return
+            return 0
 
         # set the hanging indent
         pager.set_hang(len(self.number) + 2)
 
         # seek to the question
-        inSection = False
-        firstLine = False
+        in_section = False
+        first_line = False
         self.input.seek(0)
         for line in self.input:
             if "===ANSWER===" in line:
                 break
-            elif "===QUESTION===" in line:
-                inSection = True
-                firstLine = True
-            elif inSection:
-                if firstLine:
-                    prefix = "%s: " % (self.number)
+            if "===QUESTION===" in line:
+                in_section = True
+                first_line = True
+            elif in_section:
+                if first_line:
+                    prefix = f"{self.number}: "
                     pager.add_line(prefix + line.rstrip())
-                    firstLine = False
+                    first_line = False
                 else:
                     pager.add_line(line.rstrip())
 
@@ -118,60 +124,59 @@ class question:
         # flush the output and note the line count
         return pager.flush()
 
-    def printSolution(self, output):
+    def print_solution(self, output):
         """ print out problem solution  """
         if self.input is None:
             return
 
         # seek to the question
-        inSection = False
-        firstLine = False
+        in_section = False
+        first_line = False
         self.input.seek(0)
         for line in self.input:
             if "===RUBRIC===" in line:
                 output.write('\n')
                 break
-            elif "===ANSWER===" in line:
-                inSection = True
-                firstLine = True
-            elif inSection:
-                if firstLine:
-                    self.solnIntro(output)
-                    firstLine = False
+            if "===ANSWER===" in line:
+                in_section = True
+                first_line = True
+            elif in_section:
+                if first_line:
+                    self.soln_intro(output)
+                    first_line = False
                 output.write("    " + line)
 
-    def printRubric(self, output):
+    def print_rubric(self, output):
         """ print out problem rubric  """
         if self.input is None:
             return
 
         # seek to the question
-        inSection = False
-        firstLine = False
+        in_section = False
+        first_line = False
         self.input.seek(0)
         for line in self.input:
             if "===NOTES===" in line:
                 output.write('\n')
                 break
-            elif "===RUBRIC===" in line:
-                inSection = True
-                firstLine = True
-            elif inSection:
-                if firstLine:
-                    title = "%s(%s): %s\n" % \
-                            (self.number, self.name, self.descr)
+            if "===RUBRIC===" in line:
+                in_section = True
+                first_line = True
+            elif in_section:
+                if first_line:
+                    title = f"{self.number}({self.name}): {self.descr}\n"
                     output.write(title)
-                    firstLine = False
+                    first_line = False
                 # end of RUBRIC section
                 if "===" in line:
                     output.write('\n')
                     break
                 output.write("\t" + line)
 
-    def solnIntro(self, output):
+    def soln_intro(self, output):
         """ print out the start of a solution """
 
-        title = "<H2>%s. %s</H2>\n" % (self.number, self.descr)
+        title = f"<H2>{self.number}. {self.descr}</H2>\n"
         output.write(title)
 
         if self.text or self.lect:

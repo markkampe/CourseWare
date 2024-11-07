@@ -9,7 +9,7 @@ import os
 import sys
 # pylint: disable=W0402     # upgrade to a new parser
 from optparse import OptionParser
-from question import question
+from question import Question
 from pager import Pager
 
 # IDEA
@@ -66,7 +66,7 @@ def process(in_stream, x_pager, s_stream, r_stream):
         role = fields[3].strip()
 
         # print out the information for this question
-        q = question(qname, role, qnum, opts.qdir)
+        q = Question(qname, role, qnum, opts.qdir)
         qsum = q.summary()
         sys.stderr.write(f"summary={qsum}\n")
 
@@ -78,16 +78,16 @@ def process(in_stream, x_pager, s_stream, r_stream):
         # prefixed number may be line count or question number
         prefix = "   "
         if x_pager:
-            lines = q.printExam(x_pager)
+            lines = q.print_exam(x_pager)
             prefix = f"{lines:2d} "
         elif qnum != "":
             prefix = f"{qnum:2d} "
         print(prefix + qsum)
 
         if s_stream:
-            q.printSolution(s_stream)
+            q.print_solution(s_stream)
         if r_stream:
-            q.printRubric(r_stream)
+            q.print_rubric(r_stream)
 
 
 if __name__ == '__main__':
