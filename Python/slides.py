@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-#
-#   process lectures to create an index to lecture slides
-#
-#
+"""
+   process lectures to create an index to lecture slides
+"""
 import sys
 import os.path
 from csv import reader
+# pylint: disable=W0402      # SOMEDAY move to another parser
 from optparse import OptionParser
-import datetime
 
 
-class schedule:
+class Schedule:
     """ This class accepts lectures, topics and readings
         and outputs them as an HTML schedule per session
     """
@@ -19,13 +18,10 @@ class schedule:
         self.indent = indent
         self.slides = slidepath
 
-    def addLecture(self, number, day, date, title, quiz):
+    def add_lecture(self, number, title):
         """ register a new lecture by its number and title
                 number: integer lecture #, 0-> no lecture
-                day: excel 3 letter day
-                date: m/d/yyyy
                 title: topic for this lecture/day
-                quiz: what to put in quiz field
         """
         try:
             # only numbered lectures have slides
@@ -33,97 +29,111 @@ class schedule:
         except ValueError:
             lect = 0
         if lect != 0:
-            self.printLecture(lect, title)
+            self.print_lecture(lect, title)
         else:
-            self.printActivity(title)
+            self.print_activity(title)
 
-    def listHead(self):
-        """ called to produce the start of the table definition """
-        print("<OL type=\"1\">")
+    def print_lecture(self, lecture, title):
+        """ add the slide reference line for this lecture """
+        spaces = self.indent * ' '
+        print(f"{spaces}<LI>"
+              f"<A href=\"{self.slides}lecture_{lecture}.pdf\">"
+              f"{title}</A></LI>")
 
-    def printActivity(self, subject):
+    # pylint: disable=W0613,R0201     # in other modules this does something
+    def print_activity(self, subject):
         """ I don't think activities have any place here """
         return
 
-    def printLecture(self, lecture, title):
-        print('%s<LI><A href="%slecture_%s.pdf">%s</A></LI>' %
-              ((' ' * self.indent), self.slides, lecture, title))
 
-    def listFin(self):
-        print("</OL>")
+# handy functions for list output
+def list_fin():
+    """ called to produce the end of the list """
+    print("</OL>")
+
+def list_head():
+    """ called to produce the start of the list """
+    print("<OL type=\"1\">")
 
 
-class csvReader:
+class CsvReader:
     """ This class reads CSV files for lectures, topics and readings
         and uses the schedule class to record them
     """
     def __init__(self, infile):
-        input = open(infile, 'r')
-        self.instream = reader(input, skipinitialspace=True)
+        # pylint: disable=R1732         # used elsewhere, can't use "with"
+        stream = open(infile, 'r', encoding='ascii')
+        self.instream = reader(stream, skipinitialspace=True)
 
-    def analyze(self, cols, lectHead=None):
+        # these will be set by analyzing the first line
+        self.lect_col = -1      # lecture numbe
+        self.top_col = -1       # lecture topic/title
+        self.day_col = -1       # lecture day
+        self.date_col = -1      # lecture date
+        self.quiz_col = -1      # associated quiz
+        self.opt_col = -1       # other requested field
+
+    def analyze(self, cols, opt_head=None):
         """ figure out which column contains what information """
-        for c in range(len(cols)):
-            s = cols[c]
-            if s in ["Lecture", "lecture"]:
-                self.cLect = c
-            elif s in ["Topic", "topic", "Title", "title"]:
-                self.cTop = c
-            elif s in ["Day", "day"]:
-                self.cDay = c
-            elif s in ["Date", "date"]:
-                self.cDate = c
-            elif s in ["Quiz", "quiz", "Other", "other"]:
-                self.cOther = c
-            elif s == lectHead:
-                self.cLec = c
+        for col, heading in enumerate(cols):
+            if heading in ["Lecture", "lecture"]:
+                self.lect_col = col
+            elif heading in ["Topic", "topic", "Title", "title"]:
+                self.top_col = col
+            elif heading in ["Day", "day"]:
+                self.day_col = col
+            elif heading in ["Date", "date"]:
+                self.date_col = col
+            elif heading in ["Quiz", "quiz", "Other", "other"]:
+                self.quiz_col = col
+            elif heading == opt_head:
+                self.opt_col = col
 
-    # note a date/lecture
-    def readLectures(self, obj):
+    def read_lectures(self, obj_list):
+        """ add a date/lecture to our list"""
         line = 1
         for cols in self.instream:
-            for c in range(len(cols)):
-                cols[c] = cols[c].strip()
+            for col, field in enumerate(cols):
+                cols[col] = field.strip()
             if line == 1:
                 self.analyze(cols)
-                if not hasattr(self, 'cLect'):
+                if not hasattr(self, 'lect_col'):
                     sys.stderr.write("Lectures: Lecture column unknown\n")
                     sys.exit(-1)
-                if not hasattr(self, 'cTop'):
+                if not hasattr(self, 'top_col'):
                     sys.stderr.write("Lectures: Title column unknown\n")
                     sys.exit(-1)
-                if not hasattr(self, 'cDay'):
+                if not hasattr(self, 'day_col'):
                     sys.stderr.write("Lectures: Day column unknown\n")
                     sys.exit(-1)
-                if not hasattr(self, 'cDate'):
+                if not hasattr(self, 'date_col'):
                     sys.stderr.write("Lectures: Date column unknown\n")
                     sys.exit(-1)
-                if not hasattr(self, 'cOther'):
+                if not hasattr(self, 'quiz_col'):
                     sys.stderr.write("Lectures: Quiz/Other column unknown\n")
                     sys.exit(-1)
-            elif cols[self.cDate] != "":
-                c = cols[self.cLect]
-                lect = 0 if (c == "") else c
-                obj.addLecture(lect, cols[self.cDay], cols[self.cDate],
-                               cols[self.cTop], cols[self.cOther])
+            elif cols[self.date_col] != "":
+                date = cols[self.lect_col]
+                lect = 0 if (date == "") else date
+                obj_list.add_lecture(lect, cols[self.top_col])
             line = line + 1
 
 
 def interpolate(file, indent=0):
     """ copy a file to our output with optional indentation """
     if os.path.exists(file):
-        input = open(file, 'r')
-        for line in input:
-            print("%s%s" % (' ' * indent, line.rstrip('\n')))
-        input.close()
+        with open(file, 'r', encoding='ascii') as stream:
+            spaces = ' ' * indent
+            for line in stream:
+                stripped = line.rstrip('\n')
+                print(f"{spaces}{stripped}")
 
 
+# process specified input files, or test data
 if __name__ == '__main__':
-    """ process specified input files, or test data """
 
     # process arguments to get input file names
-    umsg = "usage: %prog [options]"
-    parser = OptionParser(usage=umsg)
+    parser = OptionParser(usage="usage: %prog [options]")
     parser.add_option("-l", "--lectures", dest="lectures", metavar="FILE",
                       default=None)
     parser.add_option("-p", "--prolog", dest="prolog", metavar="FILE",
@@ -134,7 +144,7 @@ if __name__ == '__main__':
                       default="")
     (opts, files) = parser.parse_args()
 
-    obj = schedule(opts.slidepfx)
+    lectures = Schedule(opts.slidepfx)
 
     # print the prolog
     if opts.prolog is not None:
@@ -144,10 +154,10 @@ if __name__ == '__main__':
         print("<BODY>")
 
     # print the table
-    obj.listHead()
+    list_head()
     if opts.lectures is not None:       # process lectures
-        csvReader(opts.lectures).readLectures(obj)
-    obj.listFin()
+        CsvReader(opts.lectures).read_lectures(lectures)
+    list_fin()
 
     if opts.epilog is not None:
         # print ""

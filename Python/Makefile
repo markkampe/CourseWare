@@ -1,4 +1,4 @@
-ALL = exam.py objectives.py pager.py question.py schedule.py slides.py
+ALL = exam.py pager.py question.py objectives.py schedule.py slides.py
 
 lint:
 	pycodestyle $(ALL)
