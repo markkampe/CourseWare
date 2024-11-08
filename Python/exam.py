@@ -7,8 +7,7 @@
 """
 import os
 import sys
-# pylint: disable=W0402     # upgrade to a new parser
-from optparse import OptionParser
+import argparse
 from question import Question
 from pager import Pager
 
@@ -66,9 +65,8 @@ def process(in_stream, x_pager, s_stream, r_stream):
         role = fields[3].strip()
 
         # print out the information for this question
-        q = Question(qname, role, qnum, opts.qdir)
+        q = Question(qname, role, qnum, args.questions)
         qsum = q.summary()
-        sys.stderr.write(f"summary={qsum}\n")
 
         if not heading:
             print("## " + q.heading(False))
@@ -92,30 +90,32 @@ def process(in_stream, x_pager, s_stream, r_stream):
 
 if __name__ == '__main__':
     # process the arguments and input files
-    parser = OptionParser(usage="usage: %prog [options] examfile.csv")
-    parser.add_option("-q", "--questions", dest="qdir", metavar="DIR",
-                      default=None)
-    parser.add_option("-x", "--exams", dest="exams", metavar="FILE",
-                      default=None)
-    parser.add_option("-s", "--solns", dest="solns", metavar="FILE",
-                      default=None)
-    parser.add_option("-r", "--rubric", dest="rubric", metavar="FILE",
-                      default=None)
-    parser.add_option("-p", "--prolog", dest="soln_prolog", metavar="FILE",
-                      default="soln_prolog.html")
-    parser.add_option("-e", "--epilog", dest="soln_epilog", metavar="FILE",
-                      default="soln_epilog.html")
-    parser.add_option("-l", "--length", dest="page_length", metavar="LINES",
-                      default="65")
-    parser.add_option("-w", "--width", dest="line_width", metavar="CHARS",
-                      default="90")
-    (opts, files) = parser.parse_args()
+    parser = argparse.ArgumentParser(description='Exam Generator')
+    parser.add_argument("file", nargs='?',
+                        help='file of chosen questions')
+    parser.add_argument("-q", "--questions", default=None,
+                        help='directory for question files')
+    parser.add_argument("-x", "--exam", default=None,
+                        help='exam output file')
+    parser.add_argument("-s", "--solns", default=None,
+                        help='solutions output file')
+    parser.add_argument("-r", "--rubric", default=None,
+                        help='rubric output file')
+    parser.add_argument("-p", "--prolog", default='soln_prolog.html',
+                        help='solutions HTML prolog')
+    parser.add_argument("-e", "--epilog", default='soln-epilog.html',
+                        help='solutions HTML epilog')
+    parser.add_argument("-l", "--length", default="65",
+                        help='page length (lines)')
+    parser.add_argument("-w", "--width", default="90",
+                        help='line width')
+    args = parser.parse_args()
 
     # make sure we got a valid exam file
-    if not files:
+    if not args.file:
         exam_stream = sys.stdin
     else:
-        examfile = files[0]
+        examfile = args.file
         if not os.path.exists(examfile):
             sys.stderr.write(f"ERROR - no such file: {examfile}\n")
             sys.exit(-1)
@@ -123,29 +123,29 @@ if __name__ == '__main__':
         exam_stream = open(examfile, encoding='ascii')
 
     # start the exam file if any
-    if opts.exams:
+    if args.exam:
         # pylint: disable=R1732     # "with" would be inappropriate here
-        out_x = open(opts.exams, 'w', encoding='ascii')
-        pager = Pager(out_x, int(opts.line_width), int(opts.page_length))
+        out_x = open(args.exam, 'w', encoding='ascii')
+        pager = Pager(out_x, int(args.width), int(args.length))
         pager.flush(True)
     else:
         pager = None
 
     # start the rubric and solutions file (if any)
     # pylint: disable=R1732     # "with" would be inappropriate here
-    out_r = None if opts.rubric is None \
-        else open(opts.rubric, 'w', encoding='ascii')
-    out_s = None if opts.solns is None \
-        else open(opts.solns, 'w', encoding='ascii')
-    if out_s and opts.soln_prolog:
-        interpolate(opts.soln_prolog, out_s)
+    out_r = None if args.rubric is None \
+        else open(args.rubric, 'w', encoding='ascii')
+    out_s = None if args.solns is None \
+        else open(args.solns, 'w', encoding='ascii')
+    if out_s and args.prolog:
+        interpolate(args.prolog, out_s)
 
     # process each exam line in the input file
     process(exam_stream, pager, out_s, out_r)
 
     # generate the solution epilog (if any)
-    if out_s and opts.soln_epilog:
-        interpolate(opts.soln_epilog, out_s)
+    if out_s and args.epilog:
+        interpolate(args.epilog, out_s)
 
     # close all of our output files
     if out_x is not None:
