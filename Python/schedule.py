@@ -7,8 +7,7 @@ import sys
 import os.path
 from csv import reader
 import datetime
-# pylint: disable=W0402     # SOMEDAY update parser
-from optparse import OptionParser
+import argparse
 
 
 # pylint: disable=R0902       # many attributes and decisions
@@ -333,53 +332,55 @@ def interpolate(file, indent=0):
 if __name__ == '__main__':
 
     # process arguments to get input file names
-    parser = OptionParser(usage="usage: %prog [options] READINGS.csv")
-    parser.add_option("-l", "--lectures", dest="lectures", metavar="FILE",
-                      default=None)
-    parser.add_option("-t", "--topics", dest="topics", metavar="FILE",
-                      default=None)
-    parser.add_option("-p", "--prolog", dest="prolog", metavar="FILE",
-                      default=None)
-    parser.add_option("-e", "--epilog", dest="epilog", metavar="FILE",
-                      default=None)
-    parser.add_option("-c", "--col", dest="column", metavar="#LECTURES",
-                      default="28")
-    parser.add_option("-s", "--slides", dest="slidepfx", metavar="PATH",
-                      default="slides/")
-    parser.add_option("-q", "--quizzes", dest="quizpfx", metavar="PATH",
-                      default="quizzes/")
-    parser.add_option("-x", "--trial", dest="trial", action="store_true",
-                      default=False)
-    parser.add_option("-i", "--topicID", dest="topic_id", action="store_true",
-                      default=False)
+    parser = argparse.ArgumentParser(description="Create lab/lecture schedule")
+    parser.add_argument("file", nargs='?',
+                        help='name of READINGS csv input file')
+    parser.add_argument("-l", "--lectures", default=None,
+                        help='name of LECTURES csv input file')
+    parser.add_argument("-t", "--topics", default=None,
+                        help='name of TOPICS csv input file')
+    parser.add_argument("-p", "--prolog", default=None,
+                        help='HTML prolog for schedule file output')
+    parser.add_argument("-e", "--epilog", default=None,
+                        help='HTML epilog for schedule file output')
+    parser.add_argument("-c", "--col", default="28",
+                        help='input column for lecture #')
+    parser.add_argument("-s", "--slides", default="slides/",
+                        help='URL prefix for slides files')
+    parser.add_argument("-q", "--quizzes", default="quizzes/",
+                        help='URL prefox for quiz files')
+    parser.add_argument("-x", "--trial", action='store_true',
+                        help='report minutes per topic/lecture')
+    parser.add_argument("-i", "--topic_id", action='store_true',
+                        help='')
 
-    (opts, files) = parser.parse_args()
+    args = parser.parse_args()
 
     # count the file names to decide what to do
-    if len(files) != 1:
+    if args.file is None:
         sys.stderr.write("ERROR: no input files specified\n")
         sys.exit(-1)
 
-    sched = Schedule(opts.slidepfx, opts.quizpfx, opts.trial)
-    sched.topic_id = opts.topic_id
+    sched = Schedule(args.slides, args.quizzes, args.trial)
+    sched.topic_id = args.topic_id
 
-    if opts.topics is not None:     # build topics->lectures map
-        CsvReader(opts.topics).read_topics(sched, opts.column)
-    CsvReader(files[0]).read_readings(sched)         # process readings
+    if args.topics is not None:     # build topics->lectures map
+        CsvReader(args.topics).read_topics(sched, args.col)
+    CsvReader(args.file).read_readings(sched)         # process readings
 
     # print the prolog
-    if opts.prolog is not None:
-        interpolate(opts.prolog)
+    if args.prolog is not None:
+        interpolate(args.prolog)
     else:
         print("<HTML>")
 
     # print the table
     sched.table_head()
-    if opts.lectures is not None:       # process lectures
-        CsvReader(opts.lectures).read_lectures(sched)
+    if args.lectures is not None:       # process lectures
+        CsvReader(args.lectures).read_lectures(sched)
     sched.table_fin()
 
-    if opts.epilog is not None:
+    if args.epilog is not None:
         print("")
         print("<P>")
         print("<center>")
@@ -387,7 +388,7 @@ if __name__ == '__main__':
         print(f"(Last updated: {now.month}/{now.day}/{now.year})")
         print("</center>")
         print("</P>")
-        interpolate(opts.epilog)
+        interpolate(args.epilog)
     else:
         print("</HTML>")
 

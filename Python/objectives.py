@@ -9,8 +9,7 @@ import sys
 import os.path
 from csv import reader
 import datetime
-# pylint: disable=W0402     # SOMEDAY upgrade to newer parser
-from optparse import OptionParser
+import argparse
 
 
 class Objectives:
@@ -278,23 +277,26 @@ def print_categories():
 if __name__ == '__main__':
 
     # process arguments to get input file names
-    parser = OptionParser(usage="usage: %prog [options] OBJECTIVES.csv")
-    parser.add_option("-l", "--lectures", dest="lectures", metavar="FILE",
-                      default=None)
-    parser.add_option("-t", "--topics", dest="topics", metavar="FILE",
-                      default=None)
-    parser.add_option("-p", "--prolog", dest="prolog", metavar="FILE",
-                      default=None)
-    parser.add_option("-d", "--describe", dest="describe",
-                      default=False, action="store_true")
-    parser.add_option("-e", "--epilog", dest="epilog", metavar="FILE",
-                      default=None)
-    parser.add_option("-c", "--col", dest="column", metavar="#lectures",
-                      default="10")
-    (opts, files) = parser.parse_args()
+    DESCR = "Generate learning objectives list"
+    parser = argparse.ArgumentParser(description=DESCR)
+    parser.add_argument("file", nargs='?',
+                        help='OBJECTIVES csv file')
+    parser.add_argument("-l", "--lectures", default=None,
+                        help='lecture list csv file')
+    parser.add_argument("-t", "--topics", default=None,
+                        help='topics list csv file')
+    parser.add_argument("-p", "--prolog", default=None,
+                        help='HTML prolog for output file')
+    parser.add_argument("-d", "--describe", action='store_true',
+                        help='include category descriptions')
+    parser.add_argument("-e", "--epilog", default=None,
+                        help='HTML epilog for output file')
+    parser.add_argument("-c", "--col", default='10',
+                        help='column for lecture #')
+    args = parser.parse_args()
 
     # count the file names to decide what to do
-    if len(files) != 1:
+    if args.file is None:
         sys.stderr.write("Error: no input files specified\n")
         sys.exit(-1)
 
@@ -308,32 +310,33 @@ if __name__ == '__main__':
     obj.priority(3, "em")
 
     # build up a list of lectures
-    if opts.lectures is not None:
-        CsvReader(opts.lectures).read_lectures(obj)
+    if args.lectures is not None:
+        CsvReader(args.lectures).read_lectures(obj)
     # build up a topics->lectures map
-    if opts.topics is not None:     # build topics->lectures map
-        CsvReader(opts.topics).read_topics(obj, opts.column)
+    if args.topics is not None:     # build topics->lectures map
+        CsvReader(args.topics).read_topics(obj, args.col)
+
     # process the objectives
-    CsvReader(files[0]).read_objectives(obj)
+    CsvReader(args.file).read_objectives(obj)
 
     # print the table
-    if opts.prolog is not None:
-        interpolate(opts.prolog)
+    if args.prolog is not None:
+        interpolate(args.prolog)
     else:
         print("<HTML>")
 
-    if opts.describe:
+    if args.describe:
         print_categories()
 
     obj.table(True)
 
-    if opts.epilog is not None:
+    if args.epilog is not None:
         print("")
         print("<P>")
         now = datetime.date.today()
         print(f"Last updated: {now.month}/{now.day}/{now.year}")
         print("</P>")
-        interpolate(opts.epilog)
+        interpolate(args.epilog)
     else:
         print("</HTML>")
 

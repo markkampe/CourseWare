@@ -5,8 +5,7 @@
 import sys
 import os.path
 from csv import reader
-# pylint: disable=W0402      # SOMEDAY move to another parser
-from optparse import OptionParser
+import argparse
 
 
 class Schedule:
@@ -134,39 +133,39 @@ def interpolate(file, indent=0):
 if __name__ == '__main__':
 
     # process arguments to get input file names
-    parser = OptionParser(usage="usage: %prog [options]")
-    parser.add_option("-l", "--lectures", dest="lectures", metavar="FILE",
-                      default=None)
-    parser.add_option("-p", "--prolog", dest="prolog", metavar="FILE",
-                      default=None)
-    parser.add_option("-e", "--epilog", dest="epilog", metavar="FILE",
-                      default=None)
-    parser.add_option("-s", "--slides", dest="slidepfx", metavar="PATH",
-                      default="")
-    (opts, files) = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Generate slides index")
+    parser.add_argument("-l", "--lectures", default=None,
+                        help='lecture list csv file')
+    parser.add_argument("-p", "--prolog", default=None,
+                        help='HTML prolog for output file')
+    parser.add_argument("-e", "--epilog", default=None,
+                        help='HTML epilog for output file')
+    parser.add_argument("-s", "--slides", default="",
+                        help='URL path to directory of slides files')
+    args = parser.parse_args()
 
-    lectures = Schedule(opts.slidepfx)
+    lectures = Schedule(args.slides)
 
     # print the prolog
-    if opts.prolog is not None:
-        interpolate(opts.prolog)
+    if args.prolog is not None:
+        interpolate(args.prolog)
     else:
         print("<HTML>")
         print("<BODY>")
 
     # print the table
     list_head()
-    if opts.lectures is not None:       # process lectures
-        CsvReader(opts.lectures).read_lectures(lectures)
+    if args.lectures is not None:       # process lectures
+        CsvReader(args.lectures).read_lectures(lectures)
     list_fin()
 
-    if opts.epilog is not None:
+    if args.epilog is not None:
         # print ""
         # print "<P>"
         # now = datetime.date.today()
         # print "Last updated: %d/%d/%d" % (now.month, now.day, now.year)
         # print "</P>"
-        interpolate(opts.epilog)
+        interpolate(args.epilog)
     else:
         print("</BODY>")
         print("</HTML>")
