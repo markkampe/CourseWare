@@ -333,7 +333,7 @@ if __name__ == '__main__':
 
     # process arguments to get input file names
     parser = argparse.ArgumentParser(description="Create lab/lecture schedule")
-    parser.add_argument("file", nargs='?',
+    parser.add_argument("readings_file", nargs=1,
                         help='name of READINGS csv input file')
     parser.add_argument("-l", "--lectures", default=None,
                         help='name of LECTURES csv input file')
@@ -356,17 +356,12 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # count the file names to decide what to do
-    if args.file is None:
-        sys.stderr.write("ERROR: no input files specified\n")
-        sys.exit(-1)
-
     sched = Schedule(args.slides, args.quizzes, args.trial)
     sched.topic_id = args.topic_id
 
     if args.topics is not None:     # build topics->lectures map
         CsvReader(args.topics).read_topics(sched, args.col)
-    CsvReader(args.file).read_readings(sched)         # process readings
+    CsvReader(args.readings_file[0]).read_readings(sched)  # process readings
 
     # print the prolog
     if args.prolog is not None:

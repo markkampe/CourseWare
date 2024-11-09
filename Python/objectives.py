@@ -279,8 +279,8 @@ if __name__ == '__main__':
     # process arguments to get input file names
     DESCR = "Generate learning objectives list"
     parser = argparse.ArgumentParser(description=DESCR)
-    parser.add_argument("file", nargs='?',
-                        help='OBJECTIVES csv file')
+    parser.add_argument("objfile", nargs=1,
+                        help='OBJECTIVES.csv file')
     parser.add_argument("-l", "--lectures", default=None,
                         help='lecture list csv file')
     parser.add_argument("-t", "--topics", default=None,
@@ -294,11 +294,6 @@ if __name__ == '__main__':
     parser.add_argument("-c", "--col", default='10',
                         help='column for lecture #')
     args = parser.parse_args()
-
-    # count the file names to decide what to do
-    if args.file is None:
-        sys.stderr.write("Error: no input files specified\n")
-        sys.exit(-1)
 
     # create an appropriate objectives instance
     # NOTE: if I were cooler, I would take these as parms
@@ -317,7 +312,7 @@ if __name__ == '__main__':
         CsvReader(args.topics).read_topics(obj, args.col)
 
     # process the objectives
-    CsvReader(args.file).read_objectives(obj)
+    CsvReader(args.objfile[0]).read_objectives(obj)
 
     # print the table
     if args.prolog is not None:
